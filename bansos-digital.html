@@ -1,0 +1,1847 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BansosDigi – Digitalisasi Bantuan Sosial Kabupaten Ogan Ilir</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Lora:ital,wght@0,400;0,600;1,400&display=swap"
+    rel="stylesheet">
+  <style>
+    :root {
+      --primary: #0A3D62;
+      --primary-light: #1565C0;
+      --accent: #E8A027;
+      --accent-light: #FFD07B;
+      --green: #1A7F4B;
+      --green-light: #27AE60;
+      --bg: #F5F7FA;
+      --white: #FFFFFF;
+      --dark: #0D1B2A;
+      --text: #2C3E50;
+      --muted: #6B7C93;
+      --border: #DDE3EC;
+      --shadow: 0 4px 24px rgba(10, 61, 98, 0.10);
+      --shadow-lg: 0 12px 48px rgba(10, 61, 98, 0.16);
+      --radius: 16px;
+      --radius-sm: 10px;
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* ========== NAVBAR ========== */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+      transition: box-shadow 0.3s;
+    }
+
+    nav.scrolled {
+      box-shadow: var(--shadow);
+    }
+
+    .nav-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 24px;
+      height: 68px;
+    }
+
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+    }
+
+    .logo-icon {
+      width: 42px;
+      height: 42px;
+      background: linear-gradient(135deg, var(--primary), var(--primary-light));
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      flex-shrink: 0;
+    }
+
+    .logo-text {
+      line-height: 1.2;
+    }
+
+    .logo-text strong {
+      font-size: 15px;
+      font-weight: 800;
+      color: var(--primary);
+      display: block;
+    }
+
+    .logo-text span {
+      font-size: 11px;
+      color: var(--muted);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--text);
+      padding: 8px 14px;
+      border-radius: 8px;
+      transition: all 0.2s;
+    }
+
+    .nav-links a:hover {
+      background: var(--bg);
+      color: var(--primary);
+    }
+
+    .nav-cta {
+      background: var(--primary) !important;
+      color: white !important;
+      padding: 9px 20px !important;
+      border-radius: 10px !important;
+    }
+
+    .nav-cta:hover {
+      background: var(--primary-light) !important;
+    }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 4px;
+    }
+
+    .hamburger span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--primary);
+      border-radius: 2px;
+      transition: all 0.3s;
+    }
+
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      top: 68px;
+      left: 0;
+      right: 0;
+      background: white;
+      border-bottom: 1px solid var(--border);
+      padding: 16px 24px;
+      flex-direction: column;
+      gap: 4px;
+      z-index: 999;
+      box-shadow: var(--shadow);
+    }
+
+    .mobile-menu.open {
+      display: flex;
+    }
+
+    .mobile-menu a {
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 500;
+      color: var(--text);
+      padding: 12px 16px;
+      border-radius: 10px;
+      transition: all 0.2s;
+    }
+
+    .mobile-menu a:hover {
+      background: var(--bg);
+      color: var(--primary);
+    }
+
+    /* ========== HERO / BANNER ========== */
+    .hero {
+      min-height: 100vh;
+      background: linear-gradient(135deg, var(--primary) 0%, #0D5C9E 45%, #1A3A5C 100%);
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      padding: 100px 24px 80px;
+    }
+
+    .hero-pattern {
+      position: absolute;
+      inset: 0;
+      background-image:
+        radial-gradient(circle at 20% 80%, rgba(232, 160, 39, 0.15) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.06) 0%, transparent 50%);
+      pointer-events: none;
+    }
+
+    .hero-grid {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background-image:
+        linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+      background-size: 60px 60px;
+    }
+
+    .hero-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 100px;
+      padding: 6px 16px 6px 8px;
+      color: white;
+      font-size: 13px;
+      font-weight: 500;
+      margin-bottom: 24px;
+      backdrop-filter: blur(4px);
+    }
+
+    .hero-badge span.dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--accent);
+      display: inline-block;
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+
+      0%,
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+
+      50% {
+        opacity: 0.6;
+        transform: scale(1.2);
+      }
+    }
+
+    .hero h1 {
+      font-size: clamp(32px, 4vw, 54px);
+      font-weight: 800;
+      color: white;
+      line-height: 1.15;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 em {
+      font-style: normal;
+      color: var(--accent-light);
+      font-family: 'Lora', serif;
+      font-weight: 600;
+    }
+
+    .hero p {
+      color: rgba(255, 255, 255, 0.78);
+      font-size: 17px;
+      max-width: 480px;
+      margin-bottom: 36px;
+      line-height: 1.7;
+    }
+
+    .hero-btns {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: var(--dark);
+      padding: 14px 28px;
+      border-radius: 12px;
+      font-weight: 700;
+      font-size: 15px;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.25s;
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn-primary:hover {
+      background: var(--accent-light);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(232, 160, 39, 0.4);
+    }
+
+    .btn-secondary {
+      background: rgba(255, 255, 255, 0.12);
+      color: white;
+      padding: 14px 28px;
+      border-radius: 12px;
+      font-weight: 600;
+      font-size: 15px;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      transition: all 0.25s;
+    }
+
+    .btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.2);
+      transform: translateY(-2px);
+    }
+
+    .hero-visual {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .stat-card {
+      background: rgba(255, 255, 255, 0.10);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      border-radius: var(--radius);
+      padding: 20px 24px;
+      backdrop-filter: blur(12px);
+      color: white;
+      transition: transform 0.3s;
+    }
+
+    .stat-card:hover {
+      transform: translateX(8px);
+    }
+
+    .stat-card .label {
+      font-size: 12px;
+      opacity: 0.7;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 6px;
+    }
+
+    .stat-card .value {
+      font-size: 32px;
+      font-weight: 800;
+      color: var(--accent-light);
+      line-height: 1;
+    }
+
+    .stat-card .sub {
+      font-size: 13px;
+      opacity: 0.75;
+      margin-top: 4px;
+    }
+
+    .stat-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    /* ========== SECTION GENERAL ========== */
+    section {
+      padding: 88px 24px;
+    }
+
+    .section-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 56px;
+    }
+
+    .section-tag {
+      display: inline-block;
+      background: rgba(10, 61, 98, 0.08);
+      color: var(--primary);
+      border: 1px solid rgba(10, 61, 98, 0.15);
+      padding: 5px 14px;
+      border-radius: 100px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .section-header h2 {
+      font-size: clamp(26px, 3.5vw, 40px);
+      font-weight: 800;
+      color: var(--dark);
+      margin-bottom: 14px;
+      line-height: 1.2;
+    }
+
+    .section-header p {
+      color: var(--muted);
+      font-size: 16px;
+      max-width: 560px;
+      margin: 0 auto;
+    }
+
+    /* ========== STATS BAR ========== */
+    .stats-bar {
+      background: var(--white);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: 32px 24px;
+    }
+
+    .stats-bar .section-inner {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+      text-align: center;
+    }
+
+    .stat-item .num {
+      font-size: 36px;
+      font-weight: 800;
+      color: var(--primary);
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+
+    .stat-item .num span {
+      color: var(--accent);
+    }
+
+    .stat-item .desc {
+      font-size: 13px;
+      color: var(--muted);
+      font-weight: 500;
+    }
+
+    /* ========== PROGRAM BANSOS ========== */
+    .programs {
+      background: var(--white);
+    }
+
+    .program-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .program-card {
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      transition: all 0.3s;
+      background: white;
+      cursor: pointer;
+    }
+
+    .program-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-lg);
+      border-color: transparent;
+    }
+
+    .program-card-header {
+      padding: 28px 28px 20px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .program-card-header::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      opacity: 0.12;
+    }
+
+    .p-pkh .program-card-header {
+      background: linear-gradient(135deg, #0A3D62, #1565C0);
+    }
+
+    .p-bpnt .program-card-header {
+      background: linear-gradient(135deg, #1A7F4B, #27AE60);
+    }
+
+    .p-pip .program-card-header {
+      background: linear-gradient(135deg, #7B2D8B, #9B59B6);
+    }
+
+    .p-blt .program-card-header {
+      background: linear-gradient(135deg, #C0392B, #E74C3C);
+    }
+
+    .p-kip .program-card-header {
+      background: linear-gradient(135deg, #D35400, #E67E22);
+    }
+
+    .p-atensi .program-card-header {
+      background: linear-gradient(135deg, #2C3E50, #34495E);
+    }
+
+    .program-icon {
+      width: 52px;
+      height: 52px;
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.2);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      margin-bottom: 14px;
+    }
+
+    .program-card-header h3 {
+      color: white;
+      font-size: 17px;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+
+    .program-card-header .acronym {
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 12px;
+      font-weight: 500;
+    }
+
+    .program-card-body {
+      padding: 20px 28px 24px;
+    }
+
+    .program-card-body p {
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.65;
+      margin-bottom: 16px;
+    }
+
+    .program-tag {
+      display: inline-block;
+      padding: 4px 10px;
+      border-radius: 6px;
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      background: var(--bg);
+      color: var(--muted);
+    }
+
+    .program-link {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--primary);
+      font-size: 13px;
+      font-weight: 600;
+      text-decoration: none;
+      margin-top: 12px;
+      transition: gap 0.2s;
+    }
+
+    .program-link:hover {
+      gap: 10px;
+    }
+
+    /* ========== CTA ========== */
+    .cta-section {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+      position: relative;
+      overflow: hidden;
+      padding: 88px 24px;
+    }
+
+    .cta-section::before {
+      content: '';
+      position: absolute;
+      top: -80px;
+      right: -80px;
+      width: 350px;
+      height: 350px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.05);
+    }
+
+    .cta-section::after {
+      content: '';
+      position: absolute;
+      bottom: -60px;
+      left: -60px;
+      width: 250px;
+      height: 250px;
+      border-radius: 50%;
+      background: rgba(232, 160, 39, 0.12);
+    }
+
+    .cta-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    .cta-inner h2 {
+      font-size: clamp(28px, 4vw, 44px);
+      font-weight: 800;
+      color: white;
+      margin-bottom: 16px;
+      line-height: 1.2;
+    }
+
+    .cta-inner p {
+      color: rgba(255, 255, 255, 0.78);
+      font-size: 17px;
+      margin-bottom: 40px;
+    }
+
+    .cta-btns {
+      display: flex;
+      justify-content: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .btn-accent {
+      background: var(--accent);
+      color: var(--dark);
+      padding: 15px 32px;
+      border-radius: 12px;
+      font-weight: 700;
+      font-size: 15px;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.25s;
+    }
+
+    .btn-accent:hover {
+      background: var(--accent-light);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(232, 160, 39, 0.4);
+    }
+
+    .btn-white {
+      background: white;
+      color: var(--primary);
+      padding: 15px 32px;
+      border-radius: 12px;
+      font-weight: 700;
+      font-size: 15px;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.25s;
+    }
+
+    .btn-white:hover {
+      background: var(--bg);
+      transform: translateY(-2px);
+    }
+
+    /* ========== BERITA / ARTIKEL ========== */
+    .news {
+      background: var(--bg);
+    }
+
+    .news-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr;
+      gap: 24px;
+    }
+
+    .news-card {
+      background: white;
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      overflow: hidden;
+      transition: all 0.3s;
+      cursor: pointer;
+    }
+
+    .news-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg);
+      border-color: transparent;
+    }
+
+    .news-card.featured {
+      grid-row: span 2;
+    }
+
+    .news-thumb {
+      width: 100%;
+      aspect-ratio: 16/9;
+      object-fit: cover;
+      display: block;
+    }
+
+    .news-thumb-placeholder {
+      width: 100%;
+      aspect-ratio: 16/9;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 48px;
+    }
+
+    .nc-pkh {
+      background: linear-gradient(135deg, #EBF5FB, #D6EAF8);
+    }
+
+    .nc-bpnt {
+      background: linear-gradient(135deg, #EAFAF1, #D5F5E3);
+    }
+
+    .nc-sosialisasi {
+      background: linear-gradient(135deg, #FEF9E7, #FDF2D0);
+    }
+
+    .nc-featured {
+      background: linear-gradient(135deg, #EBF5FB, #D6EAF8);
+      aspect-ratio: 4/3 !important;
+    }
+
+    .news-body {
+      padding: 20px 22px 24px;
+    }
+
+    .news-meta {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+
+    .news-cat {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: var(--primary);
+      background: rgba(10, 61, 98, 0.08);
+      padding: 3px 9px;
+      border-radius: 6px;
+    }
+
+    .news-date {
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    .news-body h3 {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--dark);
+      margin-bottom: 10px;
+      line-height: 1.45;
+    }
+
+    .news-card.featured .news-body h3 {
+      font-size: 20px;
+    }
+
+    .news-body p {
+      font-size: 14px;
+      color: var(--muted);
+      line-height: 1.65;
+    }
+
+    .news-read {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      color: var(--primary);
+      font-size: 13px;
+      font-weight: 600;
+      text-decoration: none;
+      margin-top: 14px;
+      transition: gap 0.2s;
+    }
+
+    .news-read:hover {
+      gap: 9px;
+    }
+
+    /* ========== GALERI ========== */
+    .gallery {
+      background: white;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: auto auto;
+      gap: 16px;
+    }
+
+    .gallery-item {
+      border-radius: var(--radius-sm);
+      overflow: hidden;
+      position: relative;
+      cursor: pointer;
+      aspect-ratio: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 48px;
+      transition: all 0.3s;
+    }
+
+    .gallery-item:hover {
+      transform: scale(1.02);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .gallery-item:hover .gallery-overlay {
+      opacity: 1;
+    }
+
+    .gallery-item:nth-child(1) {
+      grid-column: span 2;
+      grid-row: span 2;
+      aspect-ratio: auto;
+      min-height: 320px;
+    }
+
+    .g1 {
+      background: linear-gradient(135deg, #D6EAF8, #A9CCE3);
+    }
+
+    .g2 {
+      background: linear-gradient(135deg, #D5F5E3, #A9DFBF);
+    }
+
+    .g3 {
+      background: linear-gradient(135deg, #FDF2D0, #F9E4A0);
+    }
+
+    .g4 {
+      background: linear-gradient(135deg, #FADBD8, #F1948A80);
+    }
+
+    .g5 {
+      background: linear-gradient(135deg, #E8DAEF, #C39BD3);
+    }
+
+    .g6 {
+      background: linear-gradient(135deg, #D1F2EB, #76D7C4);
+    }
+
+    .gallery-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(10, 61, 98, 0.6);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity 0.3s;
+      color: white;
+      font-size: 14px;
+      font-weight: 600;
+      gap: 8px;
+    }
+
+    .gallery-overlay span {
+      font-size: 24px;
+    }
+
+    /* ========== FOOTER ========== */
+    footer {
+      background: var(--dark);
+      color: rgba(255, 255, 255, 0.8);
+    }
+
+    .footer-main {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 64px 24px 48px;
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 48px;
+    }
+
+    .footer-brand {}
+
+    .footer-logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+
+    .footer-logo .logo-icon {
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    .footer-logo .logo-text strong {
+      color: white;
+    }
+
+    .footer-logo .logo-text span {
+      color: rgba(255, 255, 255, 0.5);
+    }
+
+    .footer-brand p {
+      font-size: 14px;
+      line-height: 1.7;
+      color: rgba(255, 255, 255, 0.6);
+      margin-bottom: 24px;
+    }
+
+    .footer-socials {
+      display: flex;
+      gap: 10px;
+    }
+
+    .social-btn {
+      width: 36px;
+      height: 36px;
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      cursor: pointer;
+      transition: all 0.2s;
+      text-decoration: none;
+    }
+
+    .social-btn:hover {
+      background: rgba(255, 255, 255, 0.15);
+    }
+
+    .footer-col h4 {
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: white;
+      margin-bottom: 20px;
+    }
+
+    .footer-col ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .footer-col ul a {
+      color: rgba(255, 255, 255, 0.6);
+      text-decoration: none;
+      font-size: 14px;
+      transition: color 0.2s;
+    }
+
+    .footer-col ul a:hover {
+      color: var(--accent-light);
+    }
+
+    .footer-contact {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 14px;
+      color: rgba(255, 255, 255, 0.6);
+    }
+
+    .contact-item span {
+      font-size: 18px;
+      margin-top: 1px;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      padding: 24px;
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 13px;
+      color: rgba(255, 255, 255, 0.4);
+    }
+
+    .footer-logos {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .gov-badge {
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 6px 14px;
+      border-radius: 8px;
+      font-size: 11px;
+      font-weight: 600;
+      color: rgba(255, 255, 255, 0.6);
+      letter-spacing: 0.5px;
+    }
+
+    /* ========== HELPDESK BUTTON ========== */
+    .helpdesk-btn {
+      position: fixed;
+      bottom: 28px;
+      left: 28px;
+      z-index: 900;
+      background: var(--green);
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 100px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 20px 12px 14px;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      box-shadow: 0 8px 32px rgba(26, 127, 75, 0.4);
+      transition: all 0.3s;
+      text-decoration: none;
+    }
+
+    .helpdesk-btn:hover {
+      background: var(--green-light);
+      transform: translateY(-3px);
+      box-shadow: 0 12px 40px rgba(26, 127, 75, 0.5);
+    }
+
+    .helpdesk-btn .hd-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      flex-shrink: 0;
+    }
+
+    .helpdesk-btn .hd-text {
+      line-height: 1.2;
+    }
+
+    .helpdesk-btn .hd-text strong {
+      display: block;
+      font-size: 14px;
+    }
+
+    .helpdesk-btn .hd-text small {
+      font-size: 11px;
+      font-weight: 400;
+      opacity: 0.8;
+    }
+
+    .helpdesk-pulse {
+      position: absolute;
+      top: -4px;
+      right: -4px;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: var(--accent);
+      border: 2px solid white;
+      animation: hd-pulse 2s infinite;
+    }
+
+    @keyframes hd-pulse {
+
+      0%,
+      100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+
+      50% {
+        transform: scale(1.3);
+        opacity: 0.7;
+      }
+    }
+
+    /* ========== CARA DAFTAR ========== */
+    .how {
+      background: var(--bg);
+    }
+
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      position: relative;
+    }
+
+    .steps-grid::before {
+      content: '';
+      position: absolute;
+      top: 36px;
+      left: calc(12.5% + 20px);
+      right: calc(12.5% + 20px);
+      height: 2px;
+      background: linear-gradient(90deg, var(--primary), var(--accent));
+      z-index: 0;
+    }
+
+    .step-card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 28px 20px;
+      text-align: center;
+      position: relative;
+      z-index: 1;
+      transition: all 0.3s;
+    }
+
+    .step-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow);
+    }
+
+    .step-num {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: var(--primary);
+      color: white;
+      font-size: 20px;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 18px;
+      border: 4px solid white;
+      box-shadow: 0 0 0 4px var(--bg);
+    }
+
+    .step-card h4 {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--dark);
+      margin-bottom: 10px;
+    }
+
+    .step-card p {
+      font-size: 13px;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    .step-icon {
+      font-size: 28px;
+      margin-bottom: 14px;
+    }
+
+    /* ========== ANIMATE ON SCROLL ========== */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .fade-in-delay-1 {
+      transition-delay: 0.1s;
+    }
+
+    .fade-in-delay-2 {
+      transition-delay: 0.2s;
+    }
+
+    .fade-in-delay-3 {
+      transition-delay: 0.3s;
+    }
+
+    .fade-in-delay-4 {
+      transition-delay: 0.4s;
+    }
+
+    .fade-in-delay-5 {
+      transition-delay: 0.5s;
+    }
+
+    /* ========== RESPONSIVE ========== */
+    @media (max-width: 1024px) {
+      .program-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .news-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .news-card.featured {
+        grid-column: span 2;
+        grid-row: span 1;
+      }
+
+      .footer-main {
+        grid-template-columns: 1fr 1fr;
+        gap: 32px;
+      }
+
+      .steps-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .steps-grid::before {
+        display: none;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+
+      .hero-inner {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .hero-visual {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+      }
+
+      .stat-row {
+        gap: 12px;
+      }
+
+      .stats-bar .section-inner {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .program-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .news-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .news-card.featured {
+        grid-column: span 1;
+      }
+
+      .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .gallery-item:nth-child(1) {
+        grid-column: span 2;
+        grid-row: span 1;
+        min-height: 200px;
+      }
+
+      .footer-main {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+        gap: 12px;
+        text-align: center;
+      }
+
+      .helpdesk-btn .hd-text {
+        display: none;
+      }
+
+      .helpdesk-btn {
+        padding: 10px;
+        border-radius: 50%;
+      }
+
+      .helpdesk-btn .hd-icon {
+        width: 44px;
+        height: 44px;
+        font-size: 22px;
+      }
+
+      section {
+        padding: 64px 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo">
+        <div class="logo-icon">🏛️</div>
+        <div class="logo-text">
+          <strong>BansosDigi Ogan Ilir</strong>
+          <span>Kementerian Sosial RI</span>
+        </div>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#program">Program</a></li>
+        <li><a href="#cara-daftar">Cara Daftar</a></li>
+        <li><a href="#berita">Berita</a></li>
+        <li><a href="#galeri">Galeri</a></li>
+        <li><a href="#kontak">Kontak</a></li>
+        <li><a href="#cta" class="nav-cta">Cek Kepesertaan</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#program">Program Bansos</a>
+    <a href="#cara-daftar">Cara Daftar</a>
+    <a href="#berita">Berita & Artikel</a>
+    <a href="#galeri">Galeri</a>
+    <a href="#kontak">Kontak</a>
+    <a href="#cta" style="color: var(--primary); font-weight: 700;">Cek Kepesertaan →</a>
+  </div>
+
+  <!-- HERO BANNER -->
+  <section class="hero" id="home">
+    <div class="hero-pattern"></div>
+    <div class="hero-grid"></div>
+    <div class="hero-inner">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="dot"></span>
+          Program Digitalisasi Aktif 2026
+        </div>
+        <h1>Bantuan Sosial <em>Digital</em> untuk Warga Ogan Ilir</h1>
+        <p>Platform resmi informasi penyaluran Bansos berbasis digital yang diselenggarakan oleh Pemerintah Desa
+          Kabupaten Ogan Ilir bersama Kementerian Sosial Republik Indonesia.</p>
+        <div class="hero-btns">
+          <a href="#cta" class="btn-primary">📋 Cek Kepesertaan</a>
+          <a href="#program" class="btn-secondary">📌 Lihat Program</a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="stat-card fade-in">
+          <div class="label">Total Penerima Manfaat</div>
+          <div class="value">42.850</div>
+          <div class="sub">KPM di Kabupaten Ogan Ilir</div>
+        </div>
+        <div class="stat-row">
+          <div class="stat-card fade-in fade-in-delay-1">
+            <div class="label">Desa Terjangkau</div>
+            <div class="value">237</div>
+            <div class="sub">dari 241 desa</div>
+          </div>
+          <div class="stat-card fade-in fade-in-delay-2">
+            <div class="label">Realisasi</div>
+            <div class="value">98%</div>
+            <div class="sub">Tahun 2026</div>
+          </div>
+        </div>
+        <div class="stat-card fade-in fade-in-delay-3">
+          <div class="label">Penyaluran Digital</div>
+          <div class="value">100%</div>
+          <div class="sub">Cashless & Transparan</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS BAR -->
+  <div class="stats-bar">
+    <div class="section-inner">
+      <div class="stat-item fade-in">
+        <div class="num">Rp <span>1,2</span> M</div>
+        <div class="desc">Total Anggaran Bansos 2026</div>
+      </div>
+      <div class="stat-item fade-in fade-in-delay-1">
+        <div class="num"><span>6</span> Program</div>
+        <div class="desc">Aktif Berjalan</div>
+      </div>
+      <div class="stat-item fade-in fade-in-delay-2">
+        <div class="num"><span>15</span> Kecamatan</div>
+        <div class="desc">Wilayah Cakupan</div>
+      </div>
+      <div class="stat-item fade-in fade-in-delay-3">
+        <div class="num"><span>24</span>/7</div>
+        <div class="desc">Layanan Helpdesk Digital</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PROGRAM BANSOS -->
+  <section class="programs" id="program">
+    <div class="section-inner">
+      <div class="section-header fade-in">
+        <div class="section-tag">Program</div>
+        <h2>Program Bantuan Sosial Aktif</h2>
+        <p>Berbagai program Bansos Pemerintah yang tersedia bagi warga Kabupaten Ogan Ilir melalui sistem penyaluran
+          digital yang transparan dan akuntabel.</p>
+      </div>
+      <div class="program-grid">
+        <div class="program-card p-pkh fade-in">
+          <div class="program-card-header">
+            <div class="program-icon">👨‍👩‍👧</div>
+            <h3>Program Keluarga Harapan</h3>
+            <div class="acronym">PKH</div>
+          </div>
+          <div class="program-card-body">
+            <p>Bantuan sosial bersyarat bagi keluarga miskin untuk meningkatkan kesejahteraan di bidang pendidikan,
+              kesehatan, dan kesejahteraan sosial.</p>
+            <span class="program-tag">Bulanan</span>
+            <a href="#" class="program-link">Selengkapnya →</a>
+          </div>
+        </div>
+        <div class="program-card p-bpnt fade-in fade-in-delay-1">
+          <div class="program-card-header">
+            <div class="program-icon">🛒</div>
+            <h3>Bantuan Pangan Non-Tunai</h3>
+            <div class="acronym">BPNT</div>
+          </div>
+          <div class="program-card-body">
+            <p>Bantuan pangan berupa saldo elektronik untuk pembelian bahan pokok di e-warong dan agen yang telah
+              ditetapkan pemerintah.</p>
+            <span class="program-tag">Bulanan</span>
+            <a href="#" class="program-link">Selengkapnya →</a>
+          </div>
+        </div>
+        <div class="program-card p-pip fade-in fade-in-delay-2">
+          <div class="program-card-header">
+            <div class="program-icon">🎓</div>
+            <h3>Program Indonesia Pintar</h3>
+            <div class="acronym">PIP</div>
+          </div>
+          <div class="program-card-body">
+            <p>Bantuan pendidikan bagi siswa dari keluarga kurang mampu agar dapat mengakses pendidikan berkualitas dari
+              SD hingga SMA.</p>
+            <span class="program-tag">Semester</span>
+            <a href="#" class="program-link">Selengkapnya →</a>
+          </div>
+        </div>
+        <div class="program-card p-blt fade-in fade-in-delay-3">
+          <div class="program-card-header">
+            <div class="program-icon">💵</div>
+            <h3>Bantuan Langsung Tunai</h3>
+            <div class="acronym">BLT Dana Desa</div>
+          </div>
+          <div class="program-card-body">
+            <p>Bantuan langsung tunai yang bersumber dari Dana Desa untuk keluarga miskin dan rentan terdampak yang
+              belum mendapat program lain.</p>
+            <span class="program-tag">Triwulan</span>
+            <a href="#" class="program-link">Selengkapnya →</a>
+          </div>
+        </div>
+        <div class="program-card p-kip fade-in fade-in-delay-4">
+          <div class="program-card-header">
+            <div class="program-icon">📚</div>
+            <h3>Kartu Indonesia Pintar Kuliah</h3>
+            <div class="acronym">KIP Kuliah</div>
+          </div>
+          <div class="program-card-body">
+            <p>Bantuan biaya pendidikan dan biaya hidup bagi mahasiswa dari keluarga kurang mampu untuk menempuh
+              pendidikan tinggi.</p>
+            <span class="program-tag">Semester</span>
+            <a href="#" class="program-link">Selengkapnya →</a>
+          </div>
+        </div>
+        <div class="program-card p-atensi fade-in fade-in-delay-5">
+          <div class="program-card-header">
+            <div class="program-icon">❤️</div>
+            <h3>Asistensi Rehabilitasi Sosial</h3>
+            <div class="acronym">ATENSI</div>
+          </div>
+          <div class="program-card-body">
+            <p>Program rehabilitasi sosial bagi penyandang disabilitas, lansia, anak terlantar, dan kelompok rentan
+              lainnya secara terpadu.</p>
+            <span class="program-tag">Khusus</span>
+            <a href="#" class="program-link">Selengkapnya →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CARA DAFTAR -->
+  <section class="how" id="cara-daftar">
+    <div class="section-inner">
+      <div class="section-header fade-in">
+        <div class="section-tag">Panduan</div>
+        <h2>Cara Mendaftar & Cek Status</h2>
+        <p>Proses pendaftaran dan pengecekan status kepesertaan bansos kini lebih mudah melalui sistem digital yang
+          terintegrasi.</p>
+      </div>
+      <div class="steps-grid">
+        <div class="step-card fade-in">
+          <div class="step-num">1</div>
+          <div class="step-icon">🏠</div>
+          <h4>Datang ke Balai Desa</h4>
+          <p>Kunjungi kantor desa atau kelurahan setempat dan temui petugas Pendamping PKH untuk pendataan awal.</p>
+        </div>
+        <div class="step-card fade-in fade-in-delay-1">
+          <div class="step-num">2</div>
+          <div class="step-icon">📄</div>
+          <h4>Siapkan Dokumen</h4>
+          <p>Siapkan KTP, KK, dan dokumen pendukung lainnya sesuai program bansos yang akan diajukan.</p>
+        </div>
+        <div class="step-card fade-in fade-in-delay-2">
+          <div class="step-num">3</div>
+          <div class="step-icon">📲</div>
+          <h4>Verifikasi Digital</h4>
+          <p>Data Anda akan diverifikasi melalui sistem DTKS Kemensos dan diinput oleh petugas desa.</p>
+        </div>
+        <div class="step-card fade-in fade-in-delay-3">
+          <div class="step-num">4</div>
+          <div class="step-icon">✅</div>
+          <h4>Terima Notifikasi</h4>
+          <p>Hasil verifikasi dikirim melalui SMS/WhatsApp. Jika lolos, siapkan rekening bank atau KKS untuk penerimaan.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section" id="cta">
+    <div class="cta-inner">
+      <div class="section-tag"
+        style="background: rgba(255,255,255,0.15); color: white; border-color: rgba(255,255,255,0.2);">Cek Sekarang
+      </div>
+      <h2>Apakah Anda Terdaftar sebagai Penerima Manfaat?</h2>
+      <p>Cek status kepesertaan Bansos Anda secara online menggunakan NIK KTP. Gratis, mudah, dan langsung terhubung ke
+        data DTKS Kemensos.</p>
+      <div class="cta-btns">
+        <a href="#" class="btn-accent">📋 Cek dengan NIK</a>
+        <a href="#" class="btn-white">📞 Hubungi Dinas Sosial</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- BERITA & ARTIKEL -->
+  <section class="news" id="berita">
+    <div class="section-inner">
+      <div class="section-header fade-in">
+        <div class="section-tag">Berita</div>
+        <h2>Berita & Informasi Terbaru</h2>
+        <p>Update terkini seputar program bantuan sosial digital di Kabupaten Ogan Ilir dan kebijakan dari Kementerian
+          Sosial.</p>
+      </div>
+      <div class="news-grid">
+        <div class="news-card featured fade-in">
+          <div class="news-thumb-placeholder nc-featured">📢</div>
+          <div class="news-body">
+            <div class="news-meta">
+              <span class="news-cat">Pengumuman</span>
+              <span class="news-date">18 Desember 2026</span>
+            </div>
+            <h3>Peluncuran Sistem Digitalisasi Bansos Terintegrasi untuk Seluruh Desa di Kabupaten Ogan Ilir</h3>
+            <p>Pemerintah Kabupaten Ogan Ilir bersama Kementerian Sosial RI resmi meluncurkan platform digital terpadu
+              untuk penyaluran bantuan sosial. Sistem ini mencakup seluruh 237 desa dan memungkinkan warga mengecek
+              status kepesertaan secara real-time melalui ponsel.</p>
+            <a href="#" class="news-read">Baca Selengkapnya →</a>
+          </div>
+        </div>
+        <div class="news-card fade-in fade-in-delay-1">
+          <div class="news-thumb-placeholder nc-pkh">👨‍👩‍👧</div>
+          <div class="news-body">
+            <div class="news-meta">
+              <span class="news-cat">PKH</span>
+              <span class="news-date">12 Desember 2026</span>
+            </div>
+            <h3>Penyaluran PKH Tahap IV 2026 Mulai Dicairkan via KKS</h3>
+            <p>Sebanyak 18.420 KPM PKH di Ogan Ilir telah menerima bantuan tahap empat melalui Kartu Keluarga Sejahtera.
+            </p>
+            <a href="#" class="news-read">Baca →</a>
+          </div>
+        </div>
+        <div class="news-card fade-in fade-in-delay-2">
+          <div class="news-thumb-placeholder nc-bpnt">🛒</div>
+          <div class="news-body">
+            <div class="news-meta">
+              <span class="news-cat">BPNT</span>
+              <span class="news-date">8 Desember 2026</span>
+            </div>
+            <h3>Penambahan 45 E-Warong Baru di Kecamatan Terpencil Ogan Ilir</h3>
+            <p>Dinas Sosial Ogan Ilir membuka 45 e-warong baru untuk memperluas jangkauan penerima BPNT di wilayah
+              terpencil.</p>
+            <a href="#" class="news-read">Baca →</a>
+          </div>
+        </div>
+        <div class="news-card fade-in fade-in-delay-3">
+          <div class="news-thumb-placeholder nc-sosialisasi">📡</div>
+          <div class="news-body">
+            <div class="news-meta">
+              <span class="news-cat">Sosialisasi</span>
+              <span class="news-date">2 Desember 2026</span>
+            </div>
+            <h3>Sosialisasi Digitalisasi Bansos Menjangkau 5.000 Warga Desa</h3>
+            <p>Tim sosialisasi gabungan Kemensos dan Pemkab Ogan Ilir berhasil menjangkau ribuan warga dalam serangkaian
+              roadshow desa.</p>
+            <a href="#" class="news-read">Baca →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALERI FOTO -->
+  <section class="gallery" id="galeri">
+    <div class="section-inner">
+      <div class="section-header fade-in">
+        <div class="section-tag">Galeri</div>
+        <h2>Dokumentasi Kegiatan</h2>
+        <p>Momen-momen kegiatan penyaluran bantuan sosial dan sosialisasi program di seluruh wilayah Kabupaten Ogan
+          Ilir.</p>
+      </div>
+      <div class="gallery-grid">
+        <div class="gallery-item g1 fade-in">
+          🎪
+          <div class="gallery-overlay"><span>🔍</span> Lihat Foto</div>
+        </div>
+        <div class="gallery-item g2 fade-in fade-in-delay-1">
+          🤝
+          <div class="gallery-overlay"><span>🔍</span> Lihat Foto</div>
+        </div>
+        <div class="gallery-item g3 fade-in fade-in-delay-2">
+          📋
+          <div class="gallery-overlay"><span>🔍</span> Lihat Foto</div>
+        </div>
+        <div class="gallery-item g4 fade-in fade-in-delay-3">
+          🏘️
+          <div class="gallery-overlay"><span>🔍</span> Lihat Foto</div>
+        </div>
+        <div class="gallery-item g5 fade-in fade-in-delay-4">
+          📲
+          <div class="gallery-overlay"><span>🔍</span> Lihat Foto</div>
+        </div>
+        <div class="gallery-item g6 fade-in fade-in-delay-5">
+          👴
+          <div class="gallery-overlay"><span>🔍</span> Lihat Foto</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="kontak">
+    <div class="footer-main">
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <div class="logo-icon">🏛️</div>
+          <div class="logo-text">
+            <strong>BansosDigi Ogan Ilir</strong>
+            <span>Portal Resmi Bantuan Sosial Digital</span>
+          </div>
+        </div>
+        <p>Platform informasi resmi digitalisasi bantuan sosial yang diselenggarakan oleh Pemerintah Desa Kabupaten Ogan
+          Ilir bekerja sama dengan Kementerian Sosial Republik Indonesia.</p>
+        <div class="footer-socials">
+          <a class="social-btn" href="#" title="Facebook">📘</a>
+          <a class="social-btn" href="#" title="Instagram">📸</a>
+          <a class="social-btn" href="#" title="YouTube">▶️</a>
+          <a class="social-btn" href="#" title="Twitter">🐦</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Program</h4>
+        <ul>
+          <li><a href="#">PKH</a></li>
+          <li><a href="#">BPNT</a></li>
+          <li><a href="#">PIP</a></li>
+          <li><a href="#">BLT Dana Desa</a></li>
+          <li><a href="#">KIP Kuliah</a></li>
+          <li><a href="#">ATENSI</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Layanan</h4>
+        <ul>
+          <li><a href="#">Cek Kepesertaan</a></li>
+          <li><a href="#">Pengaduan</a></li>
+          <li><a href="#">DTKS Online</a></li>
+          <li><a href="#">Panduan Daftar</a></li>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Helpdesk</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Kontak</h4>
+        <div class="footer-contact">
+          <div class="contact-item">
+            <span>📍</span>
+            <span>Jl. Lintas Timur No.1, Indralaya, Ogan Ilir, Sumatera Selatan 30662</span>
+          </div>
+          <div class="contact-item">
+            <span>📞</span>
+            <span>(0711) 580-XXXX</span>
+          </div>
+          <div class="contact-item">
+            <span>✉️</span>
+            <span>bansos@oganilir.go.id</span>
+          </div>
+          <div class="contact-item">
+            <span>🕐</span>
+            <span>Senin–Jumat, 08.00–16.00 WIB</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Pemerintah Kabupaten Ogan Ilir. Hak cipta dilindungi undang-undang.</span>
+      <div class="footer-logos">
+        <span class="gov-badge">🏛️ PEMKAB OGAN ILIR</span>
+        <span class="gov-badge">🇮🇩 KEMENSOS RI</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- HELPDESK BUTTON -->
+  <a href="https://wa.me/6282xxxxxxxx" class="helpdesk-btn" target="_blank" rel="noopener">
+    <div class="helpdesk-pulse"></div>
+    <div class="hd-icon">💬</div>
+    <div class="hd-text">
+      <strong>Helpdesk</strong>
+      <small>Chat WhatsApp</small>
+    </div>
+  </a>
+
+  <script>
+    // Navbar scroll effect
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 20);
+    });
+
+    // Mobile menu toggle
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+    hamburger.addEventListener('click', () => {
+      mobileMenu.classList.toggle('open');
+    });
+    mobileMenu.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => mobileMenu.classList.remove('open'));
+    });
+
+    // Fade-in on scroll (Intersection Observer)
+    const fadeEls = document.querySelectorAll('.fade-in');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+          observer.unobserve(e.target);
+        }
+      });
+    }, {
+      threshold: 0.12
+    });
+    fadeEls.forEach(el => observer.observe(el));
+
+    // Smooth close mobile menu on outside click
+    document.addEventListener('click', (e) => {
+      if (!hamburger.contains(e.target) && !mobileMenu.contains(e.target)) {
+        mobileMenu.classList.remove('open');
+      }
+    });
+
+    // Counter animation for stats
+    function animateCounter(el) {
+      const target = parseFloat(el.dataset.target);
+      const isDecimal = el.dataset.decimal === 'true';
+      const prefix = el.dataset.prefix || '';
+      const suffix = el.dataset.suffix || '';
+      let start = 0;
+      const duration = 1800;
+      const step = (timestamp) => {
+        if (!start) start = timestamp;
+        const progress = Math.min((timestamp - start) / duration, 1);
+        const eased = 1 - Math.pow(1 - progress, 3);
+        const current = eased * target;
+        el.textContent = prefix + (isDecimal ? current.toFixed(1) : Math.floor(current).toLocaleString('id')) +
+        suffix;
+        if (progress < 1) requestAnimationFrame(step);
+      };
+      requestAnimationFrame(step);
+    }
+  </script>
+</body>
+
+</html>
