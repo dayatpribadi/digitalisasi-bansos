@@ -219,82 +219,6 @@
       color: var(--primary);
     }
 
-
-    /* ===== HERO SLIDER ===== */
-    .hs-slide {
-      position: absolute;
-      inset: 0;
-      background-size: cover;
-      background-position: center;
-      opacity: 0;
-      transition: opacity 1s ease;
-    }
-
-    .hs-slide.active {
-      opacity: 0.35;
-    }
-
-    .hs-prev,
-    .hs-next {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      z-index: 2;
-      background: rgba(255, 255, 255, 0.15);
-      border: 1px solid rgba(255, 255, 255, 0.3);
-      color: #fff;
-      width: 44px;
-      height: 44px;
-      border-radius: 50%;
-      font-size: 22px;
-      line-height: 1;
-      cursor: pointer;
-      transition: background 0.2s;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .hs-prev {
-      left: 20px;
-    }
-
-    .hs-next {
-      right: 20px;
-    }
-
-    .hs-prev:hover,
-    .hs-next:hover {
-      background: rgba(255, 255, 255, 0.28);
-    }
-
-    #hsDots {
-      position: absolute;
-      bottom: 28px;
-      left: 50%;
-      transform: translateX(-50%);
-      display: flex;
-      gap: 8px;
-      z-index: 2;
-    }
-
-    .hs-dot {
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      background: rgba(255, 255, 255, 0.4);
-      border: none;
-      cursor: pointer;
-      padding: 0;
-      transition: all 0.3s;
-    }
-
-    .hs-dot.active {
-      background: #fff;
-      width: 24px;
-      border-radius: 4px;
-    }
-
     /* ===== HERO ===== */
     .hero {
       min-height: 100vh;
@@ -1674,25 +1598,11 @@
       color: #fff;
     }
 
-    .pf-icon.c1 {
-      background: var(--primary);
-    }
-
-    .pf-icon.c2 {
-      background: #1565C0;
-    }
-
-    .pf-icon.c3 {
-      background: #7B2D8B;
-    }
-
-    .pf-icon.c4 {
-      background: var(--green);
-    }
-
-    .pf-icon.c5 {
-      background: var(--accent);
-    }
+    .pf-icon.c1 { background: var(--primary); }
+    .pf-icon.c2 { background: #1565C0; }
+    .pf-icon.c3 { background: #7B2D8B; }
+    .pf-icon.c4 { background: var(--green); }
+    .pf-icon.c5 { background: var(--accent); }
 
     .pf-step h5 {
       font-size: 12px;
@@ -1758,18 +1668,15 @@
       width: 56px;
       height: 56px;
       border-radius: 50%;
-      background: rgba(255, 255, 255, 0.2);
-      border: 2px solid rgba(255, 255, 255, 0.4);
+      background: rgba(255,255,255,0.2);
+      border: 2px solid rgba(255,255,255,0.4);
       display: flex;
       align-items: center;
       justify-content: center;
       flex-shrink: 0;
     }
 
-    .ohc-avatar i {
-      font-size: 22px;
-      color: #fff;
-    }
+    .ohc-avatar i { font-size: 22px; color: #fff; }
 
     .ohc-info strong {
       display: block;
@@ -1783,8 +1690,8 @@
     }
 
     .ohc-badge {
-      background: rgba(255, 255, 255, 0.18);
-      border: 1px solid rgba(255, 255, 255, 0.3);
+      background: rgba(255,255,255,0.18);
+      border: 1px solid rgba(255,255,255,0.3);
       border-radius: 6px;
       padding: 4px 10px;
       font-size: 11px;
@@ -1847,46 +1754,26 @@
       gap: 14px;
     }
 
-    .oc-head-blue {
-      background: linear-gradient(135deg, var(--primary), var(--primary-light));
-    }
-
-    .oc-head-green {
-      background: linear-gradient(135deg, var(--green), var(--green-light));
-    }
-
-    .oc-head-purple {
-      background: linear-gradient(135deg, #7B2D8B, #9B59B6);
-    }
-
-    .oc-head-orange {
-      background: linear-gradient(135deg, #D35400, #E67E22);
-    }
-
-    .oc-head-red {
-      background: linear-gradient(135deg, #C0392B, #E74C3C);
-    }
-
-    .oc-head-teal {
-      background: linear-gradient(135deg, #00838F, #26C6DA);
-    }
+    .oc-head-blue { background: linear-gradient(135deg, var(--primary), var(--primary-light)); }
+    .oc-head-green { background: linear-gradient(135deg, var(--green), var(--green-light)); }
+    .oc-head-purple { background: linear-gradient(135deg, #7B2D8B, #9B59B6); }
+    .oc-head-orange { background: linear-gradient(135deg, #D35400, #E67E22); }
+    .oc-head-red { background: linear-gradient(135deg, #C0392B, #E74C3C); }
+    .oc-head-teal { background: linear-gradient(135deg, #00838F, #26C6DA); }
 
     .oca-icon {
       width: 42px;
       height: 42px;
       border-radius: 10px;
-      background: rgba(255, 255, 255, 0.2);
-      border: 1px solid rgba(255, 255, 255, 0.3);
+      background: rgba(255,255,255,0.2);
+      border: 1px solid rgba(255,255,255,0.3);
       display: flex;
       align-items: center;
       justify-content: center;
       flex-shrink: 0;
     }
 
-    .oca-icon i {
-      color: #fff;
-      font-size: 17px;
-    }
+    .oca-icon i { color: #fff; font-size: 17px; }
 
     .org-card-head h4 {
       color: #fff;
@@ -1896,7 +1783,7 @@
     }
 
     .org-card-head span {
-      color: rgba(255, 255, 255, 0.75);
+      color: rgba(255,255,255,0.75);
       font-size: 11px;
     }
 
@@ -1996,9 +1883,7 @@
       border-color: var(--primary);
     }
 
-    .dok-cat-btn i {
-      font-size: 11px;
-    }
+    .dok-cat-btn i { font-size: 11px; }
 
     .dokumen-grid {
       display: grid;
@@ -2035,33 +1920,14 @@
       flex-shrink: 0;
     }
 
-    .dok-icon-wrap i {
-      font-size: 22px;
-    }
+    .dok-icon-wrap i { font-size: 22px; }
 
-    .diw-pdf {
-      background: rgba(192, 57, 43, 0.1);
-    }
-
-    .diw-pdf i {
-      color: #C0392B;
-    }
-
-    .diw-doc {
-      background: rgba(21, 101, 192, 0.1);
-    }
-
-    .diw-doc i {
-      color: var(--primary-light);
-    }
-
-    .diw-sheet {
-      background: rgba(26, 127, 75, 0.1);
-    }
-
-    .diw-sheet i {
-      color: var(--green);
-    }
+    .diw-pdf { background: rgba(192,57,43,0.1); }
+    .diw-pdf i { color: #C0392B; }
+    .diw-doc { background: rgba(21, 101, 192, 0.1); }
+    .diw-doc i { color: var(--primary-light); }
+    .diw-sheet { background: rgba(26, 127, 75, 0.1); }
+    .diw-sheet i { color: var(--green); }
 
     .dok-info h4 {
       font-size: 14px;
@@ -2115,50 +1981,19 @@
     }
 
     @media(max-width:1024px) {
-      .disko-intro {
-        grid-template-columns: 1fr;
-        gap: 32px;
-      }
-
-      .disko-roles {
-        grid-template-columns: 1fr 1fr;
-      }
-
-      .org-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .dokumen-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
+      .disko-intro { grid-template-columns: 1fr; gap: 32px; }
+      .disko-roles { grid-template-columns: 1fr 1fr; }
+      .org-grid { grid-template-columns: repeat(2, 1fr); }
+      .dokumen-grid { grid-template-columns: repeat(2, 1fr); }
     }
 
     @media(max-width:768px) {
-      .disko-roles {
-        grid-template-columns: 1fr;
-      }
-
-      .pipeline-flow {
-        flex-direction: column;
-        gap: 12px;
-      }
-
-      .pf-arrow {
-        transform: rotate(90deg);
-        padding-bottom: 0;
-      }
-
-      .org-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .org-mid-connector {
-        gap: 40px;
-      }
-
-      .dokumen-grid {
-        grid-template-columns: 1fr;
-      }
+      .disko-roles { grid-template-columns: 1fr; }
+      .pipeline-flow { flex-direction: column; gap: 12px; }
+      .pf-arrow { transform: rotate(90deg); padding-bottom: 0; }
+      .org-grid { grid-template-columns: 1fr; }
+      .org-mid-connector { gap: 40px; }
+      .dokumen-grid { grid-template-columns: 1fr; }
     }
 
     /* ===== FADE IN ===== */
@@ -2334,11 +2169,13 @@
         </div>
       </a>
       <ul class="nav-links">
+        <li><a href="#program"><i class="fa-solid fa-grip"></i> Program</a></li>
+        <li><a href="#diskominfo"><i class="fa-solid fa-network-wired"></i> Diskominfo</a></li>
         <li><a href="#organisasi"><i class="fa-solid fa-sitemap"></i> Organisasi</a></li>
         <li><a href="#dokumen"><i class="fa-solid fa-folder-open"></i> Dokumen</a></li>
         <li><a href="#berita"><i class="fa-solid fa-newspaper"></i> Berita</a></li>
         <li><a href="#kontak"><i class="fa-solid fa-envelope"></i> Kontak</a></li>
-        <li><a href="#cara-daftar" class="nav-cta"><i class="fa-solid fa-circle-check"></i> Panduan Pendaftaran</a></li>
+        <li><a href="#cta" class="nav-cta"><i class="fa-solid fa-circle-check"></i> Cek Kepesertaan</a></li>
       </ul>
       <button class="hamburger" id="hamburger" aria-label="Menu">
         <span></span><span></span><span></span>
@@ -2348,46 +2185,22 @@
 
   <!-- MOBILE MENU -->
   <div class="mobile-menu" id="mobileMenu">
+    <a href="#program"><i class="fa-solid fa-grip"></i> Program Bansos</a>
+    <a href="#diskominfo"><i class="fa-solid fa-network-wired"></i> Peran Diskominfo</a>
     <a href="#organisasi"><i class="fa-solid fa-sitemap"></i> Struktur Organisasi</a>
     <a href="#dokumen"><i class="fa-solid fa-folder-open"></i> Dokumen</a>
     <a href="#cara-daftar"><i class="fa-solid fa-list-check"></i> Cara Daftar</a>
     <a href="#berita"><i class="fa-solid fa-newspaper"></i> Berita & Artikel</a>
     <a href="#galeri"><i class="fa-solid fa-images"></i> Galeri</a>
     <a href="#kontak"><i class="fa-solid fa-envelope"></i> Kontak</a>
-    <a href="#cara-daftar" style="color:var(--primary);font-weight:700;"><i class="fa-solid fa-circle-check"></i>
-      Panduan
-      Pendaftaran</a>
+    <a href="#cta" style="color:var(--primary);font-weight:700;"><i class="fa-solid fa-circle-check"></i> Cek
+      Kepesertaan</a>
   </div>
 
   <!-- HERO -->
   <section class="hero" id="home">
     <div class="hero-pattern"></div>
     <div class="hero-grid"></div>
-
-    <!-- SLIDER BACKGROUND -->
-    <div id="heroSlider" style="position:absolute;inset:0;z-index:0;">
-      <div class="hs-slide active"
-        style="background-image:url('https://images.unsplash.com/photo-1593113598332-cd288d649433?w=1600&q=85&auto=format&fit=crop')">
-      </div>
-      <div class="hs-slide"
-        style="background-image:url('https://images.unsplash.com/photo-1531206715517-5c0ba140b2b8?w=1600&q=85&auto=format&fit=crop')">
-      </div>
-      <div class="hs-slide"
-        style="background-image:url('https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?w=1600&q=85&auto=format&fit=crop')">
-      </div>
-      <div class="hs-slide"
-        style="background-image:url('https://images.unsplash.com/photo-1588072432836-e10032774350?w=1600&q=85&auto=format&fit=crop')">
-      </div>
-      <div class="hs-slide"
-        style="background-image:url('https://images.unsplash.com/photo-1542838132-92c53300491e?w=1600&q=85&auto=format&fit=crop')">
-      </div>
-    </div>
-
-    <!-- SLIDER CONTROLS -->
-    <button class="hs-prev" onclick="heroNav(-1)">&#8249;</button>
-    <button class="hs-next" onclick="heroNav(1)">&#8250;</button>
-    <div id="hsDots"></div>
-
     <div class="hero-inner">
       <div class="hero-content">
         <div class="hero-badge">
@@ -2398,7 +2211,32 @@
         <p>Platform resmi informasi penyaluran Bansos berbasis digital yang diselenggarakan oleh Pemerintah Desa
           Kabupaten Ogan Ilir bersama Kementerian Sosial Republik Indonesia.</p>
         <div class="hero-btns">
-          <a href="#cara-daftar" class="btn-primary"><i class="fa-solid fa-id-card"></i> Panduan Pendaftaran</a>
+          <a href="#cta" class="btn-primary"><i class="fa-solid fa-id-card"></i> Cek Kepesertaan</a>
+          <a href="#program" class="btn-secondary"><i class="fa-solid fa-table-cells-large"></i> Lihat Program</a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="stat-card fade-in">
+          <div class="label">Total Penerima Manfaat</div>
+          <div class="value">42.850</div>
+          <div class="sub">KPM di Kabupaten Ogan Ilir</div>
+        </div>
+        <div class="stat-row">
+          <div class="stat-card fade-in fade-in-delay-1">
+            <div class="label">Desa Terjangkau</div>
+            <div class="value">237</div>
+            <div class="sub">dari 241 desa</div>
+          </div>
+          <div class="stat-card fade-in fade-in-delay-2">
+            <div class="label">Realisasi</div>
+            <div class="value">98%</div>
+            <div class="sub">Tahun 2026</div>
+          </div>
+        </div>
+        <div class="stat-card fade-in fade-in-delay-3">
+          <div class="label">Penyaluran Digital</div>
+          <div class="value">100%</div>
+          <div class="sub">Cashless & Transparan</div>
         </div>
       </div>
     </div>
@@ -2430,14 +2268,192 @@
     </div>
   </div>
 
+  <!-- PROGRAM BANSOS -->
+  <section class="programs" id="program">
+    <div class="section-inner">
+      <div class="section-header fade-in">
+        <div class="section-tag"><i class="fa-solid fa-star"></i> Program</div>
+        <h2>Program Bantuan Sosial Aktif</h2>
+        <p>Berbagai program Bansos Pemerintah yang tersedia bagi warga Kabupaten Ogan Ilir melalui sistem penyaluran
+          digital yang transparan dan akuntabel.</p>
+      </div>
+      <div class="program-grid">
+        <div class="program-card p-pkh fade-in">
+          <div class="program-card-header">
+            <div class="program-icon"><i class="fa-solid fa-people-roof"></i></div>
+            <h3>Program Keluarga Harapan</h3>
+            <div class="acronym">PKH</div>
+          </div>
+          <div class="program-card-body">
+            <p>Bantuan sosial bersyarat bagi keluarga miskin untuk meningkatkan kesejahteraan di bidang pendidikan,
+              kesehatan, dan kesejahteraan sosial.</p>
+            <span class="program-tag"><i class="fa-regular fa-calendar"></i> Bulanan</span>
+            <a href="#" class="program-link">Selengkapnya <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+        <div class="program-card p-bpnt fade-in fade-in-delay-1">
+          <div class="program-card-header">
+            <div class="program-icon"><i class="fa-solid fa-basket-shopping"></i></div>
+            <h3>Bantuan Pangan Non-Tunai</h3>
+            <div class="acronym">BPNT</div>
+          </div>
+          <div class="program-card-body">
+            <p>Bantuan pangan berupa saldo elektronik untuk pembelian bahan pokok di e-warong dan agen yang telah
+              ditetapkan pemerintah.</p>
+            <span class="program-tag"><i class="fa-regular fa-calendar"></i> Bulanan</span>
+            <a href="#" class="program-link">Selengkapnya <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+        <div class="program-card p-pip fade-in fade-in-delay-2">
+          <div class="program-card-header">
+            <div class="program-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+            <h3>Program Indonesia Pintar</h3>
+            <div class="acronym">PIP</div>
+          </div>
+          <div class="program-card-body">
+            <p>Bantuan pendidikan bagi siswa dari keluarga kurang mampu agar dapat mengakses pendidikan berkualitas dari
+              SD hingga SMA.</p>
+            <span class="program-tag"><i class="fa-regular fa-calendar"></i> Semester</span>
+            <a href="#" class="program-link">Selengkapnya <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+        <div class="program-card p-blt fade-in fade-in-delay-3">
+          <div class="program-card-header">
+            <div class="program-icon"><i class="fa-solid fa-hand-holding-dollar"></i></div>
+            <h3>Bantuan Langsung Tunai</h3>
+            <div class="acronym">BLT Dana Desa</div>
+          </div>
+          <div class="program-card-body">
+            <p>Bantuan langsung tunai yang bersumber dari Dana Desa untuk keluarga miskin dan rentan terdampak yang
+              belum mendapat program lain.</p>
+            <span class="program-tag"><i class="fa-regular fa-calendar"></i> Triwulan</span>
+            <a href="#" class="program-link">Selengkapnya <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+        <div class="program-card p-kip fade-in fade-in-delay-4">
+          <div class="program-card-header">
+            <div class="program-icon"><i class="fa-solid fa-book-open-reader"></i></div>
+            <h3>Kartu Indonesia Pintar Kuliah</h3>
+            <div class="acronym">KIP Kuliah</div>
+          </div>
+          <div class="program-card-body">
+            <p>Bantuan biaya pendidikan dan biaya hidup bagi mahasiswa dari keluarga kurang mampu untuk menempuh
+              pendidikan tinggi.</p>
+            <span class="program-tag"><i class="fa-regular fa-calendar"></i> Semester</span>
+            <a href="#" class="program-link">Selengkapnya <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+        <div class="program-card p-atensi fade-in fade-in-delay-5">
+          <div class="program-card-header">
+            <div class="program-icon"><i class="fa-solid fa-heart-pulse"></i></div>
+            <h3>Asistensi Rehabilitasi Sosial</h3>
+            <div class="acronym">ATENSI</div>
+          </div>
+          <div class="program-card-body">
+            <p>Program rehabilitasi sosial bagi penyandang disabilitas, lansia, anak terlantar, dan kelompok rentan
+              lainnya secara terpadu.</p>
+            <span class="program-tag"><i class="fa-solid fa-circle-info"></i> Khusus</span>
+            <a href="#" class="program-link">Selengkapnya <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PERAN DISKOMINFO -->
+  <section class="diskominfo" id="diskominfo">
+    <div class="section-inner">
+      <div class="section-header fade-in">
+        <div class="section-tag"><i class="fa-solid fa-network-wired"></i> Diskominfo</div>
+        <h2>Peran Diskominfo dalam Digitalisasi Bansos</h2>
+        <p>Dinas Komunikasi dan Informatika Kabupaten Ogan Ilir menjadi tulang punggung infrastruktur dan tata kelola digital penyaluran bantuan sosial yang transparan, tepat sasaran, dan akuntabel.</p>
+      </div>
+
+      <div class="disko-intro fade-in">
+        <div class="disko-intro-text">
+          <h3>Komitmen Diskominfo dalam Transformasi Digital Bansos</h3>
+          <p>Diskominfo Kabupaten Ogan Ilir berperan aktif sebagai penggerak digitalisasi bantuan sosial dengan membangun, mengelola, dan mengamankan infrastruktur teknologi informasi yang digunakan di seluruh rantai penyaluran bansos—mulai dari pendataan awal di tingkat desa hingga pelaporan realisasi kepada pemerintah pusat.</p>
+          <p>Melalui koordinasi lintas OPD, Diskominfo memastikan interoperabilitas sistem antara Dinas Sosial, Dinas Kependudukan, Bank Penyalur, dan Kementerian Sosial RI, sehingga penerima manfaat dapat terlayani secara cepat, tepat, dan tanpa kebocoran data.</p>
+          <p>Tugas pokok Diskominfo dalam ekosistem ini mencakup pengelolaan data center, keamanan siber, integrasi API antar sistem, serta pelatihan literasi digital bagi petugas desa dan pendamping PKH di seluruh kecamatan.</p>
+        </div>
+        <div class="disko-roles">
+          <div class="disko-role-card fade-in">
+            <div class="drc-icon"><i class="fa-solid fa-server"></i></div>
+            <h4>Infrastruktur & Data Center</h4>
+            <p>Pengelolaan server, jaringan, dan data center yang menjamin ketersediaan sistem penyaluran bansos 24/7 di seluruh wilayah Ogan Ilir.</p>
+          </div>
+          <div class="disko-role-card fade-in fade-in-delay-1">
+            <div class="drc-icon"><i class="fa-solid fa-shield-halved"></i></div>
+            <h4>Keamanan Data & Siber</h4>
+            <p>Perlindungan data penerima manfaat dari ancaman siber, enkripsi komunikasi, serta audit keamanan sistem secara berkala.</p>
+          </div>
+          <div class="disko-role-card fade-in fade-in-delay-2">
+            <div class="drc-icon"><i class="fa-solid fa-plug-circle-bolt"></i></div>
+            <h4>Integrasi Sistem & API</h4>
+            <p>Menghubungkan DTKS Kemensos, SIAK Dukcapil, sistem perbankan, dan aplikasi Laberaso-OI dalam satu ekosistem data yang terintegrasi.</p>
+          </div>
+          <div class="disko-role-card fade-in fade-in-delay-3">
+            <div class="drc-icon"><i class="fa-solid fa-wifi"></i></div>
+            <h4>Konektivitas Pelosok Desa</h4>
+            <p>Pembangunan jaringan internet di desa-desa terpencil agar petugas dapat mengakses sistem verifikasi dan penyaluran secara digital.</p>
+          </div>
+          <div class="disko-role-card fade-in fade-in-delay-4">
+            <div class="drc-icon"><i class="fa-solid fa-chalkboard-user"></i></div>
+            <h4>Pelatihan & Literasi Digital</h4>
+            <p>Penyelenggaraan bimbingan teknis bagi operator desa, pendamping PKH, dan petugas verifikasi lapangan di 15 kecamatan.</p>
+          </div>
+          <div class="disko-role-card fade-in fade-in-delay-5">
+            <div class="drc-icon"><i class="fa-solid fa-chart-pie"></i></div>
+            <h4>Dashboard & Monitoring</h4>
+            <p>Penyediaan dashboard real-time bagi pimpinan daerah untuk memantau realisasi penyaluran, serapan anggaran, dan potensi penyimpangan.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="disko-pipeline fade-in">
+        <h3><i class="fa-solid fa-diagram-project" style="color:var(--primary);margin-right:8px;"></i>Alur Kerja Digital Diskominfo dalam Rantai Bansos</h3>
+        <div class="pipeline-flow">
+          <div class="pf-step">
+            <div class="pf-icon c1"><i class="fa-solid fa-database"></i></div>
+            <h5>Pendataan DTKS</h5>
+            <p>Input & verifikasi data KPM oleh petugas desa</p>
+          </div>
+          <div class="pf-arrow"><i class="fa-solid fa-chevron-right"></i></div>
+          <div class="pf-step">
+            <div class="pf-icon c2"><i class="fa-solid fa-plug-circle-bolt"></i></div>
+            <h5>Integrasi API</h5>
+            <p>Diskominfo sinkronisasi data ke Kemensos & bank</p>
+          </div>
+          <div class="pf-arrow"><i class="fa-solid fa-chevron-right"></i></div>
+          <div class="pf-step">
+            <div class="pf-icon c3"><i class="fa-solid fa-id-card-clip"></i></div>
+            <h5>Verifikasi Digital</h5>
+            <p>Cek NIK via SIAK Dukcapil secara otomatis</p>
+          </div>
+          <div class="pf-arrow"><i class="fa-solid fa-chevron-right"></i></div>
+          <div class="pf-step">
+            <div class="pf-icon c4"><i class="fa-solid fa-money-bill-transfer"></i></div>
+            <h5>Penyaluran Cashless</h5>
+            <p>Transfer via KKS / rekening bank penerima</p>
+          </div>
+          <div class="pf-arrow"><i class="fa-solid fa-chevron-right"></i></div>
+          <div class="pf-step">
+            <div class="pf-icon c5"><i class="fa-solid fa-chart-line"></i></div>
+            <h5>Monitoring & Laporan</h5>
+            <p>Dashboard real-time & laporan ke Bupati</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- STRUKTUR ORGANISASI -->
   <section class="organisasi" id="organisasi">
     <div class="section-inner">
       <div class="section-header fade-in">
         <div class="section-tag"><i class="fa-solid fa-sitemap"></i> Organisasi</div>
         <h2>Struktur Penugasan Tim Digitalisasi Bansos</h2>
-        <p>Tim lintas instansi yang dibentuk untuk mendukung pelaksanaan digitalisasi bantuan sosial di Kabupaten Ogan
-          Ilir secara menyeluruh dan terkoordinasi.</p>
+        <p>Tim lintas instansi yang dibentuk untuk mendukung pelaksanaan digitalisasi bantuan sosial di Kabupaten Ogan Ilir secara menyeluruh dan terkoordinasi.</p>
       </div>
 
       <div class="org-wrapper fade-in">
@@ -2675,10 +2691,7 @@
 
         <div class="org-note fade-in">
           <i class="fa-solid fa-circle-info"></i>
-          <p>Struktur penugasan ini ditetapkan berdasarkan <strong>Surat Keputusan Bupati Ogan Ilir</strong> tentang
-            Pembentukan Tim Koordinasi Digitalisasi Bantuan Sosial Kabupaten Ogan Ilir Tahun 2026. Setiap OPD memiliki
-            tugas dan kewenangan yang jelas dalam ekosistem digital bansos, dengan Diskominfo sebagai koordinator teknis
-            dan Dinas Sosial sebagai koordinator program.</p>
+          <p>Struktur penugasan ini ditetapkan berdasarkan <strong>Surat Keputusan Bupati Ogan Ilir</strong> tentang Pembentukan Tim Koordinasi Digitalisasi Bantuan Sosial Kabupaten Ogan Ilir Tahun 2026. Setiap OPD memiliki tugas dan kewenangan yang jelas dalam ekosistem digital bansos, dengan Diskominfo sebagai koordinator teknis dan Dinas Sosial sebagai koordinator program.</p>
         </div>
       </div>
     </div>
@@ -2690,21 +2703,15 @@
       <div class="section-header fade-in">
         <div class="section-tag"><i class="fa-solid fa-folder-open"></i> Dokumen</div>
         <h2>Dokumen Kepengurusan & Peran Kominfo</h2>
-        <p>Kumpulan dokumen resmi yang mengatur tata kelola, penugasan, dan peran Dinas Komunikasi dan Informatika dalam
-          digitalisasi bantuan sosial Kabupaten Ogan Ilir.</p>
+        <p>Kumpulan dokumen resmi yang mengatur tata kelola, penugasan, dan peran Dinas Komunikasi dan Informatika dalam digitalisasi bantuan sosial Kabupaten Ogan Ilir.</p>
       </div>
 
       <div class="dokumen-cats fade-in">
-        <button class="dok-cat-btn active" onclick="filterDok(this,'semua')"><i class="fa-solid fa-border-all"></i>
-          Semua</button>
-        <button class="dok-cat-btn" onclick="filterDok(this,'sk')"><i class="fa-solid fa-file-signature"></i> SK &
-          Keputusan</button>
-        <button class="dok-cat-btn" onclick="filterDok(this,'pedoman')"><i class="fa-solid fa-book"></i> Pedoman &
-          SOP</button>
-        <button class="dok-cat-btn" onclick="filterDok(this,'laporan')"><i class="fa-solid fa-chart-bar"></i>
-          Laporan</button>
-        <button class="dok-cat-btn" onclick="filterDok(this,'mou')"><i class="fa-solid fa-handshake"></i> MoU &
-          Perjanjian</button>
+        <button class="dok-cat-btn active" onclick="filterDok(this,'semua')"><i class="fa-solid fa-border-all"></i> Semua</button>
+        <button class="dok-cat-btn" onclick="filterDok(this,'sk')"><i class="fa-solid fa-file-signature"></i> SK & Keputusan</button>
+        <button class="dok-cat-btn" onclick="filterDok(this,'pedoman')"><i class="fa-solid fa-book"></i> Pedoman & SOP</button>
+        <button class="dok-cat-btn" onclick="filterDok(this,'laporan')"><i class="fa-solid fa-chart-bar"></i> Laporan</button>
+        <button class="dok-cat-btn" onclick="filterDok(this,'mou')"><i class="fa-solid fa-handshake"></i> MoU & Perjanjian</button>
       </div>
 
       <div class="dokumen-grid" id="dokumenGrid">
@@ -2713,8 +2720,7 @@
           <div class="dok-icon-wrap diw-pdf"><i class="fa-solid fa-file-pdf"></i></div>
           <div class="dok-info">
             <h4>SK Bupati No. 420/2026 – Tim Koordinasi Digitalisasi Bansos</h4>
-            <p>Surat Keputusan pembentukan tim lintas OPD termasuk penugasan Diskominfo sebagai koordinator teknis
-              digital.</p>
+            <p>Surat Keputusan pembentukan tim lintas OPD termasuk penugasan Diskominfo sebagai koordinator teknis digital.</p>
             <div class="dok-meta">
               <span class="dok-tag">SK Bupati</span>
               <span class="dok-date"><i class="fa-regular fa-calendar"></i> 3 Jan 2026</span>
@@ -2727,8 +2733,7 @@
           <div class="dok-icon-wrap diw-pdf"><i class="fa-solid fa-file-pdf"></i></div>
           <div class="dok-info">
             <h4>SK Kepala Diskominfo – Penunjukan Admin Sistem Bansos</h4>
-            <p>Penunjukan operator dan administrator sistem aplikasi Laberaso-OI serta pengelola server bansos daerah.
-            </p>
+            <p>Penunjukan operator dan administrator sistem aplikasi Laberaso-OI serta pengelola server bansos daerah.</p>
             <div class="dok-meta">
               <span class="dok-tag">SK Internal</span>
               <span class="dok-date"><i class="fa-regular fa-calendar"></i> 10 Jan 2026</span>
@@ -2741,8 +2746,7 @@
           <div class="dok-icon-wrap diw-doc"><i class="fa-solid fa-file-word"></i></div>
           <div class="dok-info">
             <h4>SOP Pengelolaan Infrastruktur TIK Bansos</h4>
-            <p>Prosedur standar operasi pengelolaan server, jaringan, dan keamanan data sistem penyaluran bantuan sosial
-              digital.</p>
+            <p>Prosedur standar operasi pengelolaan server, jaringan, dan keamanan data sistem penyaluran bantuan sosial digital.</p>
             <div class="dok-meta">
               <span class="dok-tag">SOP</span>
               <span class="dok-date"><i class="fa-regular fa-calendar"></i> 15 Jan 2026</span>
@@ -2755,8 +2759,7 @@
           <div class="dok-icon-wrap diw-doc"><i class="fa-solid fa-file-word"></i></div>
           <div class="dok-info">
             <h4>Pedoman Integrasi Sistem DTKS – SIAK – Bank Penyalur</h4>
-            <p>Panduan teknis interoperabilitas data antara DTKS Kemensos, SIAK Dukcapil, dan sistem perbankan mitra
-              penyalur.</p>
+            <p>Panduan teknis interoperabilitas data antara DTKS Kemensos, SIAK Dukcapil, dan sistem perbankan mitra penyalur.</p>
             <div class="dok-meta">
               <span class="dok-tag">Pedoman Teknis</span>
               <span class="dok-date"><i class="fa-regular fa-calendar"></i> 20 Jan 2026</span>
@@ -2769,8 +2772,7 @@
           <div class="dok-icon-wrap diw-sheet"><i class="fa-solid fa-file-excel"></i></div>
           <div class="dok-info">
             <h4>Laporan Triwulan I 2026 – Realisasi Digitalisasi Bansos</h4>
-            <p>Laporan realisasi penyaluran bansos digital Triwulan I 2026, mencakup capaian target, kendala, dan
-              rekomendasi Diskominfo.</p>
+            <p>Laporan realisasi penyaluran bansos digital Triwulan I 2026, mencakup capaian target, kendala, dan rekomendasi Diskominfo.</p>
             <div class="dok-meta">
               <span class="dok-tag">Laporan</span>
               <span class="dok-date"><i class="fa-regular fa-calendar"></i> 5 Apr 2026</span>
@@ -2783,8 +2785,7 @@
           <div class="dok-icon-wrap diw-pdf"><i class="fa-solid fa-file-pdf"></i></div>
           <div class="dok-info">
             <h4>Laporan Audit Keamanan Siber Sistem Bansos 2025</h4>
-            <p>Hasil audit keamanan sistem informasi penyaluran bansos tahun 2025 oleh tim internal Diskominfo dan
-              konsultan eksternal.</p>
+            <p>Hasil audit keamanan sistem informasi penyaluran bansos tahun 2025 oleh tim internal Diskominfo dan konsultan eksternal.</p>
             <div class="dok-meta">
               <span class="dok-tag">Audit Keamanan</span>
               <span class="dok-date"><i class="fa-regular fa-calendar"></i> 30 Des 2025</span>
@@ -2797,8 +2798,7 @@
           <div class="dok-icon-wrap diw-pdf"><i class="fa-solid fa-file-pdf"></i></div>
           <div class="dok-info">
             <h4>MoU Pemkab Ogan Ilir – Kemensos RI tentang Sistem Bansos Digital</h4>
-            <p>Perjanjian kerja sama antara Pemerintah Kabupaten Ogan Ilir dan Kementerian Sosial RI untuk implementasi
-              digitalisasi bansos.</p>
+            <p>Perjanjian kerja sama antara Pemerintah Kabupaten Ogan Ilir dan Kementerian Sosial RI untuk implementasi digitalisasi bansos.</p>
             <div class="dok-meta">
               <span class="dok-tag">MoU</span>
               <span class="dok-date"><i class="fa-regular fa-calendar"></i> 15 Okt 2025</span>
@@ -2811,8 +2811,7 @@
           <div class="dok-icon-wrap diw-doc"><i class="fa-solid fa-file-word"></i></div>
           <div class="dok-info">
             <h4>Perjanjian Kerja Sama Diskominfo – Bank BRI tentang API Penyaluran</h4>
-            <p>PKS teknis antara Diskominfo Ogan Ilir dan Bank BRI untuk integrasi API real-time penyaluran dana bansos
-              non-tunai.</p>
+            <p>PKS teknis antara Diskominfo Ogan Ilir dan Bank BRI untuk integrasi API real-time penyaluran dana bansos non-tunai.</p>
             <div class="dok-meta">
               <span class="dok-tag">PKS</span>
               <span class="dok-date"><i class="fa-regular fa-calendar"></i> 2 Nov 2025</span>
@@ -2825,8 +2824,7 @@
           <div class="dok-icon-wrap diw-doc"><i class="fa-solid fa-file-word"></i></div>
           <div class="dok-info">
             <h4>Panduan Bimtek Literasi Digital untuk Operator Desa</h4>
-            <p>Modul pelatihan penggunaan sistem Laberaso-OI dan DTKS Online bagi operator desa dan pendamping PKH di 15
-              kecamatan.</p>
+            <p>Modul pelatihan penggunaan sistem Laberaso-OI dan DTKS Online bagi operator desa dan pendamping PKH di 15 kecamatan.</p>
             <div class="dok-meta">
               <span class="dok-tag">Modul Pelatihan</span>
               <span class="dok-date"><i class="fa-regular fa-calendar"></i> 12 Feb 2026</span>
@@ -2877,194 +2875,19 @@
     </div>
   </section>
 
-  <!-- CTA BANNER SLIDER -->
-  <section id="cta" style="padding:64px 24px;background:var(--bg);overflow:hidden;">
-    <div style="max-width:1200px;margin:0 auto;">
-
-      <div style="position:relative;border-radius:20px;overflow:hidden;user-select:none;">
-
-        <!-- TRACK -->
-        <div id="ctaTrack" style="display:flex;transition:transform 0.55s cubic-bezier(0.77,0,0.175,1);">
-
-          <!-- SLIDE 1 — Cek Kepesertaan -->
-          <div class="cta-slide"
-            style="background:linear-gradient(120deg,#0A3D62 0%,#1565C0 100%);min-width:100%;display:flex;align-items:center;justify-content:space-between;padding:52px 60px;gap:32px;position:relative;overflow:hidden;">
-            <div
-              style="position:absolute;right:0;top:0;bottom:0;width:55%;background:url('https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=900&q=80&auto=format&fit=crop') center/cover no-repeat;opacity:0.22;">
-            </div>
-            <div
-              style="position:absolute;inset:0;background:linear-gradient(90deg,rgba(10,61,98,1) 38%,rgba(10,61,98,0.7) 65%,rgba(10,61,98,0.2) 100%);">
-            </div>
-            <!-- Dekor lingkaran -->
-            <div
-              style="position:absolute;right:260px;top:-60px;width:220px;height:220px;border-radius:50%;border:2px solid rgba(255,255,255,0.08);pointer-events:none;">
-            </div>
-            <div
-              style="position:absolute;right:200px;bottom:-80px;width:300px;height:300px;border-radius:50%;border:2px solid rgba(255,255,255,0.06);pointer-events:none;">
-            </div>
-            <!-- Lencana starburst -->
-            <div
-              style="position:absolute;right:52px;top:50%;transform:translateY(-50%);width:168px;height:168px;z-index:2;display:flex;align-items:center;justify-content:center;">
-              <svg viewBox="0 0 168 168" width="168" height="168" style="position:absolute;inset:0;">
-                <polygon
-                  points="84,4 96,44 134,24 120,62 162,64 132,90 154,126 114,116 104,156 84,128 64,156 54,116 14,126 36,90 6,64 48,62 34,24 72,44"
-                  fill="#E8A027" opacity="0.95" /></svg>
-              <div style="position:relative;z-index:1;text-align:center;padding:8px;">
-                <div
-                  style="font-size:11px;font-weight:700;color:#0A3D62;line-height:1.3;text-transform:uppercase;letter-spacing:0.5px;">
-                  Cek Status</div>
-                <div style="font-size:20px;font-weight:800;color:#0A3D62;line-height:1.1;">Gratis</div>
-                <div style="font-size:10px;font-weight:600;color:#0A3D62;opacity:0.85;">& Real-Time</div>
-              </div>
-            </div>
-            <!-- Teks -->
-            <div style="position:relative;z-index:2;max-width:520px;">
-              <div
-                style="display:inline-flex;align-items:center;gap:7px;background:rgba(255,255,255,0.14);border:1px solid rgba(255,255,255,0.22);border-radius:100px;padding:5px 14px;font-size:12px;font-weight:700;color:#fff;letter-spacing:1px;text-transform:uppercase;margin-bottom:18px;">
-                <i class="fa-solid fa-circle-check" style="font-size:11px;color:#FFD07B;"></i> Kepesertaan Bansos
-              </div>
-              <h2
-                style="font-size:clamp(26px,3.5vw,44px);font-weight:800;color:#fff;line-height:1.15;margin-bottom:14px;">
-                Apakah Anda<br>Terdaftar sebagai<br><span style="color:#FFD07B;">Penerima Manfaat?</span></h2>
-              <p
-                style="color:rgba(255,255,255,0.78);font-size:16px;margin-bottom:30px;max-width:400px;line-height:1.65;">
-                Cek status kepesertaan Bansos Anda secara online. Gratis, mudah, dan langsung terhubung dengan Dinas
-                Sosial Kabupaten Ogan Ilir.</p>
-              <div style="display:flex;gap:12px;flex-wrap:wrap;">
-                <a href="#"
-                  style="background:#E8A027;color:#0D1B2A;padding:13px 26px;border-radius:12px;font-weight:700;font-size:14px;text-decoration:none;display:inline-flex;align-items:center;gap:8px;transition:all 0.25s;"><i
-                    class="fab fa-google-play"></i> Unduh Laberaso-OI</a>
-                <a href="#"
-                  style="background:rgba(255,255,255,0.13);color:#fff;padding:13px 26px;border-radius:12px;font-weight:600;font-size:14px;text-decoration:none;display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(255,255,255,0.25);"><i
-                    class="fa-solid fa-phone"></i> Hubungi Dinsos</a>
-              </div>
-            </div>
-          </div>
-
-          <!-- SLIDE 2 — Pengaduan Online -->
-          <div class="cta-slide"
-            style="background:linear-gradient(120deg,#1A7F4B 0%,#27AE60 100%);min-width:100%;display:flex;align-items:center;justify-content:space-between;padding:52px 60px;gap:32px;position:relative;overflow:hidden;">
-            <div
-              style="position:absolute;right:0;top:0;bottom:0;width:55%;background:url('https://images.unsplash.com/photo-1573497620053-ea5300f94f21?w=900&q=80&auto=format&fit=crop') center/cover no-repeat;opacity:0.2;">
-            </div>
-            <div
-              style="position:absolute;inset:0;background:linear-gradient(90deg,rgba(26,127,75,1) 38%,rgba(26,127,75,0.7) 65%,rgba(26,127,75,0.15) 100%);">
-            </div>
-            <div
-              style="position:absolute;right:260px;top:-60px;width:220px;height:220px;border-radius:50%;border:2px solid rgba(255,255,255,0.08);pointer-events:none;">
-            </div>
-            <div
-              style="position:absolute;right:200px;bottom:-80px;width:300px;height:300px;border-radius:50%;border:2px solid rgba(255,255,255,0.06);pointer-events:none;">
-            </div>
-            <!-- Lencana starburst -->
-            <div
-              style="position:absolute;right:52px;top:50%;transform:translateY(-50%);width:168px;height:168px;z-index:2;display:flex;align-items:center;justify-content:center;">
-              <svg viewBox="0 0 168 168" width="168" height="168" style="position:absolute;inset:0;">
-                <polygon
-                  points="84,4 96,44 134,24 120,62 162,64 132,90 154,126 114,116 104,156 84,128 64,156 54,116 14,126 36,90 6,64 48,62 34,24 72,44"
-                  fill="#FFD07B" opacity="0.95" /></svg>
-              <div style="position:relative;z-index:1;text-align:center;padding:8px;">
-                <div
-                  style="font-size:11px;font-weight:700;color:#1A7F4B;line-height:1.3;text-transform:uppercase;letter-spacing:0.5px;">
-                  Respons</div>
-                <div style="font-size:20px;font-weight:800;color:#1A7F4B;line-height:1.1;">1×24</div>
-                <div style="font-size:10px;font-weight:600;color:#1A7F4B;opacity:0.85;">Jam Kerja</div>
-              </div>
-            </div>
-            <div style="position:relative;z-index:2;max-width:520px;">
-              <div
-                style="display:inline-flex;align-items:center;gap:7px;background:rgba(255,255,255,0.14);border:1px solid rgba(255,255,255,0.22);border-radius:100px;padding:5px 14px;font-size:12px;font-weight:700;color:#fff;letter-spacing:1px;text-transform:uppercase;margin-bottom:18px;">
-                <i class="fa-solid fa-triangle-exclamation" style="font-size:11px;color:#FFD07B;"></i> Pengaduan
-                Masyarakat
-              </div>
-              <h2
-                style="font-size:clamp(26px,3.5vw,44px);font-weight:800;color:#fff;line-height:1.15;margin-bottom:14px;">
-                Ada Masalah<br>dengan Bantuan<br><span style="color:#FFD07B;">Sosial Anda?</span></h2>
-              <p
-                style="color:rgba(255,255,255,0.78);font-size:16px;margin-bottom:30px;max-width:400px;line-height:1.65;">
-                Laporkan kendala, sanggahan, atau dugaan penyalahgunaan bansos melalui sistem pengaduan online.
-                Identitas pelapor terjaga kerahasiaannya.</p>
-              <div style="display:flex;gap:12px;flex-wrap:wrap;">
-                <a href="#"
-                  style="background:#FFD07B;color:#1A7F4B;padding:13px 26px;border-radius:12px;font-weight:700;font-size:14px;text-decoration:none;display:inline-flex;align-items:center;gap:8px;"><i
-                    class="fa-solid fa-paper-plane"></i> Kirim Pengaduan</a>
-                <a href="https://wa.me/6282xxxxxxxx"
-                  style="background:rgba(255,255,255,0.13);color:#fff;padding:13px 26px;border-radius:12px;font-weight:600;font-size:14px;text-decoration:none;display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(255,255,255,0.25);"><i
-                    class="fa-brands fa-whatsapp"></i> Chat WhatsApp</a>
-              </div>
-            </div>
-          </div>
-
-          <!-- SLIDE 3 — Bimtek Operator Desa -->
-          <div class="cta-slide"
-            style="background:linear-gradient(120deg,#7B2D8B 0%,#9B59B6 100%);min-width:100%;display:flex;align-items:center;justify-content:space-between;padding:52px 60px;gap:32px;position:relative;overflow:hidden;">
-            <div
-              style="position:absolute;right:0;top:0;bottom:0;width:55%;background:url('https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=900&q=80&auto=format&fit=crop') center/cover no-repeat;opacity:0.2;">
-            </div>
-            <div
-              style="position:absolute;inset:0;background:linear-gradient(90deg,rgba(123,45,139,1) 38%,rgba(123,45,139,0.7) 65%,rgba(123,45,139,0.15) 100%);">
-            </div>
-            <div
-              style="position:absolute;right:260px;top:-60px;width:220px;height:220px;border-radius:50%;border:2px solid rgba(255,255,255,0.08);pointer-events:none;">
-            </div>
-            <div
-              style="position:absolute;right:200px;bottom:-80px;width:300px;height:300px;border-radius:50%;border:2px solid rgba(255,255,255,0.06);pointer-events:none;">
-            </div>
-            <!-- Lencana starburst -->
-            <div
-              style="position:absolute;right:52px;top:50%;transform:translateY(-50%);width:168px;height:168px;z-index:2;display:flex;align-items:center;justify-content:center;">
-              <svg viewBox="0 0 168 168" width="168" height="168" style="position:absolute;inset:0;">
-                <polygon
-                  points="84,4 96,44 134,24 120,62 162,64 132,90 154,126 114,116 104,156 84,128 64,156 54,116 14,126 36,90 6,64 48,62 34,24 72,44"
-                  fill="#FFD07B" opacity="0.95" /></svg>
-              <div style="position:relative;z-index:1;text-align:center;padding:8px;">
-                <div
-                  style="font-size:11px;font-weight:700;color:#7B2D8B;line-height:1.3;text-transform:uppercase;letter-spacing:0.5px;">
-                  237</div>
-                <div style="font-size:20px;font-weight:800;color:#7B2D8B;line-height:1.1;">Desa</div>
-                <div style="font-size:10px;font-weight:600;color:#7B2D8B;opacity:0.85;">Se-Kab. Ogan Ilir</div>
-              </div>
-            </div>
-            <div style="position:relative;z-index:2;max-width:520px;">
-              <div
-                style="display:inline-flex;align-items:center;gap:7px;background:rgba(255,255,255,0.14);border:1px solid rgba(255,255,255,0.22);border-radius:100px;padding:5px 14px;font-size:12px;font-weight:700;color:#fff;letter-spacing:1px;text-transform:uppercase;margin-bottom:18px;">
-                <i class="fa-solid fa-chalkboard-user" style="font-size:11px;color:#FFD07B;"></i> Bimtek Operator Desa
-              </div>
-              <h2
-                style="font-size:clamp(26px,3.5vw,44px);font-weight:800;color:#fff;line-height:1.15;margin-bottom:14px;">
-                Daftarkan Operator<br>Desa Anda ke<br><span style="color:#FFD07B;">Pelatihan Digital</span></h2>
-              <p
-                style="color:rgba(255,255,255,0.78);font-size:16px;margin-bottom:30px;max-width:400px;line-height:1.65;">
-                Diskominfo Ogan Ilir membuka jadwal Bimtek Sistem Laberaso-OI dan DTKS Online untuk operator desa dan
-                pendamping PKH di 15 kecamatan.</p>
-              <div style="display:flex;gap:12px;flex-wrap:wrap;">
-                <a href="#dokumen"
-                  style="background:#FFD07B;color:#7B2D8B;padding:13px 26px;border-radius:12px;font-weight:700;font-size:14px;text-decoration:none;display:inline-flex;align-items:center;gap:8px;"><i
-                    class="fa-solid fa-file-lines"></i> Unduh Modul Bimtek</a>
-                <a href="#"
-                  style="background:rgba(255,255,255,0.13);color:#fff;padding:13px 26px;border-radius:12px;font-weight:600;font-size:14px;text-decoration:none;display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(255,255,255,0.25);"><i
-                    class="fa-solid fa-calendar-days"></i> Lihat Jadwal</a>
-              </div>
-            </div>
-          </div>
-
-        </div><!-- end track -->
-
-        <!-- NAV BUTTONS -->
-        <button onclick="ctaNav(-1)"
-          style="position:absolute;left:16px;top:50%;transform:translateY(-50%);z-index:10;width:42px;height:42px;border-radius:50%;background:rgba(255,255,255,0.18);border:1px solid rgba(255,255,255,0.3);color:#fff;font-size:20px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background 0.2s;"
-          onmouseover="this.style.background='rgba(255,255,255,0.3)'"
-          onmouseout="this.style.background='rgba(255,255,255,0.18)'">&#8249;</button>
-        <button onclick="ctaNav(1)"
-          style="position:absolute;right:16px;top:50%;transform:translateY(-50%);z-index:10;width:42px;height:42px;border-radius:50%;background:rgba(255,255,255,0.18);border:1px solid rgba(255,255,255,0.3);color:#fff;font-size:20px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background 0.2s;"
-          onmouseover="this.style.background='rgba(255,255,255,0.3)'"
-          onmouseout="this.style.background='rgba(255,255,255,0.18)'">&#8250;</button>
-
-      </div><!-- end slider wrapper -->
-
-      <!-- DOTS -->
-      <div id="ctaDots" style="display:flex;justify-content:center;gap:8px;margin-top:20px;"></div>
-
+  <!-- CTA -->
+  <section class="cta-section" id="cta">
+    <div class="cta-inner">
+      <div class="section-tag" style="background:rgba(255,255,255,0.15);color:#fff;border-color:rgba(255,255,255,0.2);">
+        <i class="fa-solid fa-bolt"></i> Cek Sekarang
+      </div>
+      <h2>Apakah Anda Terdaftar sebagai Penerima Manfaat?</h2>
+      <p>Cek status kepesertaan Bansos Anda. Gratis, mudah, dan langsung terhubung dengan Petugas
+        Dinas Sosial Kabupaten Ogan Ilir.</p>
+      <div class="cta-btns">
+        <a href="#" class="btn-accent"><i class="fab fa-google-play"></i> Download Aplikasi Laberaso-OI</a>
+        <a href="#" class="btn-white"><i class="fa-solid fa-phone"></i> Hubungi Dinas Sosial</a>
+      </div>
     </div>
   </section>
 
@@ -3216,6 +3039,17 @@
             <div class="go-sub"><i class="fa-solid fa-tag"></i> Akses via Smartphone</div>
           </div>
         </div>
+        <!-- <div class="gallery-item fade-in fade-in-delay-3" data-index="3"
+          data-src="https://images.unsplash.com/photo-1542838132-92c53300491e?w=1200&q=90&auto=format&fit=crop"
+          data-caption="E-Warong Mitra BPNT di Wilayah Ogan Ilir">
+          <img src="https://images.unsplash.com/photo-1542838132-92c53300491e?w=600&q=80&auto=format&fit=crop"
+            alt="E-Warong BPNT" loading="lazy">
+          <div class="gallery-overlay">
+            <div class="go-icon-wrap"><i class="fa-solid fa-expand"></i></div>
+            <div class="go-label">E-Warong BPNT</div>
+            <div class="go-sub"><i class="fa-solid fa-tag"></i> Mitra Belanja Pangan</div>
+          </div>
+        </div> -->
         <div class="gallery-item fade-in fade-in-delay-4" data-index="4"
           data-src="https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?w=1200&q=90&auto=format&fit=crop"
           data-caption="Penerima Manfaat Program ATENSI — Lansia">
@@ -3338,84 +3172,12 @@
     </div>
   </a>
 
-  <!-- BACK TO TOP -->
-  <button id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Kembali ke atas"
-    style="position:fixed;bottom:28px;right:28px;z-index:900;width:48px;height:48px;border-radius:50%;background:var(--primary);border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 24px rgba(10,61,98,0.35);opacity:0;transform:translateY(12px);transition:opacity 0.3s,transform 0.3s,background 0.2s;pointer-events:none;">
-    <i class="fa-solid fa-arrow-up" style="color:#fff;font-size:18px;"></i>
-  </button>
-
-
   <script>
     /* ---- NAVBAR SCROLL ---- */
     const navbar = document.getElementById('navbar');
     window.addEventListener('scroll', () => {
       navbar.classList.toggle('scrolled', window.scrollY > 20);
     });
-
-    /* ---- HERO SLIDER ---- */
-    (function () {
-      const slides = document.querySelectorAll('.hs-slide');
-      const dotsWrap = document.getElementById('hsDots');
-      let cur = 0,
-        timer;
-
-      slides.forEach((_, i) => {
-        const d = document.createElement('button');
-        d.className = 'hs-dot' + (i === 0 ? ' active' : '');
-        d.onclick = () => heroNav(i - cur);
-        dotsWrap.appendChild(d);
-      });
-
-      window.heroNav = function (dir) {
-        slides[cur].classList.remove('active');
-        dotsWrap.children[cur].classList.remove('active');
-        cur = (cur + dir + slides.length) % slides.length;
-        slides[cur].classList.add('active');
-        dotsWrap.children[cur].classList.add('active');
-        clearInterval(timer);
-        timer = setInterval(() => heroNav(1), 5000);
-      };
-
-      timer = setInterval(() => heroNav(1), 5000);
-    })();
-
-
-    /* ---- CTA BANNER SLIDER ---- */
-    (function () {
-      const track = document.getElementById('ctaTrack');
-      const dotsWrap = document.getElementById('ctaDots');
-      if (!track) return;
-      const total = track.children.length;
-      let cur = 0,
-        timer;
-
-      const colors = ['#1565C0', '#27AE60', '#9B59B6'];
-
-      for (let i = 0; i < total; i++) {
-        const d = document.createElement('button');
-        d.style.cssText =
-          `width:10px;height:10px;border-radius:50%;background:${colors[i]};opacity:${i===0?'1':'0.3'};border:none;cursor:pointer;padding:0;transition:all 0.3s;`;
-        d.onclick = () => goTo(i);
-        dotsWrap.appendChild(d);
-      }
-
-      function goTo(n) {
-        cur = (n + total) % total;
-        track.style.transform = `translateX(-${cur * 100}%)`;
-        Array.from(dotsWrap.children).forEach((d, i) => {
-          d.style.opacity = i === cur ? '1' : '0.3';
-          d.style.width = i === cur ? '26px' : '10px';
-          d.style.borderRadius = i === cur ? '5px' : '50%';
-        });
-        clearInterval(timer);
-        timer = setInterval(() => goTo(cur + 1), 5500);
-      }
-
-      window.ctaNav = function (dir) {
-        goTo(cur + dir);
-      };
-      timer = setInterval(() => goTo(cur + 1), 5500);
-    })();
 
     /* ---- MOBILE MENU ---- */
     const hamburger = document.getElementById('hamburger');
@@ -3525,19 +3287,6 @@
         }
       });
     }
-
-    /* ---- BACK TO TOP ---- */
-    (function () {
-      const btn = document.getElementById('backToTop');
-      window.addEventListener('scroll', () => {
-        const show = window.scrollY > 400;
-        btn.style.opacity = show ? '1' : '0';
-        btn.style.transform = show ? 'translateY(0)' : 'translateY(12px)';
-        btn.style.pointerEvents = show ? 'auto' : 'none';
-      });
-      btn.addEventListener('mouseenter', () => btn.style.background = 'var(--primary-light)');
-      btn.addEventListener('mouseleave', () => btn.style.background = 'var(--primary)');
-    })();
 
     /* ---- SMOOTH IMAGE LOAD ---- */
     document.querySelectorAll('img[loading="lazy"]').forEach(img => {
