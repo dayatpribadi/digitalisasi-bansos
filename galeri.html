@@ -1,0 +1,1777 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galeri Dokumentasi – BansosDigi Ogan Ilir</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Lora:ital,wght@0,400;0,600;1,400&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    :root {
+      --primary: #0A3D62;
+      --primary-light: #1565C0;
+      --accent: #E8A027;
+      --accent-light: #FFD07B;
+      --green: #1A7F4B;
+      --green-light: #27AE60;
+      --bg: #F5F7FA;
+      --white: #FFFFFF;
+      --dark: #0D1B2A;
+      --text: #2C3E50;
+      --muted: #6B7C93;
+      --border: #DDE3EC;
+      --shadow: 0 4px 24px rgba(10, 61, 98, 0.10);
+      --shadow-lg: 0 12px 48px rgba(10, 61, 98, 0.16);
+      --radius: 16px;
+      --radius-sm: 10px;
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* NAVBAR */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      background: rgba(255, 255, 255, 0.93);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+      transition: box-shadow 0.3s;
+    }
+
+    nav.scrolled {
+      box-shadow: var(--shadow);
+    }
+
+    .nav-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 24px;
+      height: 68px;
+    }
+
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+    }
+
+    .logo-icon {
+      width: 42px;
+      height: 42px;
+      background: linear-gradient(135deg, var(--primary), var(--primary-light));
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .logo-icon i {
+      color: #fff;
+      font-size: 18px;
+    }
+
+    .logo-text strong {
+      font-size: 15px;
+      font-weight: 800;
+      color: var(--primary);
+      display: block;
+      line-height: 1.2;
+    }
+
+    .logo-text span {
+      font-size: 11px;
+      color: var(--muted);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      font-size: 13.5px;
+      font-weight: 500;
+      color: var(--text);
+      padding: 8px 13px;
+      border-radius: 8px;
+      transition: all 0.2s;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      background: var(--bg);
+      color: var(--primary);
+    }
+
+    .nav-links a i {
+      font-size: 11px;
+      opacity: 0.7;
+    }
+
+    .nav-cta {
+      background: var(--primary) !important;
+      color: #fff !important;
+      padding: 9px 18px !important;
+      border-radius: 10px !important;
+    }
+
+    .nav-cta:hover {
+      background: var(--primary-light) !important;
+    }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 4px;
+    }
+
+    .hamburger span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--primary);
+      border-radius: 2px;
+    }
+
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      top: 68px;
+      left: 0;
+      right: 0;
+      background: #fff;
+      border-bottom: 1px solid var(--border);
+      padding: 16px 24px;
+      flex-direction: column;
+      gap: 4px;
+      z-index: 999;
+      box-shadow: var(--shadow);
+    }
+
+    .mobile-menu.open {
+      display: flex;
+    }
+
+    .mobile-menu a {
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 500;
+      color: var(--text);
+      padding: 12px 16px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .mobile-menu a i {
+      color: var(--primary);
+      width: 18px;
+      text-align: center;
+    }
+
+    /* PAGE HERO */
+    .page-hero {
+      margin-top: 68px;
+      background: linear-gradient(135deg, var(--primary) 0%, #0D5C9E 50%, #1A3A5C 100%);
+      padding: 60px 24px 80px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .page-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: radial-gradient(circle at 20% 80%, rgba(232, 160, 39, 0.15) 0%, transparent 50%), radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.05) 0%, transparent 50%);
+    }
+
+    .page-hero-grid {
+      position: absolute;
+      inset: 0;
+      background-image: linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+      background-size: 60px 60px;
+    }
+
+    .page-hero-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    .breadcrumb {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 20px;
+    }
+
+    .breadcrumb a {
+      color: rgba(255, 255, 255, 0.6);
+      text-decoration: none;
+      font-size: 13px;
+      transition: color 0.2s;
+    }
+
+    .breadcrumb a:hover {
+      color: #fff;
+    }
+
+    .breadcrumb .sep {
+      color: rgba(255, 255, 255, 0.35);
+      font-size: 12px;
+    }
+
+    .breadcrumb span {
+      color: var(--accent-light);
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .page-hero h1 {
+      font-size: clamp(28px, 4vw, 48px);
+      font-weight: 800;
+      color: #fff;
+      line-height: 1.2;
+      margin-bottom: 12px;
+    }
+
+    .page-hero p {
+      color: rgba(255, 255, 255, 0.75);
+      font-size: 16px;
+      max-width: 540px;
+    }
+
+    .hero-stats {
+      display: flex;
+      gap: 32px;
+      margin-top: 28px;
+      flex-wrap: wrap;
+    }
+
+    .hs-item {
+      text-align: center;
+    }
+
+    .hs-num {
+      font-size: 28px;
+      font-weight: 800;
+      color: var(--accent-light);
+      line-height: 1;
+    }
+
+    .hs-lbl {
+      font-size: 12px;
+      color: rgba(255, 255, 255, 0.65);
+      margin-top: 3px;
+    }
+
+    /* .page-hero-wave { position: absolute; bottom: -2px; left: 0; right: 0; } */
+
+    /* FILTER */
+    .filter-section {
+      background: #fff;
+      border-bottom: 1px solid var(--border);
+      padding: 0 24px;
+      position: sticky;
+      top: 68px;
+      z-index: 100;
+      box-shadow: 0 2px 12px rgba(10, 61, 98, 0.06);
+    }
+
+    .filter-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+      padding: 14px 0;
+    }
+
+    .filter-cats {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .filter-btn {
+      padding: 7px 16px;
+      border-radius: 100px;
+      border: 1px solid var(--border);
+      background: #fff;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--muted);
+      cursor: pointer;
+      transition: all 0.2s;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    .filter-btn i {
+      font-size: 10px;
+    }
+
+    .filter-btn.active,
+    .filter-btn:hover {
+      background: var(--primary);
+      color: #fff;
+      border-color: var(--primary);
+    }
+
+    .view-toggle {
+      display: flex;
+      gap: 4px;
+    }
+
+    .view-btn {
+      width: 36px;
+      height: 36px;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      background: var(--bg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .view-btn i {
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    .view-btn.active {
+      background: var(--primary);
+      border-color: var(--primary);
+    }
+
+    .view-btn.active i {
+      color: #fff;
+    }
+
+    /* MAIN */
+    .main-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 40px 24px 80px;
+    }
+
+    /* FEATURED GALLERY (top strip) */
+    .featured-strip {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      grid-template-rows: 280px;
+      gap: 14px;
+      margin-bottom: 40px;
+    }
+
+    .featured-strip .gi-tall {
+      grid-row: span 1;
+    }
+
+    /* GALLERY MASONRY / GRID */
+    .gallery-grid-layout {
+      display: grid;
+      gap: 16px;
+    }
+
+    .gallery-grid-layout.view-grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    .gallery-grid-layout.view-list {
+      grid-template-columns: 1fr;
+    }
+
+    /* GALLERY ITEM */
+    .gallery-item {
+      border-radius: var(--radius-sm);
+      overflow: hidden;
+      position: relative;
+      cursor: pointer;
+      background: var(--dark);
+      transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s;
+    }
+
+    .gallery-item:hover {
+      transform: scale(1.02);
+      box-shadow: 0 16px 48px rgba(10, 61, 98, 0.22);
+      z-index: 2;
+    }
+
+    .gi-thumb-wrap {
+      overflow: hidden;
+      position: relative;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.6s ease;
+      aspect-ratio: 4/3;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.08);
+    }
+
+    .gallery-item.featured-item img {
+      aspect-ratio: unset;
+      height: 100%;
+    }
+
+    /* OVERLAY */
+    .gallery-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(10, 61, 98, 0.92) 0%, rgba(10, 61, 98, 0.35) 55%, transparent 100%);
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-end;
+      padding: 18px;
+      opacity: 0;
+      transition: opacity 0.35s ease;
+    }
+
+    .gallery-item:hover .gallery-overlay {
+      opacity: 1;
+    }
+
+    .go-icon-btn {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.2);
+      border: 1px solid rgba(255, 255, 255, 0.4);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 8px;
+      transform: translateY(6px);
+      transition: transform 0.3s;
+    }
+
+    .go-icon-btn i {
+      font-size: 13px;
+      color: #fff;
+    }
+
+    .gallery-item:hover .go-icon-btn {
+      transform: translateY(0);
+    }
+
+    .go-label {
+      font-size: 13px;
+      font-weight: 700;
+      color: #fff;
+      transform: translateY(6px);
+      transition: transform 0.3s ease 0.04s;
+      line-height: 1.35;
+    }
+
+    .go-sub {
+      font-size: 11px;
+      color: rgba(255, 255, 255, 0.75);
+      margin-top: 3px;
+      transform: translateY(6px);
+      transition: transform 0.3s ease 0.08s;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .go-sub i {
+      font-size: 10px;
+    }
+
+    .gallery-item:hover .go-label,
+    .gallery-item:hover .go-sub {
+      transform: translateY(0);
+    }
+
+    .gi-tag {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      background: rgba(0, 0, 0, 0.55);
+      backdrop-filter: blur(6px);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 100px;
+      padding: 3px 10px;
+      font-size: 11px;
+      font-weight: 700;
+      color: #fff;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .gi-tag i {
+      font-size: 9px;
+      color: var(--accent-light);
+    }
+
+    /* LIST VIEW */
+    .view-list .gallery-item {
+      display: flex;
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      background: #fff;
+      transform: none !important;
+      transition: box-shadow 0.3s, border-color 0.3s;
+    }
+
+    .view-list .gallery-item:hover {
+      box-shadow: var(--shadow-lg);
+      border-color: transparent;
+      transform: none !important;
+    }
+
+    .view-list .gallery-item img {
+      width: 200px;
+      height: 140px;
+      border-radius: var(--radius-sm);
+      flex-shrink: 0;
+      aspect-ratio: unset;
+      object-fit: cover;
+    }
+
+    .view-list .gallery-overlay {
+      display: none;
+    }
+
+    .view-list .gi-tag {
+      position: relative;
+      top: unset;
+      left: unset;
+      background: rgba(10, 61, 98, 0.1);
+      color: var(--primary);
+      border: 1px solid rgba(10, 61, 98, 0.15);
+      backdrop-filter: none;
+      display: inline-flex;
+      margin-bottom: 8px;
+    }
+
+    .view-list .gi-tag i {
+      color: var(--primary);
+    }
+
+    .gi-list-body {
+      padding: 20px 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .gi-list-title {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--dark);
+      margin-bottom: 8px;
+      line-height: 1.4;
+    }
+
+    .gi-list-desc {
+      font-size: 13.5px;
+      color: var(--muted);
+      line-height: 1.65;
+      margin-bottom: 12px;
+    }
+
+    .gi-list-meta {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .gi-list-meta span {
+      font-size: 12px;
+      color: var(--muted);
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .gi-list-meta i {
+      font-size: 11px;
+    }
+
+    .gi-view-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--primary);
+      font-size: 13px;
+      font-weight: 700;
+      text-decoration: none;
+      transition: gap 0.2s;
+    }
+
+    .gi-view-btn:hover {
+      gap: 9px;
+    }
+
+    /* SECTION LABELS */
+    .gallery-section-label {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 20px;
+      margin-top: 40px;
+    }
+
+    .gallery-section-label h3 {
+      font-size: 17px;
+      font-weight: 800;
+      color: var(--dark);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .gallery-section-label h3 i {
+      color: var(--primary);
+    }
+
+    .gallery-section-label span {
+      font-size: 13px;
+      color: var(--muted);
+      font-weight: 600;
+    }
+
+    /* LOAD MORE */
+    .load-more-wrap {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .load-more-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      background: #fff;
+      border: 1px solid var(--border);
+      color: var(--primary);
+      padding: 13px 28px;
+      border-radius: 12px;
+      font-size: 14px;
+      font-weight: 700;
+      cursor: pointer;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      transition: all 0.25s;
+    }
+
+    .load-more-btn:hover {
+      background: var(--primary);
+      color: #fff;
+      border-color: var(--primary);
+    }
+
+    .load-more-btn i {
+      font-size: 13px;
+    }
+
+    /* UPLOAD CTA */
+    .upload-cta {
+      background: linear-gradient(135deg, var(--primary), var(--primary-light));
+      border-radius: 20px;
+      padding: 44px 40px;
+      text-align: center;
+      margin-top: 56px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .upload-cta::before {
+      content: '';
+      position: absolute;
+      top: -60px;
+      right: -60px;
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.06);
+    }
+
+    .upload-cta::after {
+      content: '';
+      position: absolute;
+      bottom: -40px;
+      left: -40px;
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      background: rgba(232, 160, 39, 0.1);
+    }
+
+    .upload-cta h3 {
+      font-size: 24px;
+      font-weight: 800;
+      color: #fff;
+      margin-bottom: 10px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .upload-cta p {
+      color: rgba(255, 255, 255, 0.75);
+      font-size: 15px;
+      max-width: 480px;
+      margin: 0 auto 28px;
+      position: relative;
+      z-index: 1;
+      line-height: 1.7;
+    }
+
+    .upload-cta-btns {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      position: relative;
+      z-index: 1;
+    }
+
+    .btn-accent {
+      background: var(--accent);
+      color: var(--dark);
+      padding: 13px 26px;
+      border-radius: 12px;
+      font-weight: 700;
+      font-size: 14px;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.25s;
+    }
+
+    .btn-accent:hover {
+      background: var(--accent-light);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(232, 160, 39, 0.4);
+    }
+
+    .btn-outline-white {
+      background: rgba(255, 255, 255, 0.12);
+      color: #fff;
+      padding: 13px 26px;
+      border-radius: 12px;
+      font-weight: 600;
+      font-size: 14px;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      transition: all 0.25s;
+    }
+
+    .btn-outline-white:hover {
+      background: rgba(255, 255, 255, 0.22);
+      transform: translateY(-2px);
+    }
+
+    /* LIGHTBOX */
+    .lightbox {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 2000;
+      background: rgba(5, 15, 30, 0.96);
+      backdrop-filter: blur(14px);
+      align-items: center;
+      justify-content: center;
+    }
+
+    .lightbox.open {
+      display: flex;
+    }
+
+    .lb-inner {
+      position: relative;
+      max-width: 92vw;
+      max-height: 92vh;
+    }
+
+    .lb-inner img {
+      max-width: 88vw;
+      max-height: 82vh;
+      border-radius: 14px;
+      object-fit: contain;
+      box-shadow: 0 32px 80px rgba(0, 0, 0, 0.6);
+      animation: lb-in 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    @keyframes lb-in {
+      from {
+        transform: scale(0.88);
+        opacity: 0;
+      }
+
+      to {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    .lb-close {
+      position: absolute;
+      top: -18px;
+      right: -18px;
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: #fff;
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+      transition: transform 0.2s;
+    }
+
+    .lb-close i {
+      font-size: 16px;
+      color: var(--dark);
+    }
+
+    .lb-close:hover {
+      transform: scale(1.1) rotate(90deg);
+    }
+
+    .lb-nav {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.15);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      color: #fff;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.2s;
+      backdrop-filter: blur(8px);
+    }
+
+    .lb-nav:hover {
+      background: rgba(255, 255, 255, 0.28);
+      transform: translateY(-50%) scale(1.1);
+    }
+
+    .lb-nav i {
+      font-size: 16px;
+    }
+
+    .lb-prev {
+      left: -62px;
+    }
+
+    .lb-next {
+      right: -62px;
+    }
+
+    .lb-info {
+      position: absolute;
+      bottom: -70px;
+      left: 0;
+      right: 0;
+      text-align: center;
+    }
+
+    .lb-caption {
+      color: rgba(255, 255, 255, 0.88);
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 5px;
+    }
+
+    .lb-sub {
+      color: rgba(255, 255, 255, 0.5);
+      font-size: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .lb-counter {
+      background: rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 100px;
+      padding: 3px 12px;
+      font-size: 12px;
+      font-weight: 700;
+      color: #fff;
+      position: absolute;
+      top: -18px;
+      left: -18px;
+    }
+
+    /* FADE IN */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.55s ease, transform 0.55s ease;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .fade-in-delay-1 {
+      transition-delay: 0.08s;
+    }
+
+    .fade-in-delay-2 {
+      transition-delay: 0.16s;
+    }
+
+    .fade-in-delay-3 {
+      transition-delay: 0.24s;
+    }
+
+    .fade-in-delay-4 {
+      transition-delay: 0.32s;
+    }
+
+    /* FOOTER */
+    footer {
+      background: var(--dark);
+    }
+
+    .footer-bottom {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 28px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 13px;
+      color: rgba(255, 255, 255, 0.4);
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .gov-badge {
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 6px 14px;
+      border-radius: 8px;
+      font-size: 11px;
+      font-weight: 600;
+      color: rgba(255, 255, 255, 0.6);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .gov-badge i {
+      font-size: 12px;
+      color: var(--accent-light);
+    }
+
+    .footer-logos {
+      display: flex;
+      gap: 8px;
+    }
+
+    /* RESPONSIVE */
+    @media(max-width: 1024px) {
+      .gallery-grid-layout.view-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .featured-strip {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 220px;
+      }
+
+      .featured-strip .gi-featured-main {
+        grid-column: span 2;
+      }
+    }
+
+    @media(max-width: 768px) {
+      .nav-links {
+        display: none;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+
+      .gallery-grid-layout.view-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .featured-strip {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+      }
+
+      .featured-strip .gi-featured-main {
+        grid-column: unset;
+        height: 240px;
+      }
+
+      .featured-strip .gallery-item {
+        height: 180px;
+      }
+
+      .lb-prev {
+        left: -8px;
+      }
+
+      .lb-next {
+        right: -8px;
+      }
+
+      .filter-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .view-list .gallery-item {
+        flex-direction: column;
+      }
+
+      .view-list .gallery-item img {
+        width: 100%;
+        height: 200px;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+        gap: 12px;
+        text-align: center;
+      }
+
+      .footer-logos {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .upload-cta {
+        padding: 32px 24px;
+      }
+    }
+
+    @media(max-width: 480px) {
+      .gallery-grid-layout.view-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <div class="logo-icon"><i class="fa-solid fa-landmark"></i></div>
+        <div class="logo-text">
+          <strong>Digitalisasi Bansos</strong>
+          <span>Pemerintah Kabupaten Ogan Ilir</span>
+        </div>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html#organisasi"><i class="fa-solid fa-sitemap"></i> Organisasi</a></li>
+        <li><a href="index.html#dokumen"><i class="fa-solid fa-folder-open"></i> Dokumen</a></li>
+        <li><a href="berita-list.html"><i class="fa-solid fa-newspaper"></i> Berita</a></li>
+        <li><a href="galeri.html" class="active"><i class="fa-solid fa-images"></i> Galeri</a></li>
+        <li><a href="index.html#kontak"><i class="fa-solid fa-envelope"></i> Kontak</a></li>
+        <li><a href="index.html#cara-daftar" class="nav-cta"><i class="fa-solid fa-circle-check"></i> Panduan</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html"><i class="fa-solid fa-house"></i> Beranda</a>
+    <a href="berita-list.html"><i class="fa-solid fa-newspaper"></i> Berita</a>
+    <a href="galeri.html"><i class="fa-solid fa-images"></i> Galeri</a>
+    <a href="index.html#kontak"><i class="fa-solid fa-envelope"></i> Kontak</a>
+  </div>
+
+  <!-- PAGE HERO -->
+  <div class="page-hero">
+    <div class="page-hero-grid"></div>
+    <div class="page-hero-inner">
+      <div class="breadcrumb">
+        <a href="index.html"><i class="fa-solid fa-house"></i> Beranda</a>
+        <span class="sep"><i class="fa-solid fa-chevron-right"></i></span>
+        <span>Galeri Dokumentasi</span>
+      </div>
+      <h1>Galeri Dokumentasi Kegiatan</h1>
+      <p>Kumpulan foto dan dokumentasi resmi kegiatan penyaluran bantuan sosial, sosialisasi program, dan pelatihan di
+        seluruh wilayah Kabupaten Ogan Ilir.</p>
+    </div>
+  </div>
+
+  <!-- FILTER BAR -->
+  <div class="filter-section">
+    <div class="filter-inner">
+      <div class="filter-cats">
+        <button class="filter-btn active" onclick="filterGallery(this,'semua')"><i class="fa-solid fa-border-all"></i>
+          Semua</button>
+        <button class="filter-btn" onclick="filterGallery(this,'distribusi')"><i
+            class="fa-solid fa-hand-holding-heart"></i> Distribusi Bansos</button>
+        <button class="filter-btn" onclick="filterGallery(this,'sosialisasi')"><i
+            class="fa-solid fa-person-chalkboard"></i> Sosialisasi</button>
+        <button class="filter-btn" onclick="filterGallery(this,'bimtek')"><i class="fa-solid fa-chalkboard-user"></i>
+          Bimtek</button>
+        <button class="filter-btn" onclick="filterGallery(this,'biometrik')"><i class="fa-solid fa-fingerprint"></i>
+          Perekaman Biometrik</button>
+        <button class="filter-btn" onclick="filterGallery(this,'rapat')"><i class="fa-solid fa-people-arrows"></i> Rapat
+          & Koordinasi</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- MAIN CONTENT -->
+  <div class="main-content">
+
+    <!-- FEATURED STRIP -->
+    <div class="fade-in">
+      <div class="gallery-section-label">
+        <h3><i class="fa-solid fa-star"></i> Foto Unggulan</h3>
+        <span>Dokumentasi kegiatan terbaru</span>
+      </div>
+      <div class="featured-strip">
+        <div class="gallery-item gi-featured-main" data-cat="distribusi"
+          data-src="https://images.unsplash.com/photo-1593113598332-cd288d649433?w=1400&q=90&auto=format&fit=crop"
+          data-caption="Penyaluran Bantuan Sosial kepada KPM di Kecamatan Indralaya" data-date="15 Des 2026"
+          data-idx="0">
+          <div class="gi-tag"><i class="fa-solid fa-star"></i> Unggulan</div>
+          <img src="https://images.unsplash.com/photo-1593113598332-cd288d649433?w=900&q=80&auto=format&fit=crop"
+            alt="Penyaluran Bansos" loading="lazy" style="height:100%;aspect-ratio:unset;">
+          <div class="gallery-overlay">
+            <div class="go-icon-btn"><i class="fa-solid fa-expand"></i></div>
+            <div class="go-label">Penyaluran Bantuan Sosial kepada KPM</div>
+            <div class="go-sub"><i class="fa-solid fa-location-dot"></i> Kecamatan Indralaya &nbsp;·&nbsp; <i
+                class="fa-regular fa-calendar"></i> 15 Des 2026</div>
+          </div>
+        </div>
+        <div class="gallery-item" data-cat="bimtek"
+          data-src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=1200&q=90&auto=format&fit=crop"
+          data-caption="Bimtek Operator Desa se-Kabupaten Ogan Ilir" data-date="10 Des 2026" data-idx="1">
+          <div class="gi-tag"><i class="fa-solid fa-chalkboard-user"></i> Bimtek</div>
+          <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=600&q=80&auto=format&fit=crop"
+            alt="Bimtek Operator" loading="lazy" style="height:100%;aspect-ratio:unset;">
+          <div class="gallery-overlay">
+            <div class="go-icon-btn"><i class="fa-solid fa-expand"></i></div>
+            <div class="go-label">Bimtek Operator Desa</div>
+            <div class="go-sub"><i class="fa-solid fa-location-dot"></i> Aula Kantor Bupati &nbsp;·&nbsp; <i
+                class="fa-regular fa-calendar"></i> 10 Des 2026</div>
+          </div>
+        </div>
+        <div class="gallery-item" data-cat="sosialisasi"
+          data-src="https://images.unsplash.com/photo-1531206715517-5c0ba140b2b8?w=1200&q=90&auto=format&fit=crop"
+          data-caption="Sosialisasi Program Bansos kepada Warga Desa" data-date="5 Des 2026" data-idx="2">
+          <div class="gi-tag"><i class="fa-solid fa-person-chalkboard"></i> Sosialisasi</div>
+          <img src="https://images.unsplash.com/photo-1531206715517-5c0ba140b2b8?w=600&q=80&auto=format&fit=crop"
+            alt="Sosialisasi Desa" loading="lazy" style="height:100%;aspect-ratio:unset;">
+          <div class="gallery-overlay">
+            <div class="go-icon-btn"><i class="fa-solid fa-expand"></i></div>
+            <div class="go-label">Sosialisasi kepada Warga Desa</div>
+            <div class="go-sub"><i class="fa-solid fa-location-dot"></i> Kecamatan Pemulutan &nbsp;·&nbsp; <i
+                class="fa-regular fa-calendar"></i> 5 Des 2026</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ALBUM GRID -->
+    <div class="gallery-section-label fade-in">
+      <h3><i class="fa-solid fa-images"></i> Semua Dokumentasi</h3>
+      <span id="photoCount">Menampilkan 12 foto</span>
+    </div>
+
+    <div class="gallery-grid-layout view-grid fade-in" id="galleryGrid">
+
+      <!-- ITEM 1 -->
+      <div class="gallery-item" data-cat="distribusi"
+        data-src="https://images.unsplash.com/photo-1573497620053-ea5300f94f21?w=1200&q=90&auto=format&fit=crop"
+        data-caption="Bupati Ogan Ilir secara resmi menyerahkan bantuan kepada KPM PKH" data-date="18 Des 2026"
+        data-idx="3">
+        <div class="gi-tag"><i class="fa-solid fa-people-roof"></i> PKH</div>
+        <div class="gi-thumb-wrap">
+          <img src="https://images.unsplash.com/photo-1573497620053-ea5300f94f21?w=600&q=80&auto=format&fit=crop"
+            alt="Penyerahan PKH" loading="lazy">
+        </div>
+        <div class="gallery-overlay">
+          <div class="go-icon-btn"><i class="fa-solid fa-expand"></i></div>
+          <div class="go-label">Penyerahan Bantuan PKH</div>
+          <div class="go-sub"><i class="fa-regular fa-calendar"></i> 18 Des 2026</div>
+        </div>
+        <div class="gi-list-body">
+          <div class="gi-tag"><i class="fa-solid fa-people-roof"></i> PKH</div>
+          <div class="gi-list-title">Penyerahan Bantuan PKH oleh Bupati Ogan Ilir</div>
+          <div class="gi-list-desc">Bupati Panca Wijaya Akbar secara simbolis menyerahkan bantuan PKH kepada perwakilan
+            KPM dalam acara peluncuran sistem digitalisasi bansos.</div>
+          <div class="gi-list-meta">
+            <span><i class="fa-regular fa-calendar"></i> 18 Des 2026</span>
+            <span><i class="fa-solid fa-location-dot"></i> Aula Kantor Bupati</span>
+          </div>
+          <a href="#" class="gi-view-btn" style="margin-top:10px;">Lihat Foto <i
+              class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <!-- ITEM 2 -->
+      <div class="gallery-item" data-cat="biometrik"
+        data-src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=1200&q=90&auto=format&fit=crop"
+        data-caption="Perekaman biometrik sidik jari warga calon penerima bansos" data-date="14 Des 2026" data-idx="4">
+        <div class="gi-tag"><i class="fa-solid fa-fingerprint"></i> Biometrik</div>
+        <div class="gi-thumb-wrap">
+          <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=600&q=80&auto=format&fit=crop"
+            alt="Perekaman Biometrik" loading="lazy">
+        </div>
+        <div class="gallery-overlay">
+          <div class="go-icon-btn"><i class="fa-solid fa-expand"></i></div>
+          <div class="go-label">Perekaman Biometrik Warga</div>
+          <div class="go-sub"><i class="fa-regular fa-calendar"></i> 14 Des 2026</div>
+        </div>
+        <div class="gi-list-body">
+          <div class="gi-tag"><i class="fa-solid fa-fingerprint"></i> Biometrik</div>
+          <div class="gi-list-title">Perekaman Biometrik Sidik Jari Calon KPM</div>
+          <div class="gi-list-desc">Tim Dukcapil melaksanakan perekaman biometrik bagi warga yang mendaftar sebagai
+            calon penerima bantuan sosial secara digital.</div>
+          <div class="gi-list-meta">
+            <span><i class="fa-regular fa-calendar"></i> 14 Des 2026</span>
+            <span><i class="fa-solid fa-location-dot"></i> Kantor Desa Indralaya</span>
+          </div>
+          <a href="#" class="gi-view-btn" style="margin-top:10px;">Lihat Foto <i
+              class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <!-- ITEM 3 -->
+      <div class="gallery-item" data-cat="sosialisasi"
+        data-src="https://images.unsplash.com/photo-1588072432836-e10032774350?w=1200&q=90&auto=format&fit=crop"
+        data-caption="Sosialisasi Program Indonesia Pintar kepada siswa dan orang tua" data-date="12 Des 2026"
+        data-idx="5">
+        <div class="gi-tag"><i class="fa-solid fa-graduation-cap"></i> PIP</div>
+        <div class="gi-thumb-wrap">
+          <img src="https://images.unsplash.com/photo-1588072432836-e10032774350?w=600&q=80&auto=format&fit=crop"
+            alt="Sosialisasi PIP" loading="lazy">
+        </div>
+        <div class="gallery-overlay">
+          <div class="go-icon-btn"><i class="fa-solid fa-expand"></i></div>
+          <div class="go-label">Sosialisasi Program Indonesia Pintar</div>
+          <div class="go-sub"><i class="fa-regular fa-calendar"></i> 12 Des 2026</div>
+        </div>
+        <div class="gi-list-body">
+          <div class="gi-tag"><i class="fa-solid fa-graduation-cap"></i> PIP</div>
+          <div class="gi-list-title">Sosialisasi Program Indonesia Pintar kepada Siswa</div>
+          <div class="gi-list-desc">Pendamping PKH mensosialisasikan Program Indonesia Pintar kepada siswa dan orang tua
+            wali di SDN 12 Indralaya.</div>
+          <div class="gi-list-meta">
+            <span><i class="fa-regular fa-calendar"></i> 12 Des 2026</span>
+            <span><i class="fa-solid fa-location-dot"></i> SDN 12 Indralaya</span>
+          </div>
+          <a href="#" class="gi-view-btn" style="margin-top:10px;">Lihat Foto <i
+              class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <!-- ITEM 4 -->
+      <div class="gallery-item" data-cat="distribusi"
+        data-src="https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?w=1200&q=90&auto=format&fit=crop"
+        data-caption="Penyaluran bantuan program ATENSI untuk lansia Kabupaten Ogan Ilir" data-date="10 Des 2026"
+        data-idx="6">
+        <div class="gi-tag"><i class="fa-solid fa-heart-pulse"></i> ATENSI</div>
+        <div class="gi-thumb-wrap">
+          <img src="https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?w=600&q=80&auto=format&fit=crop"
+            alt="ATENSI Lansia" loading="lazy">
+        </div>
+        <div class="gallery-overlay">
+          <div class="go-icon-btn"><i class="fa-solid fa-expand"></i></div>
+          <div class="go-label">Penyaluran ATENSI untuk Lansia</div>
+          <div class="go-sub"><i class="fa-regular fa-calendar"></i> 10 Des 2026</div>
+        </div>
+        <div class="gi-list-body">
+          <div class="gi-tag"><i class="fa-solid fa-heart-pulse"></i> ATENSI</div>
+          <div class="gi-list-title">Penyaluran Program ATENSI untuk Warga Lansia</div>
+          <div class="gi-list-desc">Bantuan rehabilitasi sosial program ATENSI disalurkan kepada 1.200 lansia dan
+            penyandang disabilitas di Kabupaten Ogan Ilir.</div>
+          <div class="gi-list-meta">
+            <span><i class="fa-regular fa-calendar"></i> 10 Des 2026</span>
+            <span><i class="fa-solid fa-location-dot"></i> Kecamatan Tanjung Batu</span>
+          </div>
+          <a href="#" class="gi-view-btn" style="margin-top:10px;">Lihat Foto <i
+              class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <!-- ITEM 5 -->
+      <div class="gallery-item" data-cat="bimtek"
+        data-src="https://images.unsplash.com/photo-1556761175-b413da4baf72?w=1200&q=90&auto=format&fit=crop"
+        data-caption="Bimtek penggunaan sistem DTKS Online untuk operator kelurahan" data-date="8 Des 2026"
+        data-idx="7">
+        <div class="gi-tag"><i class="fa-solid fa-laptop"></i> Bimtek</div>
+        <div class="gi-thumb-wrap">
+          <img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?w=600&q=80&auto=format&fit=crop"
+            alt="Bimtek DTKS" loading="lazy"
+            onerror="this.src='https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=600&q=80'">
+        </div>
+        <div class="gallery-overlay">
+          <div class="go-icon-btn"><i class="fa-solid fa-expand"></i></div>
+          <div class="go-label">Bimtek DTKS Online</div>
+          <div class="go-sub"><i class="fa-regular fa-calendar"></i> 8 Des 2026</div>
+        </div>
+        <div class="gi-list-body">
+          <div class="gi-tag"><i class="fa-solid fa-laptop"></i> Bimtek</div>
+          <div class="gi-list-title">Bimtek Penggunaan Sistem DTKS Online</div>
+          <div class="gi-list-desc">Operator kelurahan mengikuti bimbingan teknis penggunaan sistem DTKS Online yang
+            difasilitasi oleh Diskominfo Ogan Ilir.</div>
+          <div class="gi-list-meta">
+            <span><i class="fa-regular fa-calendar"></i> 8 Des 2026</span>
+            <span><i class="fa-solid fa-location-dot"></i> Kantor Diskominfo</span>
+          </div>
+          <a href="#" class="gi-view-btn" style="margin-top:10px;">Lihat Foto <i
+              class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <!-- ITEM 6 -->
+      <div class="gallery-item" data-cat="rapat"
+        data-src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=1200&q=90&auto=format&fit=crop"
+        data-caption="Rapat koordinasi lintas OPD Tim Pelaksana Digitalisasi Bansos" data-date="5 Des 2026"
+        data-idx="8">
+        <div class="gi-tag"><i class="fa-solid fa-people-arrows"></i> Koordinasi</div>
+        <div class="gi-thumb-wrap">
+          <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=600&q=80&auto=format&fit=crop"
+            alt="Rapat Koordinasi" loading="lazy"
+            onerror="this.src='https://images.unsplash.com/photo-1531206715517-5c0ba140b2b8?w=600&q=80'">
+        </div>
+        <div class="gallery-overlay">
+          <div class="go-icon-btn"><i class="fa-solid fa-expand"></i></div>
+          <div class="go-label">Rapat Koordinasi Lintas OPD</div>
+          <div class="go-sub"><i class="fa-regular fa-calendar"></i> 5 Des 2026</div>
+        </div>
+        <div class="gi-list-body">
+          <div class="gi-tag"><i class="fa-solid fa-people-arrows"></i> Koordinasi</div>
+          <div class="gi-list-title">Rapat Koordinasi Lintas OPD Tim Pelaksana Digitalisasi</div>
+          <div class="gi-list-desc">Rapat koordinasi bulanan Tim Pelaksana Digitalisasi Bansos yang melibatkan seluruh
+            OPD terkait dipimpin oleh Sekretaris Daerah.</div>
+          <div class="gi-list-meta">
+            <span><i class="fa-regular fa-calendar"></i> 5 Des 2026</span>
+            <span><i class="fa-solid fa-location-dot"></i> Ruang Rapat Setda</span>
+          </div>
+          <a href="#" class="gi-view-btn" style="margin-top:10px;">Lihat Foto <i
+              class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <!-- ITEM 7 -->
+      <div class="gallery-item" data-cat="distribusi"
+        data-src="https://images.unsplash.com/photo-1542838132-92c53300491e?w=1200&q=90&auto=format&fit=crop"
+        data-caption="Warga penerima BPNT berbelanja di E-Warong dengan KKS" data-date="2 Des 2026" data-idx="9">
+        <div class="gi-tag"><i class="fa-solid fa-basket-shopping"></i> BPNT</div>
+        <div class="gi-thumb-wrap">
+          <img src="https://images.unsplash.com/photo-1542838132-92c53300491e?w=600&q=80&auto=format&fit=crop"
+            alt="E-Warong BPNT" loading="lazy">
+        </div>
+        <div class="gallery-overlay">
+          <div class="go-icon-btn"><i class="fa-solid fa-expand"></i></div>
+          <div class="go-label">Warga Berbelanja di E-Warong</div>
+          <div class="go-sub"><i class="fa-regular fa-calendar"></i> 2 Des 2026</div>
+        </div>
+        <div class="gi-list-body">
+          <div class="gi-tag"><i class="fa-solid fa-basket-shopping"></i> BPNT</div>
+          <div class="gi-list-title">Warga Penerima BPNT Berbelanja di E-Warong</div>
+          <div class="gi-list-desc">Penerima BPNT menggunakan Kartu Keluarga Sejahtera (KKS) untuk berbelanja kebutuhan
+            pangan di E-Warong mitra resmi pemerintah.</div>
+          <div class="gi-list-meta">
+            <span><i class="fa-regular fa-calendar"></i> 2 Des 2026</span>
+            <span><i class="fa-solid fa-location-dot"></i> Kecamatan Rantau Alai</span>
+          </div>
+          <a href="#" class="gi-view-btn" style="margin-top:10px;">Lihat Foto <i
+              class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <!-- ITEM 8 -->
+      <div class="gallery-item" data-cat="sosialisasi"
+        data-src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=1200&q=90&auto=format&fit=crop"
+        data-caption="Sosialisasi penggunaan aplikasi Laberaso-OI kepada warga desa" data-date="28 Nov 2026"
+        data-idx="10">
+        <div class="gi-tag"><i class="fa-solid fa-mobile-screen"></i> Sosialisasi</div>
+        <div class="gi-thumb-wrap">
+          <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=600&q=80&auto=format&fit=crop"
+            alt="Sosialisasi Aplikasi" loading="lazy">
+        </div>
+        <div class="gallery-overlay">
+          <div class="go-icon-btn"><i class="fa-solid fa-expand"></i></div>
+          <div class="go-label">Sosialisasi Aplikasi Laberaso-OI</div>
+          <div class="go-sub"><i class="fa-regular fa-calendar"></i> 28 Nov 2026</div>
+        </div>
+        <div class="gi-list-body">
+          <div class="gi-tag"><i class="fa-solid fa-mobile-screen"></i> Sosialisasi</div>
+          <div class="gi-list-title">Sosialisasi Penggunaan Aplikasi Laberaso-OI</div>
+          <div class="gi-list-desc">Tim sosialisasi membantu warga memahami cara menggunakan aplikasi Laberaso-OI untuk
+            mendaftar dan memantau status kepesertaan bansos.</div>
+          <div class="gi-list-meta">
+            <span><i class="fa-regular fa-calendar"></i> 28 Nov 2026</span>
+            <span><i class="fa-solid fa-location-dot"></i> Desa Tanjung Gelam</span>
+          </div>
+          <a href="#" class="gi-view-btn" style="margin-top:10px;">Lihat Foto <i
+              class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <!-- ITEM 9 -->
+      <div class="gallery-item" data-cat="biometrik"
+        data-src="https://images.unsplash.com/photo-1607863680198-23d4b2565df0?w=1200&q=90&auto=format&fit=crop"
+        data-caption="Petugas Dukcapil melakukan verifikasi data kependudukan warga" data-date="25 Nov 2026"
+        data-idx="11" onerror="">
+        <div class="gi-tag"><i class="fa-solid fa-id-card"></i> Dukcapil</div>
+        <div class="gi-thumb-wrap">
+          <img src="https://images.unsplash.com/photo-1607863680198-23d4b2565df0?w=600&q=80&auto=format&fit=crop"
+            alt="Verifikasi Dukcapil" loading="lazy"
+            onerror="this.src='https://images.unsplash.com/photo-1593113598332-cd288d649433?w=600&q=80'">
+        </div>
+        <div class="gallery-overlay">
+          <div class="go-icon-btn"><i class="fa-solid fa-expand"></i></div>
+          <div class="go-label">Verifikasi Data Kependudukan</div>
+          <div class="go-sub"><i class="fa-regular fa-calendar"></i> 25 Nov 2026</div>
+        </div>
+        <div class="gi-list-body">
+          <div class="gi-tag"><i class="fa-solid fa-id-card"></i> Dukcapil</div>
+          <div class="gi-list-title">Verifikasi Data Kependudukan oleh Tim Dukcapil</div>
+          <div class="gi-list-desc">Tim Dinas Dukcapil melakukan verifikasi dan pemutakhiran data kependudukan warga
+            calon penerima bansos secara langsung di lapangan.</div>
+          <div class="gi-list-meta">
+            <span><i class="fa-regular fa-calendar"></i> 25 Nov 2026</span>
+            <span><i class="fa-solid fa-location-dot"></i> Kecamatan Muara Kuang</span>
+          </div>
+          <a href="#" class="gi-view-btn" style="margin-top:10px;">Lihat Foto <i
+              class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <!-- ITEM 10 -->
+      <div class="gallery-item" data-cat="rapat"
+        data-src="https://images.unsplash.com/photo-1560439514-4e9645039924?w=1200&q=90&auto=format&fit=crop"
+        data-caption="Evaluasi triwulan Tim Pelaksana Digitalisasi Bansos bersama Inspektorat" data-date="20 Nov 2026"
+        data-idx="12">
+        <div class="gi-tag"><i class="fa-solid fa-magnifying-glass-chart"></i> Evaluasi</div>
+        <div class="gi-thumb-wrap">
+          <img src="https://images.unsplash.com/photo-1560439514-4e9645039924?w=600&q=80&auto=format&fit=crop"
+            alt="Evaluasi Program" loading="lazy"
+            onerror="this.src='https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=600&q=80'">
+        </div>
+        <div class="gallery-overlay">
+          <div class="go-icon-btn"><i class="fa-solid fa-expand"></i></div>
+          <div class="go-label">Evaluasi Triwulan Program Bansos</div>
+          <div class="go-sub"><i class="fa-regular fa-calendar"></i> 20 Nov 2026</div>
+        </div>
+        <div class="gi-list-body">
+          <div class="gi-tag"><i class="fa-solid fa-magnifying-glass-chart"></i> Evaluasi</div>
+          <div class="gi-list-title">Evaluasi Triwulan Program Digitalisasi Bansos</div>
+          <div class="gi-list-desc">Tim Evaluasi dari Inspektorat Daerah bersama Bappeda melaksanakan evaluasi capaian
+            triwulan ketiga program digitalisasi bansos.</div>
+          <div class="gi-list-meta">
+            <span><i class="fa-regular fa-calendar"></i> 20 Nov 2026</span>
+            <span><i class="fa-solid fa-location-dot"></i> Ruang Inspektorat</span>
+          </div>
+          <a href="#" class="gi-view-btn" style="margin-top:10px;">Lihat Foto <i
+              class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <!-- ITEM 11 -->
+      <div class="gallery-item" data-cat="distribusi"
+        data-src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=1200&q=90&auto=format&fit=crop"
+        data-caption="Pendamping PKH mendampingi KPM saat pengambilan bantuan" data-date="15 Nov 2026" data-idx="13">
+        <div class="gi-tag"><i class="fa-solid fa-people-roof"></i> PKH</div>
+        <div class="gi-thumb-wrap">
+          <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=600&q=80&auto=format&fit=crop"
+            alt="Pendamping PKH" loading="lazy">
+        </div>
+        <div class="gallery-overlay">
+          <div class="go-icon-btn"><i class="fa-solid fa-expand"></i></div>
+          <div class="go-label">Pendampingan KPM PKH</div>
+          <div class="go-sub"><i class="fa-regular fa-calendar"></i> 15 Nov 2026</div>
+        </div>
+        <div class="gi-list-body">
+          <div class="gi-tag"><i class="fa-solid fa-people-roof"></i> PKH</div>
+          <div class="gi-list-title">Pendamping PKH Mendampingi KPM Saat Pengambilan Bantuan</div>
+          <div class="gi-list-desc">Pendamping PKH aktif memberikan pendampingan kepada Keluarga Penerima Manfaat saat
+            proses pengambilan dana bantuan.</div>
+          <div class="gi-list-meta">
+            <span><i class="fa-regular fa-calendar"></i> 15 Nov 2026</span>
+            <span><i class="fa-solid fa-location-dot"></i> Bank BRI Indralaya</span>
+          </div>
+          <a href="#" class="gi-view-btn" style="margin-top:10px;">Lihat Foto <i
+              class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <!-- ITEM 12 -->
+      <div class="gallery-item" data-cat="bimtek"
+        data-src="https://images.unsplash.com/photo-1543269865-cbf427effbad?w=1200&q=90&auto=format&fit=crop"
+        data-caption="Peserta Bimtek mendapatkan materi penggunaan sistem Laberaso-OI" data-date="10 Nov 2026"
+        data-idx="14">
+        <div class="gi-tag"><i class="fa-solid fa-display"></i> Bimtek</div>
+        <div class="gi-thumb-wrap">
+          <img src="https://images.unsplash.com/photo-1543269865-cbf427effbad?w=600&q=80&auto=format&fit=crop"
+            alt="Pelatihan Sistem" loading="lazy"
+            onerror="this.src='https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=600&q=80'">
+        </div>
+        <div class="gallery-overlay">
+          <div class="go-icon-btn"><i class="fa-solid fa-expand"></i></div>
+          <div class="go-label">Pelatihan Sistem Laberaso-OI</div>
+          <div class="go-sub"><i class="fa-regular fa-calendar"></i> 10 Nov 2026</div>
+        </div>
+        <div class="gi-list-body">
+          <div class="gi-tag"><i class="fa-solid fa-display"></i> Bimtek</div>
+          <div class="gi-list-title">Peserta Bimtek Mempelajari Sistem Laberaso-OI</div>
+          <div class="gi-list-desc">Peserta bimtek dari 15 kecamatan antusias mengikuti materi penggunaan sistem
+            Laberaso-OI yang dipandu langsung oleh tim teknis Diskominfo.</div>
+          <div class="gi-list-meta">
+            <span><i class="fa-regular fa-calendar"></i> 10 Nov 2026</span>
+            <span><i class="fa-solid fa-location-dot"></i> Gedung Serba Guna Indralaya</span>
+          </div>
+          <a href="#" class="gi-view-btn" style="margin-top:10px;">Lihat Foto <i
+              class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+    </div><!-- end galleryGrid -->
+
+    <!-- LOAD MORE -->
+    <div class="load-more-wrap fade-in">
+      <button class="load-more-btn"><i class="fa-solid fa-rotate"></i> Muat Lebih Banyak Foto</button>
+    </div>
+
+  </div>
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox">
+    <div class="lb-inner">
+      <div class="lb-counter" id="lbCounter">1 / 15</div>
+      <button class="lb-close" id="lbClose"><i class="fa-solid fa-xmark"></i></button>
+      <button class="lb-nav lb-prev" id="lbPrev"><i class="fa-solid fa-chevron-left"></i></button>
+      <button class="lb-nav lb-next" id="lbNext"><i class="fa-solid fa-chevron-right"></i></button>
+      <img src="" alt="" id="lbImg">
+      <div class="lb-info">
+        <div class="lb-caption" id="lbCaption"></div>
+        <div class="lb-sub" id="lbSub"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-bottom">
+      <span><i class="fa-regular fa-copyright"></i> 2026 Pemerintah Kabupaten Ogan Ilir. Hak cipta dilindungi
+        undang-undang.</span>
+      <div class="footer-logos">
+        <span class="gov-badge"><i class="fa-solid fa-globe"></i> PEMKAB OGAN ILIR</span>
+        <span class="gov-badge"><i class="fa-solid fa-globe"></i> DISKOMINFO OGAN ILIR</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- BACK TO TOP -->
+  <button id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})"
+    style="position:fixed;bottom:28px;right:28px;z-index:900;width:48px;height:48px;border-radius:50%;background:var(--primary);border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 24px rgba(10,61,98,0.35);opacity:0;transform:translateY(12px);transition:opacity 0.3s,transform 0.3s;pointer-events:none;">
+    <i class="fa-solid fa-arrow-up" style="color:#fff;font-size:18px;"></i>
+  </button>
+
+  <script>
+    // Navbar
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 20);
+    });
+
+    // Mobile menu
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+    hamburger.addEventListener('click', () => mobileMenu.classList.toggle('open'));
+    document.addEventListener('click', (e) => {
+      if (!hamburger.contains(e.target) && !mobileMenu.contains(e.target)) mobileMenu.classList.remove('open');
+    });
+
+    // Fade in
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+          observer.unobserve(e.target);
+        }
+      });
+    }, {
+      threshold: 0.08
+    });
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+    // Filter gallery
+    function filterGallery(btn, cat) {
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const items = document.querySelectorAll('#galleryGrid .gallery-item');
+      let shown = 0;
+      items.forEach(item => {
+        const match = cat === 'semua' || item.dataset.cat === cat;
+        item.style.display = match ? '' : 'none';
+        if (match) shown++;
+      });
+      document.getElementById('photoCount').textContent = `Menampilkan ${shown} foto`;
+    }
+
+    // View toggle
+    function setView(mode) {
+      const grid = document.getElementById('galleryGrid');
+      document.getElementById('btnGrid').classList.toggle('active', mode === 'grid');
+      document.getElementById('btnList').classList.toggle('active', mode === 'list');
+      grid.className = 'gallery-grid-layout ' + (mode === 'list' ? 'view-list' : 'view-grid');
+    }
+
+    // Collect all gallery items for lightbox
+    function getVisibleItems() {
+      return [...document.querySelectorAll('.gallery-item[data-src]')].filter(el => el.style.display !== 'none');
+    }
+
+    let currentLbIdx = 0;
+
+    function openLightbox(item) {
+      const items = getVisibleItems();
+      currentLbIdx = items.indexOf(item);
+      showLbItem(currentLbIdx);
+      document.getElementById('lightbox').classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function showLbItem(idx) {
+      const items = getVisibleItems();
+      if (!items[idx]) return;
+      const el = items[idx];
+      const img = document.getElementById('lbImg');
+      img.style.opacity = '0';
+      setTimeout(() => {
+        img.src = el.dataset.src;
+        img.style.transition = 'opacity 0.3s';
+        img.style.opacity = '1';
+      }, 100);
+      document.getElementById('lbCaption').textContent = el.dataset.caption || '';
+      const sub = el.dataset.date ? `<i class="fa-regular fa-calendar"></i> ${el.dataset.date}` : '';
+      document.getElementById('lbSub').innerHTML = sub;
+      document.getElementById('lbCounter').textContent = `${idx + 1} / ${items.length}`;
+    }
+
+    function closeLightbox() {
+      document.getElementById('lightbox').classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    document.querySelectorAll('.gallery-item[data-src]').forEach(item => {
+      item.addEventListener('click', () => openLightbox(item));
+    });
+
+    document.getElementById('lbClose').addEventListener('click', closeLightbox);
+    document.getElementById('lightbox').addEventListener('click', (e) => {
+      if (e.target === document.getElementById('lightbox')) closeLightbox();
+    });
+
+    document.getElementById('lbPrev').addEventListener('click', () => {
+      const items = getVisibleItems();
+      currentLbIdx = (currentLbIdx - 1 + items.length) % items.length;
+      showLbItem(currentLbIdx);
+    });
+    document.getElementById('lbNext').addEventListener('click', () => {
+      const items = getVisibleItems();
+      currentLbIdx = (currentLbIdx + 1) % items.length;
+      showLbItem(currentLbIdx);
+    });
+    document.addEventListener('keydown', (e) => {
+      if (!document.getElementById('lightbox').classList.contains('open')) return;
+      if (e.key === 'Escape') closeLightbox();
+      if (e.key === 'ArrowLeft') document.getElementById('lbPrev').click();
+      if (e.key === 'ArrowRight') document.getElementById('lbNext').click();
+    });
+
+    // Smooth img load
+    document.querySelectorAll('img[loading="lazy"]').forEach(img => {
+      img.style.opacity = '0';
+      img.style.transition = 'opacity 0.5s ease';
+      img.addEventListener('load', () => {
+        img.style.opacity = '1';
+      });
+      if (img.complete) img.style.opacity = '1';
+    });
+
+    // Back to top
+    const btt = document.getElementById('backToTop');
+    window.addEventListener('scroll', () => {
+      const show = window.scrollY > 400;
+      btt.style.opacity = show ? '1' : '0';
+      btt.style.transform = show ? 'translateY(0)' : 'translateY(12px)';
+      btt.style.pointerEvents = show ? 'auto' : 'none';
+    });
+  </script>
+</body>
+
+</html>

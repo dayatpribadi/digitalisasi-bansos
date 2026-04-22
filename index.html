@@ -717,6 +717,40 @@
       gap: 10px;
     }
 
+
+    /* LOAD MORE */
+    .load-more-wrap {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .load-more-btn {
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      background: #fff;
+      border: 1px solid var(--border);
+      color: var(--primary);
+      padding: 13px 28px;
+      border-radius: 12px;
+      font-size: 14px;
+      font-weight: 700;
+      cursor: pointer;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      transition: all 0.25s;
+    }
+
+    .load-more-btn:hover {
+      background: var(--primary);
+      color: #fff;
+      border-color: var(--primary);
+    }
+
+    .load-more-btn i {
+      font-size: 13px;
+    }
+
     /* ===== CTA ===== */
     .cta-section {
       background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
@@ -2441,7 +2475,7 @@
   <!-- NAVBAR -->
   <nav id="navbar">
     <div class="nav-inner">
-      <a href="#" class="nav-logo">
+      <a href="index.html" class="nav-logo">
         <div class="logo-icon"><i class="fa-solid fa-landmark"></i></div>
         <div class="logo-text">
           <strong>Digitalisasi Bansos</strong>
@@ -2449,29 +2483,21 @@
         </div>
       </a>
       <ul class="nav-links">
-        <li><a href="#organisasi"><i class="fa-solid fa-sitemap"></i> Organisasi</a></li>
-        <li><a href="#dokumen"><i class="fa-solid fa-folder-open"></i> Dokumen</a></li>
-        <li><a href="#berita"><i class="fa-solid fa-newspaper"></i> Berita</a></li>
-        <li><a href="#kontak"><i class="fa-solid fa-envelope"></i> Kontak</a></li>
-        <li><a href="#cara-daftar" class="nav-cta"><i class="fa-solid fa-circle-check"></i> Panduan Pendaftaran</a></li>
+        <li><a href="index.html#organisasi"><i class="fa-solid fa-sitemap"></i> Organisasi</a></li>
+        <li><a href="index.html#dokumen"><i class="fa-solid fa-folder-open"></i> Dokumen</a></li>
+        <li><a href="berita-list.html"><i class="fa-solid fa-newspaper"></i> Berita</a></li>
+        <li><a href="galeri.html"><i class="fa-solid fa-images"></i> Galeri</a></li>
+        <li><a href="index.html#kontak"><i class="fa-solid fa-envelope"></i> Kontak</a></li>
+        <li><a href="index.html#cara-daftar" class="nav-cta"><i class="fa-solid fa-circle-check"></i> Panduan</a></li>
       </ul>
-      <button class="hamburger" id="hamburger" aria-label="Menu">
-        <span></span><span></span><span></span>
-      </button>
+      <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
     </div>
   </nav>
-
-  <!-- MOBILE MENU -->
   <div class="mobile-menu" id="mobileMenu">
-    <a href="#organisasi"><i class="fa-solid fa-sitemap"></i> Struktur Organisasi</a>
-    <a href="#dokumen"><i class="fa-solid fa-folder-open"></i> Dokumen</a>
-    <a href="#cara-daftar"><i class="fa-solid fa-list-check"></i> Cara Daftar</a>
-    <a href="#berita"><i class="fa-solid fa-newspaper"></i> Berita & Artikel</a>
-    <a href="#galeri"><i class="fa-solid fa-images"></i> Galeri</a>
-    <a href="#kontak"><i class="fa-solid fa-envelope"></i> Kontak</a>
-    <a href="#cara-daftar" style="color:var(--primary);font-weight:700;"><i class="fa-solid fa-circle-check"></i>
-      Panduan
-      Pendaftaran</a>
+    <a href="index.html"><i class="fa-solid fa-house"></i> Beranda</a>
+    <a href="berita-list.html"><i class="fa-solid fa-newspaper"></i> Berita</a>
+    <a href="galeri.html"><i class="fa-solid fa-images"></i> Galeri</a>
+    <a href="index.html#kontak"><i class="fa-solid fa-envelope"></i> Kontak</a>
   </div>
 
   <!-- HERO -->
@@ -3576,7 +3602,7 @@
             <p>Pemerintah Kabupaten Ogan Ilir bersama Kementerian Sosial RI resmi meluncurkan platform digital terpadu
               untuk penyaluran bantuan sosial. Sistem ini mencakup seluruh 237 desa dan memungkinkan warga mengecek
               status kepesertaan secara real-time melalui ponsel.</p>
-            <a href="#" class="news-read">Baca Selengkapnya <i class="fa-solid fa-arrow-right"></i></a>
+            <a href="berita-detail.html" class="news-read">Baca Selengkapnya <i class="fa-solid fa-arrow-right"></i></a>
           </div>
         </div>
         <div class="news-card fade-in fade-in-delay-1">
@@ -3594,7 +3620,7 @@
             <h3>Penyaluran PKH Tahap IV 2026 Mulai Dicairkan via KKS</h3>
             <p>Sebanyak 18.420 KPM PKH di Ogan Ilir telah menerima bantuan tahap empat melalui Kartu Keluarga Sejahtera.
             </p>
-            <a href="#" class="news-read">Baca <i class="fa-solid fa-arrow-right"></i></a>
+            <a href="berita-detail.html" class="news-read">Baca <i class="fa-solid fa-arrow-right"></i></a>
           </div>
         </div>
         <div class="news-card fade-in fade-in-delay-2">
@@ -3612,7 +3638,7 @@
             <h3>Penambahan 45 E-Warong Baru di Kecamatan Terpencil Ogan Ilir</h3>
             <p>Dinas Sosial Ogan Ilir membuka 45 e-warong baru untuk memperluas jangkauan penerima BPNT di wilayah
               terpencil.</p>
-            <a href="#" class="news-read">Baca <i class="fa-solid fa-arrow-right"></i></a>
+            <a href="berita-detail.html" class="news-read">Baca <i class="fa-solid fa-arrow-right"></i></a>
           </div>
         </div>
         <div class="news-card fade-in fade-in-delay-3">
@@ -3630,7 +3656,7 @@
             <h3>Sosialisasi Digitalisasi Bansos Menjangkau 5.000 Warga Desa</h3>
             <p>Tim sosialisasi gabungan Kemensos dan Pemkab Ogan Ilir berhasil menjangkau ribuan warga dalam serangkaian
               roadshow desa.</p>
-            <a href="#" class="news-read">Baca <i class="fa-solid fa-arrow-right"></i></a>
+            <a href="berita-detail.html" class="news-read">Baca <i class="fa-solid fa-arrow-right"></i></a>
           </div>
         </div>
         <div class="news-card fade-in fade-in-delay-4">
@@ -3648,9 +3674,13 @@
             <h3>Program ATENSI Bantu 1.200 Lansia dan Penyandang Disabilitas di Ogan Ilir</h3>
             <p>Kemensos melalui program ATENSI menyalurkan bantuan rehabilitasi sosial kepada ribuan kelompok rentan di
               wilayah Ogan Ilir.</p>
-            <a href="#" class="news-read">Baca <i class="fa-solid fa-arrow-right"></i></a>
+            <a href="berita-detail.html" class="news-read">Baca <i class="fa-solid fa-arrow-right"></i></a>
           </div>
         </div>
+      </div>
+
+      <div class="load-more-wrap fade-in">
+        <a href="berita-list.html" class="load-more-btn"><i class="fa-solid fa-rotate"></i> Berita Lainnya</a>
       </div>
     </div>
   </section>
@@ -3720,6 +3750,10 @@
             <div class="go-sub"><i class="fa-solid fa-tag"></i> Beasiswa Pendidikan</div>
           </div>
         </div>
+      </div>
+
+      <div class="load-more-wrap fade-in">
+        <a href="galeri.html" class="load-more-btn"><i class="fa-solid fa-rotate"></i> Galeri Lainnya</a>
       </div>
     </div>
   </section>

@@ -1,0 +1,1602 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Berita & Artikel – BansosDigi Ogan Ilir</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Lora:ital,wght@0,400;0,600;1,400&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    :root {
+      --primary: #0A3D62;
+      --primary-light: #1565C0;
+      --accent: #E8A027;
+      --accent-light: #FFD07B;
+      --green: #1A7F4B;
+      --green-light: #27AE60;
+      --bg: #F5F7FA;
+      --white: #FFFFFF;
+      --dark: #0D1B2A;
+      --text: #2C3E50;
+      --muted: #6B7C93;
+      --border: #DDE3EC;
+      --shadow: 0 4px 24px rgba(10, 61, 98, 0.10);
+      --shadow-lg: 0 12px 48px rgba(10, 61, 98, 0.16);
+      --radius: 16px;
+      --radius-sm: 10px;
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* NAVBAR */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      background: rgba(255, 255, 255, 0.93);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+      transition: box-shadow 0.3s;
+    }
+
+    nav.scrolled {
+      box-shadow: var(--shadow);
+    }
+
+    .nav-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 24px;
+      height: 68px;
+    }
+
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+    }
+
+    .logo-icon {
+      width: 42px;
+      height: 42px;
+      background: linear-gradient(135deg, var(--primary), var(--primary-light));
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .logo-icon i {
+      color: #fff;
+      font-size: 18px;
+    }
+
+    .logo-text strong {
+      font-size: 15px;
+      font-weight: 800;
+      color: var(--primary);
+      display: block;
+      line-height: 1.2;
+    }
+
+    .logo-text span {
+      font-size: 11px;
+      color: var(--muted);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      font-size: 13.5px;
+      font-weight: 500;
+      color: var(--text);
+      padding: 8px 13px;
+      border-radius: 8px;
+      transition: all 0.2s;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      background: var(--bg);
+      color: var(--primary);
+    }
+
+    .nav-links a i {
+      font-size: 11px;
+      opacity: 0.7;
+    }
+
+    .nav-cta {
+      background: var(--primary) !important;
+      color: #fff !important;
+      padding: 9px 18px !important;
+      border-radius: 10px !important;
+    }
+
+    .nav-cta:hover {
+      background: var(--primary-light) !important;
+    }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 4px;
+    }
+
+    .hamburger span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--primary);
+      border-radius: 2px;
+      transition: all 0.3s;
+    }
+
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      top: 68px;
+      left: 0;
+      right: 0;
+      background: #fff;
+      border-bottom: 1px solid var(--border);
+      padding: 16px 24px;
+      flex-direction: column;
+      gap: 4px;
+      z-index: 999;
+      box-shadow: var(--shadow);
+    }
+
+    .mobile-menu.open {
+      display: flex;
+    }
+
+    .mobile-menu a {
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 500;
+      color: var(--text);
+      padding: 12px 16px;
+      border-radius: 10px;
+      transition: all 0.2s;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .mobile-menu a i {
+      color: var(--primary);
+      width: 18px;
+      text-align: center;
+    }
+
+    /* PAGE HERO */
+    .page-hero {
+      margin-top: 68px;
+      background: linear-gradient(135deg, var(--primary) 0%, #0D5C9E 50%, #1A3A5C 100%);
+      padding: 60px 24px 80px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .page-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: radial-gradient(circle at 20% 80%, rgba(232, 160, 39, 0.15) 0%, transparent 50%), radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.05) 0%, transparent 50%);
+    }
+
+    .page-hero-grid {
+      position: absolute;
+      inset: 0;
+      background-image: linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+      background-size: 60px 60px;
+    }
+
+    .page-hero-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    .breadcrumb {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 20px;
+    }
+
+    .breadcrumb a {
+      color: rgba(255, 255, 255, 0.6);
+      text-decoration: none;
+      font-size: 13px;
+      transition: color 0.2s;
+    }
+
+    .breadcrumb a:hover {
+      color: #fff;
+    }
+
+    .breadcrumb .sep {
+      color: rgba(255, 255, 255, 0.35);
+      font-size: 12px;
+    }
+
+    .breadcrumb span {
+      color: var(--accent-light);
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .page-hero h1 {
+      font-size: clamp(28px, 4vw, 48px);
+      font-weight: 800;
+      color: #fff;
+      line-height: 1.2;
+      margin-bottom: 12px;
+    }
+
+    .page-hero p {
+      color: rgba(255, 255, 255, 0.75);
+      font-size: 16px;
+      max-width: 540px;
+    }
+
+    /* FILTER BAR */
+    .filter-section {
+      background: #fff;
+      border-bottom: 1px solid var(--border);
+      padding: 0 24px;
+      position: sticky;
+      top: 68px;
+      z-index: 100;
+      box-shadow: 0 2px 12px rgba(10, 61, 98, 0.06);
+    }
+
+    .filter-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+      padding: 14px 0;
+    }
+
+    .filter-cats {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .filter-btn {
+      padding: 7px 16px;
+      border-radius: 100px;
+      border: 1px solid var(--border);
+      background: #fff;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--muted);
+      cursor: pointer;
+      transition: all 0.2s;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    .filter-btn i {
+      font-size: 10px;
+    }
+
+    .filter-btn.active,
+    .filter-btn:hover {
+      background: var(--primary);
+      color: #fff;
+      border-color: var(--primary);
+    }
+
+    .search-wrap {
+      position: relative;
+    }
+
+    .search-wrap input {
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 9px 16px 9px 38px;
+      font-size: 13.5px;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      width: 240px;
+      outline: none;
+      transition: all 0.2s;
+    }
+
+    .search-wrap input:focus {
+      border-color: var(--primary);
+      background: #fff;
+      box-shadow: 0 0 0 3px rgba(10, 61, 98, 0.08);
+    }
+
+    .search-wrap i {
+      position: absolute;
+      left: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    /* MAIN CONTENT */
+    .main-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 48px 24px 80px;
+    }
+
+    /* FEATURED ARTICLE */
+    .featured-article {
+      background: #fff;
+      border-radius: 20px;
+      border: 1px solid var(--border);
+      overflow: hidden;
+      display: grid;
+      grid-template-columns: 1.1fr 1fr;
+      margin-bottom: 48px;
+      transition: all 0.35s;
+      cursor: pointer;
+    }
+
+    .featured-article:hover {
+      box-shadow: var(--shadow-lg);
+      transform: translateY(-4px);
+      border-color: transparent;
+    }
+
+    .fa-thumb-wrap {
+      overflow: hidden;
+      position: relative;
+    }
+
+    .fa-thumb-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.6s ease;
+    }
+
+    .featured-article:hover .fa-thumb-wrap img {
+      transform: scale(1.05);
+    }
+
+    .fa-thumb-wrap::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to right, transparent 70%, rgba(255, 255, 255, 0.1) 100%);
+    }
+
+    .fa-badge {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      background: var(--accent);
+      color: var(--dark);
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+      padding: 5px 12px;
+      border-radius: 6px;
+      z-index: 2;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .fa-content {
+      padding: 44px 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .fa-meta {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 16px;
+      flex-wrap: wrap;
+    }
+
+    .cat-badge {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      padding: 4px 10px;
+      border-radius: 6px;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .cat-badge i {
+      font-size: 10px;
+    }
+
+    .cat-pengumuman {
+      background: rgba(10, 61, 98, 0.09);
+      color: var(--primary);
+    }
+
+    .cat-pkh {
+      background: rgba(26, 127, 75, 0.1);
+      color: var(--green);
+    }
+
+    .cat-bpnt {
+      background: rgba(232, 160, 39, 0.12);
+      color: #B07A00;
+    }
+
+    .cat-atensi {
+      background: rgba(123, 45, 139, 0.1);
+      color: #7B2D8B;
+    }
+
+    .cat-sos {
+      background: rgba(192, 57, 43, 0.1);
+      color: #C0392B;
+    }
+
+    .cat-pip {
+      background: rgba(52, 73, 94, 0.1);
+      color: #34495E;
+    }
+
+    .news-date-text {
+      font-size: 12px;
+      color: var(--muted);
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .fa-content h2 {
+      font-size: clamp(20px, 2.5vw, 28px);
+      font-weight: 800;
+      color: var(--dark);
+      line-height: 1.3;
+      margin-bottom: 14px;
+      transition: color 0.2s;
+    }
+
+    .featured-article:hover .fa-content h2 {
+      color: var(--primary);
+    }
+
+    .fa-content p {
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.7;
+      margin-bottom: 24px;
+    }
+
+    .read-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--primary);
+      color: #fff;
+      text-decoration: none;
+      padding: 11px 22px;
+      border-radius: 10px;
+      font-size: 13.5px;
+      font-weight: 700;
+      transition: all 0.25s;
+      width: fit-content;
+    }
+
+    .read-btn:hover {
+      background: var(--primary-light);
+      transform: translateX(4px);
+    }
+
+    .fa-views {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-top: 16px;
+      padding-top: 16px;
+      border-top: 1px solid var(--border);
+    }
+
+    .fa-stat {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    .fa-stat i {
+      font-size: 12px;
+    }
+
+    /* ARTICLE GRID */
+    .section-label {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 24px;
+    }
+
+    .section-label h3 {
+      font-size: 18px;
+      font-weight: 800;
+      color: var(--dark);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .section-label h3 i {
+      color: var(--primary);
+      font-size: 16px;
+    }
+
+    .section-label a {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--primary);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      transition: gap 0.2s;
+    }
+
+    .section-label a:hover {
+      gap: 8px;
+    }
+
+    .articles-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .article-card {
+      background: #fff;
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      overflow: hidden;
+      transition: all 0.35s;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .article-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-lg);
+      border-color: transparent;
+    }
+
+    .ac-thumb {
+      overflow: hidden;
+      position: relative;
+    }
+
+    .ac-thumb img {
+      width: 100%;
+      aspect-ratio: 16/9;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.6s ease;
+    }
+
+    .article-card:hover .ac-thumb img {
+      transform: scale(1.06);
+    }
+
+    .ac-body {
+      padding: 20px 22px 24px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+
+    .ac-meta {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 10px;
+      flex-wrap: wrap;
+    }
+
+    .ac-body h3 {
+      font-size: 15.5px;
+      font-weight: 700;
+      color: var(--dark);
+      line-height: 1.45;
+      margin-bottom: 10px;
+      transition: color 0.2s;
+      flex: 1;
+    }
+
+    .article-card:hover .ac-body h3 {
+      color: var(--primary);
+    }
+
+    .ac-body p {
+      font-size: 13.5px;
+      color: var(--muted);
+      line-height: 1.65;
+      margin-bottom: 16px;
+    }
+
+    .ac-footer {
+      margin-top: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-top: 14px;
+      border-top: 1px solid var(--border);
+    }
+
+    .ac-stats {
+      display: flex;
+      gap: 12px;
+    }
+
+    .ac-stat {
+      font-size: 11.5px;
+      color: var(--muted);
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .ac-read {
+      font-size: 12.5px;
+      font-weight: 700;
+      color: var(--primary);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      transition: gap 0.2s;
+    }
+
+    .ac-read:hover {
+      gap: 8px;
+    }
+
+    /* SIDEBAR */
+    .content-with-sidebar {
+      display: grid;
+      grid-template-columns: 1fr 320px;
+      gap: 32px;
+      margin-top: 48px;
+    }
+
+    .sidebar {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .sidebar-card {
+      background: #fff;
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      overflow: hidden;
+    }
+
+    .sc-head {
+      background: var(--primary);
+      padding: 14px 20px;
+    }
+
+    .sc-head h4 {
+      color: #fff;
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      display: flex;
+      align-items: center;
+      gap: 7px;
+    }
+
+    .sc-head h4 i {
+      font-size: 12px;
+    }
+
+    .sc-body {
+      padding: 18px 20px;
+    }
+
+    .popular-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 10px 0;
+      border-bottom: 1px solid var(--border);
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .popular-item:last-child {
+      border-bottom: none;
+    }
+
+    .popular-item:hover .pi-num {
+      background: var(--primary);
+      color: #fff;
+    }
+
+    .popular-item:hover .pi-title {
+      color: var(--primary);
+    }
+
+    .pi-num {
+      width: 26px;
+      height: 26px;
+      border-radius: 7px;
+      background: var(--bg);
+      font-size: 11px;
+      font-weight: 800;
+      color: var(--muted);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      transition: all 0.2s;
+    }
+
+    .pi-title {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--dark);
+      line-height: 1.4;
+      transition: color 0.2s;
+    }
+
+    .pi-date {
+      font-size: 11px;
+      color: var(--muted);
+      margin-top: 3px;
+    }
+
+    .tag-cloud {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .tag-pill {
+      padding: 5px 13px;
+      border-radius: 100px;
+      border: 1px solid var(--border);
+      background: var(--bg);
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--muted);
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .tag-pill:hover {
+      background: var(--primary);
+      color: #fff;
+      border-color: var(--primary);
+    }
+
+    .stat-row-sb {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    .stat-box {
+      text-align: center;
+      padding: 16px 12px;
+      border-radius: 10px;
+      background: var(--bg);
+    }
+
+    .stat-box .num {
+      font-size: 22px;
+      font-weight: 800;
+      color: var(--primary);
+      line-height: 1;
+    }
+
+    .stat-box .num span {
+      color: var(--accent);
+    }
+
+    .stat-box .lbl {
+      font-size: 11px;
+      color: var(--muted);
+      margin-top: 4px;
+    }
+
+    /* PAGINATION */
+    .pagination {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+      margin-top: 48px;
+    }
+
+    .page-btn {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      background: #fff;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--muted);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.2s;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    .page-btn.active {
+      background: var(--primary);
+      color: #fff;
+      border-color: var(--primary);
+    }
+
+    .page-btn:hover:not(.active):not(:disabled) {
+      background: var(--bg);
+      color: var(--primary);
+      border-color: var(--primary);
+    }
+
+    .page-btn:disabled {
+      opacity: 0.4;
+      cursor: not-allowed;
+    }
+
+    .page-ellipsis {
+      color: var(--muted);
+      font-weight: 700;
+      padding: 0 4px;
+    }
+
+    /* FADE IN */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.55s ease, transform 0.55s ease;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .fade-in-delay-1 {
+      transition-delay: 0.08s;
+    }
+
+    .fade-in-delay-2 {
+      transition-delay: 0.16s;
+    }
+
+    .fade-in-delay-3 {
+      transition-delay: 0.24s;
+    }
+
+    /* EMPTY STATE */
+    .empty-state {
+      text-align: center;
+      padding: 64px 24px;
+    }
+
+    .empty-state i {
+      font-size: 48px;
+      color: var(--border);
+      margin-bottom: 16px;
+    }
+
+    .empty-state h3 {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--muted);
+      margin-bottom: 8px;
+    }
+
+    .empty-state p {
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    /* FOOTER */
+    footer {
+      background: var(--dark);
+      color: rgba(255, 255, 255, 0.8);
+      margin-top: 0;
+    }
+
+    .footer-bottom {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 28px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 13px;
+      color: rgba(255, 255, 255, 0.4);
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .gov-badge {
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 6px 14px;
+      border-radius: 8px;
+      font-size: 11px;
+      font-weight: 600;
+      color: rgba(255, 255, 255, 0.6);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .gov-badge i {
+      font-size: 12px;
+      color: var(--accent-light);
+    }
+
+    .footer-logos {
+      display: flex;
+      gap: 8px;
+    }
+
+    /* RESPONSIVE */
+    @media(max-width: 1024px) {
+      .content-with-sidebar {
+        grid-template-columns: 1fr;
+      }
+
+      .sidebar {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+      }
+
+      .articles-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .featured-article {
+        grid-template-columns: 1fr;
+      }
+
+      .fa-thumb-wrap {
+        height: 300px;
+      }
+
+      .fa-content {
+        padding: 28px 28px;
+      }
+    }
+
+    @media(max-width: 768px) {
+      .nav-links {
+        display: none;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+
+      .articles-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .sidebar {
+        grid-template-columns: 1fr;
+      }
+
+      .filter-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .search-wrap input {
+        width: 100%;
+      }
+
+      .search-wrap {
+        width: 100%;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+        gap: 12px;
+        text-align: center;
+      }
+
+      .footer-logos {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <div class="logo-icon"><i class="fa-solid fa-landmark"></i></div>
+        <div class="logo-text">
+          <strong>Digitalisasi Bansos</strong>
+          <span>Pemerintah Kabupaten Ogan Ilir</span>
+        </div>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html#organisasi"><i class="fa-solid fa-sitemap"></i> Organisasi</a></li>
+        <li><a href="index.html#dokumen"><i class="fa-solid fa-folder-open"></i> Dokumen</a></li>
+        <li><a href="berita-list.html" class="active"><i class="fa-solid fa-newspaper"></i> Berita</a></li>
+        <li><a href="galeri.html"><i class="fa-solid fa-images"></i> Galeri</a></li>
+        <li><a href="index.html#kontak"><i class="fa-solid fa-envelope"></i> Kontak</a></li>
+        <li><a href="index.html#cara-daftar" class="nav-cta"><i class="fa-solid fa-circle-check"></i> Panduan</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html"><i class="fa-solid fa-house"></i> Beranda</a>
+    <a href="berita-list.html"><i class="fa-solid fa-newspaper"></i> Berita</a>
+    <a href="galeri.html"><i class="fa-solid fa-images"></i> Galeri</a>
+    <a href="index.html#kontak"><i class="fa-solid fa-envelope"></i> Kontak</a>
+  </div>
+
+  <!-- PAGE HERO -->
+  <div class="page-hero">
+    <div class="page-hero-grid"></div>
+    <div class="page-hero-inner">
+      <div class="breadcrumb">
+        <a href="index.html"><i class="fa-solid fa-house"></i> Beranda</a>
+        <span class="sep"><i class="fa-solid fa-chevron-right"></i></span>
+        <span>Berita & Artikel</span>
+      </div>
+      <h1>Berita & Informasi Terkini</h1>
+      <p>Update terbaru seputar program bantuan sosial digital, kebijakan pemerintah, dan kegiatan lapangan di Kabupaten
+        Ogan Ilir.</p>
+    </div>
+  </div>
+
+  <!-- FILTER BAR -->
+  <div class="filter-section" id="filterBar">
+    <div class="filter-inner">
+      <div class="filter-cats">
+        <button class="filter-btn active" data-cat="semua" onclick="filterArticles(this,'semua')"><i
+            class="fa-solid fa-border-all"></i> Semua</button>
+        <button class="filter-btn" data-cat="pengumuman" onclick="filterArticles(this,'pengumuman')"><i
+            class="fa-solid fa-bullhorn"></i> Pengumuman</button>
+        <button class="filter-btn" data-cat="pkh" onclick="filterArticles(this,'pkh')"><i
+            class="fa-solid fa-people-roof"></i> PKH</button>
+        <button class="filter-btn" data-cat="bpnt" onclick="filterArticles(this,'bpnt')"><i
+            class="fa-solid fa-basket-shopping"></i> BPNT</button>
+        <button class="filter-btn" data-cat="atensi" onclick="filterArticles(this,'atensi')"><i
+            class="fa-solid fa-heart-pulse"></i> ATENSI</button>
+        <button class="filter-btn" data-cat="sosialisasi" onclick="filterArticles(this,'sosialisasi')"><i
+            class="fa-solid fa-person-chalkboard"></i> Sosialisasi</button>
+        <button class="filter-btn" data-cat="pip" onclick="filterArticles(this,'pip')"><i
+            class="fa-solid fa-graduation-cap"></i> PIP</button>
+      </div>
+      <div class="search-wrap">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" id="searchInput" placeholder="Cari berita..." oninput="searchArticles(this.value)">
+      </div>
+    </div>
+  </div>
+
+  <!-- MAIN -->
+  <div class="main-content">
+
+    <!-- FEATURED -->
+    <div class="fade-in" id="featuredWrap">
+      <a href="berita-detail.html" style="text-decoration:none;">
+        <div class="featured-article">
+          <div class="fa-thumb-wrap" style="min-height:340px;">
+            <div class="fa-badge"><i class="fa-solid fa-star"></i> Unggulan</div>
+            <img src="https://images.unsplash.com/photo-1573497620053-ea5300f94f21?w=900&q=80&auto=format&fit=crop"
+              alt="Peluncuran Sistem Digitalisasi" loading="lazy">
+          </div>
+          <div class="fa-content">
+            <div class="fa-meta">
+              <span class="cat-badge cat-pengumuman"><i class="fa-solid fa-bullhorn"></i> Pengumuman</span>
+              <span class="news-date-text"><i class="fa-regular fa-calendar-days"></i> 18 Desember 2026</span>
+            </div>
+            <h2>Peluncuran Sistem Digitalisasi Bansos Terintegrasi untuk Seluruh Desa di Kabupaten Ogan Ilir</h2>
+            <p>Pemerintah Kabupaten Ogan Ilir bersama Kementerian Sosial RI resmi meluncurkan platform digital terpadu
+              untuk penyaluran bantuan sosial. Sistem ini mencakup seluruh 237 desa dan memungkinkan warga mengecek
+              status kepesertaan secara real-time melalui ponsel.</p>
+            <span class="read-btn">Baca Selengkapnya <i class="fa-solid fa-arrow-right"></i></span>
+            <div class="fa-views">
+              <span class="fa-stat"><i class="fa-regular fa-eye"></i> 12.450 dibaca</span>
+              <span class="fa-stat"><i class="fa-regular fa-comment"></i> 86 komentar</span>
+              <span class="fa-stat"><i class="fa-solid fa-share-nodes"></i> 234 dibagikan</span>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <!-- ARTICLE GRID + SIDEBAR -->
+    <div class="content-with-sidebar">
+      <div>
+        <div class="section-label">
+          <h3><i class="fa-solid fa-newspaper"></i> Semua Artikel</h3>
+          <span id="articleCount" style="font-size:13px;color:var(--muted);font-weight:600;">Menampilkan 8
+            artikel</span>
+        </div>
+
+        <div class="articles-grid" id="articlesGrid">
+
+          <div class="article-card fade-in" data-cat="pkh">
+            <div class="ac-thumb">
+              <img src="https://images.unsplash.com/photo-1593113598332-cd288d649433?w=600&q=80&auto=format&fit=crop"
+                alt="PKH" loading="lazy">
+            </div>
+            <div class="ac-body">
+              <div class="ac-meta">
+                <span class="cat-badge cat-pkh"><i class="fa-solid fa-people-roof"></i> PKH</span>
+                <span class="news-date-text"><i class="fa-regular fa-calendar-days"></i> 12 Des 2026</span>
+              </div>
+              <h3>Penyaluran PKH Tahap IV 2026 Mulai Dicairkan via KKS</h3>
+              <p>Sebanyak 18.420 KPM PKH di Ogan Ilir telah menerima bantuan tahap empat melalui Kartu Keluarga
+                Sejahtera secara non-tunai.</p>
+              <div class="ac-footer">
+                <div class="ac-stats">
+                  <span class="ac-stat"><i class="fa-regular fa-eye"></i> 8.210</span>
+                  <span class="ac-stat"><i class="fa-regular fa-comment"></i> 42</span>
+                </div>
+                <a href="berita-detail.html" class="ac-read">Baca <i class="fa-solid fa-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="article-card fade-in fade-in-delay-1" data-cat="bpnt">
+            <div class="ac-thumb">
+              <img src="https://images.unsplash.com/photo-1542838132-92c53300491e?w=600&q=80&auto=format&fit=crop"
+                alt="BPNT" loading="lazy">
+            </div>
+            <div class="ac-body">
+              <div class="ac-meta">
+                <span class="cat-badge cat-bpnt"><i class="fa-solid fa-basket-shopping"></i> BPNT</span>
+                <span class="news-date-text"><i class="fa-regular fa-calendar-days"></i> 8 Des 2026</span>
+              </div>
+              <h3>Penambahan 45 E-Warong Baru di Kecamatan Terpencil Ogan Ilir</h3>
+              <p>Dinas Sosial Ogan Ilir membuka 45 e-warong baru untuk memperluas jangkauan penerima BPNT di wilayah
+                terpencil.</p>
+              <div class="ac-footer">
+                <div class="ac-stats">
+                  <span class="ac-stat"><i class="fa-regular fa-eye"></i> 5.340</span>
+                  <span class="ac-stat"><i class="fa-regular fa-comment"></i> 28</span>
+                </div>
+                <a href="berita-detail.html" class="ac-read">Baca <i class="fa-solid fa-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="article-card fade-in fade-in-delay-2" data-cat="sosialisasi">
+            <div class="ac-thumb">
+              <img src="https://images.unsplash.com/photo-1531206715517-5c0ba140b2b8?w=600&q=80&auto=format&fit=crop"
+                alt="Sosialisasi" loading="lazy">
+            </div>
+            <div class="ac-body">
+              <div class="ac-meta">
+                <span class="cat-badge cat-sos"><i class="fa-solid fa-person-chalkboard"></i> Sosialisasi</span>
+                <span class="news-date-text"><i class="fa-regular fa-calendar-days"></i> 2 Des 2026</span>
+              </div>
+              <h3>Sosialisasi Digitalisasi Bansos Menjangkau 5.000 Warga Desa</h3>
+              <p>Tim sosialisasi gabungan Kemensos dan Pemkab Ogan Ilir berhasil menjangkau ribuan warga dalam
+                serangkaian roadshow desa.</p>
+              <div class="ac-footer">
+                <div class="ac-stats">
+                  <span class="ac-stat"><i class="fa-regular fa-eye"></i> 6.780</span>
+                  <span class="ac-stat"><i class="fa-regular fa-comment"></i> 55</span>
+                </div>
+                <a href="berita-detail.html" class="ac-read">Baca <i class="fa-solid fa-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="article-card fade-in" data-cat="atensi">
+            <div class="ac-thumb">
+              <img src="https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?w=600&q=80&auto=format&fit=crop"
+                alt="ATENSI" loading="lazy">
+            </div>
+            <div class="ac-body">
+              <div class="ac-meta">
+                <span class="cat-badge cat-atensi"><i class="fa-solid fa-heart-pulse"></i> ATENSI</span>
+                <span class="news-date-text"><i class="fa-regular fa-calendar-days"></i> 28 Nov 2026</span>
+              </div>
+              <h3>Program ATENSI Bantu 1.200 Lansia dan Penyandang Disabilitas di Ogan Ilir</h3>
+              <p>Kemensos melalui program ATENSI menyalurkan bantuan rehabilitasi sosial kepada ribuan kelompok rentan
+                di wilayah Ogan Ilir.</p>
+              <div class="ac-footer">
+                <div class="ac-stats">
+                  <span class="ac-stat"><i class="fa-regular fa-eye"></i> 4.120</span>
+                  <span class="ac-stat"><i class="fa-regular fa-comment"></i> 19</span>
+                </div>
+                <a href="berita-detail.html" class="ac-read">Baca <i class="fa-solid fa-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="article-card fade-in fade-in-delay-1" data-cat="pip">
+            <div class="ac-thumb">
+              <img src="https://images.unsplash.com/photo-1588072432836-e10032774350?w=600&q=80&auto=format&fit=crop"
+                alt="PIP" loading="lazy">
+            </div>
+            <div class="ac-body">
+              <div class="ac-meta">
+                <span class="cat-badge cat-pip"><i class="fa-solid fa-graduation-cap"></i> PIP</span>
+                <span class="news-date-text"><i class="fa-regular fa-calendar-days"></i> 20 Nov 2026</span>
+              </div>
+              <h3>3.800 Siswa Ogan Ilir Terima Dana PIP Semester Ganjil 2026</h3>
+              <p>Program Indonesia Pintar kembali menyalurkan bantuan pendidikan bagi ribuan siswa SD, SMP, dan SMA di
+                Ogan Ilir melalui rekening tabungan.</p>
+              <div class="ac-footer">
+                <div class="ac-stats">
+                  <span class="ac-stat"><i class="fa-regular fa-eye"></i> 7.650</span>
+                  <span class="ac-stat"><i class="fa-regular fa-comment"></i> 61</span>
+                </div>
+                <a href="berita-detail.html" class="ac-read">Baca <i class="fa-solid fa-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="article-card fade-in fade-in-delay-2" data-cat="pengumuman">
+            <div class="ac-thumb">
+              <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=600&q=80&auto=format&fit=crop"
+                alt="Aplikasi" loading="lazy">
+            </div>
+            <div class="ac-body">
+              <div class="ac-meta">
+                <span class="cat-badge cat-pengumuman"><i class="fa-solid fa-bullhorn"></i> Pengumuman</span>
+                <span class="news-date-text"><i class="fa-regular fa-calendar-days"></i> 15 Nov 2026</span>
+              </div>
+              <h3>Aplikasi Laberaso-OI Kini Tersedia di Google Play Store</h3>
+              <p>Warga Ogan Ilir kini dapat mengunduh aplikasi Laberaso-OI secara gratis untuk memantau status
+                kepesertaan bansos dari ponsel Android.</p>
+              <div class="ac-footer">
+                <div class="ac-stats">
+                  <span class="ac-stat"><i class="fa-regular fa-eye"></i> 9.990</span>
+                  <span class="ac-stat"><i class="fa-regular fa-comment"></i> 103</span>
+                </div>
+                <a href="berita-detail.html" class="ac-read">Baca <i class="fa-solid fa-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="article-card fade-in" data-cat="sosialisasi">
+            <div class="ac-thumb">
+              <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=600&q=80&auto=format&fit=crop"
+                alt="Bimtek" loading="lazy">
+            </div>
+            <div class="ac-body">
+              <div class="ac-meta">
+                <span class="cat-badge cat-sos"><i class="fa-solid fa-person-chalkboard"></i> Sosialisasi</span>
+                <span class="news-date-text"><i class="fa-regular fa-calendar-days"></i> 8 Nov 2026</span>
+              </div>
+              <h3>Bimtek Operator Desa Sukses Diikuti 237 Peserta se-Kabupaten Ogan Ilir</h3>
+              <p>Diskominfo menyelenggarakan bimbingan teknis penggunaan sistem DTKS Online dan Laberaso-OI bagi seluruh
+                operator desa.</p>
+              <div class="ac-footer">
+                <div class="ac-stats">
+                  <span class="ac-stat"><i class="fa-regular fa-eye"></i> 3.450</span>
+                  <span class="ac-stat"><i class="fa-regular fa-comment"></i> 17</span>
+                </div>
+                <a href="berita-detail.html" class="ac-read">Baca <i class="fa-solid fa-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="article-card fade-in fade-in-delay-1" data-cat="pkh">
+            <div class="ac-thumb">
+              <img src="https://images.unsplash.com/photo-1607863680198-23d4b2565df0?w=600&q=80&auto=format&fit=crop"
+                alt="Pendamping PKH" loading="lazy"
+                onerror="this.src='https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=600&q=80'">
+            </div>
+            <div class="ac-body">
+              <div class="ac-meta">
+                <span class="cat-badge cat-pkh"><i class="fa-solid fa-people-roof"></i> PKH</span>
+                <span class="news-date-text"><i class="fa-regular fa-calendar-days"></i> 1 Nov 2026</span>
+              </div>
+              <h3>Rekrutmen 30 Pendamping PKH Baru untuk Kecamatan Terpencil</h3>
+              <p>Dinsos Ogan Ilir membuka pendaftaran pendamping PKH baru untuk mengisi kekosongan di 8 kecamatan yang
+                belum terlayani optimal.</p>
+              <div class="ac-footer">
+                <div class="ac-stats">
+                  <span class="ac-stat"><i class="fa-regular fa-eye"></i> 11.200</span>
+                  <span class="ac-stat"><i class="fa-regular fa-comment"></i> 78</span>
+                </div>
+                <a href="berita-detail.html" class="ac-read">Baca <i class="fa-solid fa-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- EMPTY STATE -->
+        <div class="empty-state" id="emptyState" style="display:none;">
+          <i class="fa-solid fa-newspaper"></i>
+          <h3>Artikel tidak ditemukan</h3>
+          <p>Coba ubah kata kunci pencarian atau pilih kategori lain.</p>
+        </div>
+
+        <!-- PAGINATION -->
+        <div class="pagination">
+          <button class="page-btn" disabled><i class="fa-solid fa-chevron-left"></i></button>
+          <button class="page-btn active">1</button>
+          <button class="page-btn">2</button>
+          <button class="page-btn">3</button>
+          <span class="page-ellipsis">…</span>
+          <button class="page-btn">8</button>
+          <button class="page-btn"><i class="fa-solid fa-chevron-right"></i></button>
+        </div>
+      </div>
+
+      <!-- SIDEBAR -->
+      <div class="sidebar">
+        <div class="sidebar-card">
+          <div class="sc-head">
+            <h4><i class="fa-solid fa-fire"></i> Artikel Populer</h4>
+          </div>
+          <div class="sc-body">
+            <div class="popular-item">
+              <div class="pi-num">1</div>
+              <div>
+                <div class="pi-title">Aplikasi Laberaso-OI Kini Tersedia di Google Play Store</div>
+                <div class="pi-date"><i class="fa-regular fa-calendar"></i> 15 Nov 2026</div>
+              </div>
+            </div>
+            <div class="popular-item">
+              <div class="pi-num">2</div>
+              <div>
+                <div class="pi-title">Peluncuran Sistem Digitalisasi Bansos Terintegrasi</div>
+                <div class="pi-date"><i class="fa-regular fa-calendar"></i> 18 Des 2026</div>
+              </div>
+            </div>
+            <div class="popular-item">
+              <div class="pi-num">3</div>
+              <div>
+                <div class="pi-title">Rekrutmen 30 Pendamping PKH Baru</div>
+                <div class="pi-date"><i class="fa-regular fa-calendar"></i> 1 Nov 2026</div>
+              </div>
+            </div>
+            <div class="popular-item">
+              <div class="pi-num">4</div>
+              <div>
+                <div class="pi-title">3.800 Siswa Terima Dana PIP Semester Ganjil</div>
+                <div class="pi-date"><i class="fa-regular fa-calendar"></i> 20 Nov 2026</div>
+              </div>
+            </div>
+            <div class="popular-item">
+              <div class="pi-num">5</div>
+              <div>
+                <div class="pi-title">Sosialisasi Digitalisasi Bansos ke 5.000 Warga</div>
+                <div class="pi-date"><i class="fa-regular fa-calendar"></i> 2 Des 2026</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="sidebar-card">
+          <div class="sc-head">
+            <h4><i class="fa-solid fa-chart-bar"></i> Statistik Berita</h4>
+          </div>
+          <div class="sc-body">
+            <div class="stat-row-sb">
+              <div class="stat-box">
+                <div class="num"><span>64</span></div>
+                <div class="lbl">Total Artikel</div>
+              </div>
+              <div class="stat-box">
+                <div class="num"><span>12</span></div>
+                <div class="lbl">Bulan Ini</div>
+              </div>
+              <div class="stat-box">
+                <div class="num"><span>89</span><span style="font-size:14px;">K</span></div>
+                <div class="lbl">Total Dibaca</div>
+              </div>
+              <div class="stat-box">
+                <div class="num"><span>7</span></div>
+                <div class="lbl">Kategori</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="sidebar-card">
+          <div class="sc-head">
+            <h4><i class="fa-solid fa-tags"></i> Topik</h4>
+          </div>
+          <div class="sc-body">
+            <div class="tag-cloud">
+              <span class="tag-pill">PKH</span>
+              <span class="tag-pill">BPNT</span>
+              <span class="tag-pill">Digitalisasi</span>
+              <span class="tag-pill">E-Warong</span>
+              <span class="tag-pill">ATENSI</span>
+              <span class="tag-pill">PIP</span>
+              <span class="tag-pill">KKS</span>
+              <span class="tag-pill">Laberaso-OI</span>
+              <span class="tag-pill">DTKS</span>
+              <span class="tag-pill">Bimtek</span>
+              <span class="tag-pill">Pendamping</span>
+              <span class="tag-pill">Diskominfo</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-bottom">
+      <span><i class="fa-regular fa-copyright"></i> 2026 Pemerintah Kabupaten Ogan Ilir. Hak cipta dilindungi
+        undang-undang.</span>
+      <div class="footer-logos">
+        <span class="gov-badge"><i class="fa-solid fa-globe"></i> PEMKAB OGAN ILIR</span>
+        <span class="gov-badge"><i class="fa-solid fa-globe"></i> DISKOMINFO OGAN ILIR</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- BACK TO TOP -->
+  <button id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})"
+    style="position:fixed;bottom:28px;right:28px;z-index:900;width:48px;height:48px;border-radius:50%;background:var(--primary);border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 24px rgba(10,61,98,0.35);opacity:0;transform:translateY(12px);transition:opacity 0.3s,transform 0.3s;pointer-events:none;">
+    <i class="fa-solid fa-arrow-up" style="color:#fff;font-size:18px;"></i>
+  </button>
+
+  <script>
+    // Navbar scroll
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 20);
+    });
+
+    // Mobile menu
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+    hamburger.addEventListener('click', () => mobileMenu.classList.toggle('open'));
+    document.addEventListener('click', (e) => {
+      if (!hamburger.contains(e.target) && !mobileMenu.contains(e.target)) mobileMenu.classList.remove('open');
+    });
+
+    // Fade in
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+          observer.unobserve(e.target);
+        }
+      });
+    }, {
+      threshold: 0.10
+    });
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+    // Filter
+    function filterArticles(btn, cat) {
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const cards = document.querySelectorAll('.article-card');
+      let shown = 0;
+      const featured = document.getElementById('featuredWrap');
+      cards.forEach(card => {
+        const match = cat === 'semua' || card.dataset.cat === cat;
+        card.style.display = match ? 'flex' : 'none';
+        if (match) shown++;
+      });
+      featured.style.display = (cat === 'semua' || cat === 'pengumuman') ? 'block' : 'none';
+      document.getElementById('emptyState').style.display = shown === 0 ? 'block' : 'none';
+      document.getElementById('articleCount').textContent = `Menampilkan ${shown} artikel`;
+    }
+
+    // Search
+    function searchArticles(query) {
+      const q = query.toLowerCase();
+      const cards = document.querySelectorAll('.article-card');
+      let shown = 0;
+      cards.forEach(card => {
+        const text = card.textContent.toLowerCase();
+        const match = text.includes(q);
+        card.style.display = match ? 'flex' : 'none';
+        if (match) shown++;
+      });
+      document.getElementById('emptyState').style.display = shown === 0 ? 'block' : 'none';
+      document.getElementById('articleCount').textContent = `Menampilkan ${shown} artikel`;
+      document.getElementById('featuredWrap').style.display = q.length > 0 ? 'none' : 'block';
+    }
+
+    // Smooth img load
+    document.querySelectorAll('img[loading="lazy"]').forEach(img => {
+      img.style.opacity = '0';
+      img.style.transition = 'opacity 0.5s ease';
+      img.addEventListener('load', () => {
+        img.style.opacity = '1';
+      });
+      if (img.complete) img.style.opacity = '1';
+    });
+
+    // Back to top
+    const btt = document.getElementById('backToTop');
+    window.addEventListener('scroll', () => {
+      const show = window.scrollY > 400;
+      btt.style.opacity = show ? '1' : '0';
+      btt.style.transform = show ? 'translateY(0)' : 'translateY(12px)';
+      btt.style.pointerEvents = show ? 'auto' : 'none';
+    });
+  </script>
+</body>
+
+</html>
