@@ -2094,24 +2094,6 @@
       margin-top: 0;
     }
 
-    /* Override untuk 4 tim */
-    .organisasi .org-grid {
-      grid-template-columns: repeat(4, 1fr);
-    }
-
-    @media(max-width:1200px) {
-      .organisasi .org-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-
-    @media(max-width:600px) {
-      .organisasi .org-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-
-
     .org-card {
       border: 1px solid var(--border);
       border-radius: var(--radius);
@@ -2721,390 +2703,252 @@
     <div class="section-inner">
       <div class="section-header fade-in">
         <div class="section-tag"><i class="fa-solid fa-sitemap"></i> Organisasi</div>
-        <h2>Struktur Tim Pelaksana Digitalisasi Bansos</h2>
-        <p>Berdasarkan Keputusan Bupati Ogan Ilir tentang Tim Pelaksana Program Percontohan Digitalisasi Bantuan Sosial
-          di Kabupaten Ogan Ilir Tahun 2026.</p>
+        <h2>Struktur Penugasan Tim Digitalisasi Bansos</h2>
+        <p>Tim lintas instansi yang dibentuk untuk mendukung pelaksanaan digitalisasi bantuan sosial di Kabupaten Ogan
+          Ilir secara menyeluruh dan terkoordinasi.</p>
       </div>
 
       <div class="org-wrapper fade-in">
-
-        <!-- PENGARAH -->
         <div class="org-top">
           <div class="org-head-card">
+            <div class="ohc-avatar"><i class="fa-solid fa-user-tie"></i></div>
             <div class="ohc-info">
-              <strong>Pengarah</strong>
-              <span>Bupati & Wakil Bupati Ogan Ilir</span>
+              <strong>Bupati Ogan Ilir</strong>
+              <span>Penanggung Jawab Utama Program</span>
             </div>
+            <span class="ohc-badge">Pimpinan Daerah</span>
           </div>
         </div>
 
-        <!-- KOORDINATOR UMUM -->
-        <div style="display:flex;justify-content:center;margin-bottom:0;">
-          <div
-            style="background:linear-gradient(135deg,var(--primary),var(--primary-light));color:#fff;border-radius:var(--radius);padding:18px 36px;display:inline-flex;align-items:center;gap:14px;box-shadow:var(--shadow);position:relative;">
-            <div>
-              <div
-                style="font-size:11px;opacity:0.75;text-transform:uppercase;letter-spacing:1px;margin-bottom:2px;text-align: center;">
-                Koordinator Umum</div>
-              <strong style="font-size:15px;font-weight:700;">Sekretaris Daerah Kabupaten Ogan Ilir</strong>
-            </div>
-            <div
-              style="position:absolute;bottom:-30px;left:50%;transform:translateX(-50%);width:2px;height:30px;background:var(--border);">
-            </div>
-          </div>
+        <div style="display:flex;justify-content:center;gap:120px;position:relative;margin-bottom:0;">
+          <div style="width:2px;height:30px;background:var(--border);margin:0 auto;"></div>
+        </div>
+        <div style="display:flex;justify-content:center;gap:0;width:100%;position:relative;margin-bottom:0;">
+          <div style="height:2px;background:var(--border);width:66%;margin:0 auto;"></div>
         </div>
 
-        <!-- GARIS KE WAKIL KOORDINATOR -->
-        <div style="display:flex;justify-content:center;margin-top:30px;margin-bottom:0;">
-          <div
-            style="background:rgba(21,101,192,0.1);border:1px solid rgba(21,101,192,0.2);color:var(--primary);border-radius:var(--radius);padding:14px 32px;display:inline-flex;align-items:center;gap:14px;position:relative;">
-            <div>
-              <div
-                style="font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin-bottom:2px;text-align: center;">
-                Wakil Koordinator Umum</div>
-              <strong style="font-size:14px;font-weight:700;color:var(--dark);">Asisten Pemerintahan dan Kesejahteraan
-                Rakyat Setda Kab. Ogan Ilir</strong>
-            </div>
-            <div
-              style="position:absolute;bottom:-30px;left:50%;transform:translateX(-50%);width:2px;height:30px;background:var(--border);">
-            </div>
-          </div>
-        </div>
-
-        <!-- GARIS HORIZONTAL KE 4 TIM -->
-        <div style="margin-top:30px;margin-bottom:0;">
-          <div style="height:2px;background:var(--border);width:75%;margin:0 auto;"></div>
-        </div>
-
-        <!-- 4 KARTU TIM -->
         <div class="org-grid" style="margin-top:0;">
-
-          <!-- SEKRETARIAT -->
           <div class="org-card fade-in">
             <div class="org-card-head oc-head-blue">
               <div class="oca-icon"><i class="fa-solid fa-network-wired"></i></div>
               <div>
-                <h4>Sekretariat</h4>
-                <span>Koordinasi & Administrasi</span>
+                <h4>Diskominfo Ogan Ilir</h4>
+                <span>Koordinator Teknis Digital</span>
               </div>
             </div>
             <div class="org-card-body">
               <div class="org-person">
                 <div class="op-dot" style="background:var(--primary);"></div>
                 <div class="op-info">
-                  <strong>Sekretaris</strong>
-                  <span>Kepala Diskominfo Statistik & Persandian Kab. Ogan Ilir</span>
-                </div>
-              </div>
-              <div
-                style="font-size:11px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:0.8px;padding:8px 0 4px;">
-                Anggota</div>
-              <div class="org-person">
-                <div class="op-dot"></div>
-                <div class="op-info">
-                  <strong>Kepala BPKAD Kab. Ogan Ilir</strong>
+                  <strong>Kepala Diskominfo</strong>
+                  <span>Penanggung Jawab Infrastruktur IT</span>
                 </div>
               </div>
               <div class="org-person">
                 <div class="op-dot"></div>
                 <div class="op-info">
-                  <strong>Kepala BPS Kab. Ogan Ilir</strong>
+                  <strong>Kabid Layanan e-Government</strong>
+                  <span>Integrasi Sistem & API</span>
                 </div>
               </div>
               <div class="org-person">
                 <div class="op-dot"></div>
                 <div class="op-info">
-                  <strong>Kabag Tata Pemerintahan & Kerja Sama Setda</strong>
+                  <strong>Tim Keamanan Siber</strong>
+                  <span>Perlindungan Data & Audit</span>
                 </div>
               </div>
               <div class="org-person">
                 <div class="op-dot"></div>
                 <div class="op-info">
-                  <strong>Kabag Hukum Setda</strong>
-                </div>
-              </div>
-              <div class="org-person">
-                <div class="op-dot"></div>
-                <div class="op-info">
-                  <strong>Kabag Organisasi Setda</strong>
-                </div>
-              </div>
-              <div class="org-person">
-                <div class="op-dot"></div>
-                <div class="op-info">
-                  <strong>Sekretaris Diskominfo</strong>
-                </div>
-              </div>
-              <div class="org-person">
-                <div class="op-dot"></div>
-                <div class="op-info">
-                  <strong>Kabid Informasi & Komunikasi Publik Diskominfo</strong>
-                </div>
-              </div>
-              <div class="org-person">
-                <div class="op-dot"></div>
-                <div class="op-info">
-                  <strong>Kabid Aplikasi Informatika Diskominfo</strong>
-                </div>
-              </div>
-              <div class="org-person">
-                <div class="op-dot"></div>
-                <div class="op-info">
-                  <strong>Kabid Statistik & Kabid Persandian Diskominfo</strong>
-                </div>
-              </div>
-              <div class="org-person">
-                <div class="op-dot"></div>
-                <div class="op-info">
-                  <strong>Camat se-Kab. Ogan Ilir</strong>
-                </div>
-              </div>
-              <div class="org-person">
-                <div class="op-dot"></div>
-                <div class="op-info">
-                  <strong>Lurah/Kepala Desa se-Kab. Ogan Ilir</strong>
-                </div>
-              </div>
-              <div class="org-person">
-                <div class="op-dot"></div>
-                <div class="op-info">
-                  <strong>Analis Kebijakan Ahli Muda Bagian Tapem Setda</strong>
+                  <strong>Tim Helpdesk TIK</strong>
+                  <span>Dukungan Teknis Lapangan</span>
                 </div>
               </div>
             </div>
           </div>
 
-          <!-- TIM OPERASIONAL -->
           <div class="org-card fade-in fade-in-delay-1">
             <div class="org-card-head oc-head-green">
               <div class="oca-icon"><i class="fa-solid fa-people-roof"></i></div>
               <div>
-                <h4>Tim Operasional</h4>
-                <span>Pelaksana Program Lapangan</span>
+                <h4>Dinas Sosial Ogan Ilir</h4>
+                <span>Koordinator Program Bansos</span>
               </div>
             </div>
             <div class="org-card-body">
               <div class="org-person">
                 <div class="op-dot" style="background:var(--green);"></div>
                 <div class="op-info">
-                  <strong>Koordinator</strong>
-                  <span>Kepala Dinas Sosial Kab. Ogan Ilir</span>
-                </div>
-              </div>
-              <div
-                style="font-size:11px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:0.8px;padding:8px 0 4px;">
-                Anggota</div>
-              <div class="org-person">
-                <div class="op-dot"></div>
-                <div class="op-info">
-                  <strong>Kepala Dinas Pemberdayaan Masyarakat dan Desa</strong>
+                  <strong>Kepala Dinas Sosial</strong>
+                  <span>Pengelola Program & Anggaran</span>
                 </div>
               </div>
               <div class="org-person">
                 <div class="op-dot"></div>
                 <div class="op-info">
-                  <strong>Sekretaris Dinas Sosial</strong>
+                  <strong>Kabid Perlindungan Sosial</strong>
+                  <span>Verifikasi & Validasi KPM</span>
                 </div>
               </div>
               <div class="org-person">
                 <div class="op-dot"></div>
                 <div class="op-info">
-                  <strong>Kabid Bantuan dan Jaminan Sosial Dinsos</strong>
+                  <strong>Pendamping PKH (237 Desa)</strong>
+                  <span>Pendataan & Pendampingan KPM</span>
                 </div>
               </div>
               <div class="org-person">
                 <div class="op-dot"></div>
                 <div class="op-info">
-                  <strong>Kabid Pelayanan, Rehabilitasi & Perlindungan Sosial Dinsos</strong>
-                </div>
-              </div>
-              <div class="org-person">
-                <div class="op-dot"></div>
-                <div class="op-info">
-                  <strong>Verifikator SIKS-NG Dinsos</strong>
-                </div>
-              </div>
-              <div class="org-person">
-                <div class="op-dot"></div>
-                <div class="op-info">
-                  <strong>Pekerja Sosial Ahli Pertama Dinsos</strong>
-                </div>
-              </div>
-              <div class="org-person">
-                <div class="op-dot"></div>
-                <div class="op-info">
-                  <strong>Pengisi Data Kabupaten & Penata/Operator Layanan Operasional Dinsos</strong>
-                </div>
-              </div>
-              <div class="org-person">
-                <div class="op-dot"></div>
-                <div class="op-info">
-                  <strong>Pendamping PKH se-Kab. Ogan Ilir</strong>
-                </div>
-              </div>
-              <div class="org-person">
-                <div class="op-dot"></div>
-                <div class="op-info">
-                  <strong>TKSK se-Kab. Ogan Ilir</strong>
-                </div>
-              </div>
-              <div class="org-person">
-                <div class="op-dot"></div>
-                <div class="op-info">
-                  <strong>Perangkat & Operator Kelurahan/Desa se-Kab. Ogan Ilir</strong>
+                  <strong>Operator DTKS</strong>
+                  <span>Input & Pembaruan Data DTKS</span>
                 </div>
               </div>
             </div>
           </div>
 
-          <!-- TIM PEREKAMAN BIOMETRIK & HELPDESK -->
           <div class="org-card fade-in fade-in-delay-2">
             <div class="org-card-head oc-head-purple">
-              <div class="oca-icon"><i class="fa-solid fa-fingerprint"></i></div>
+              <div class="oca-icon"><i class="fa-solid fa-id-card"></i></div>
               <div>
-                <h4>Tim Perekaman Biometrik & Helpdesk</h4>
-                <span>Dukcapil & Layanan Aduan</span>
+                <h4>Dinas Dukcapil</h4>
+                <span>Koordinator Data Kependudukan</span>
               </div>
             </div>
             <div class="org-card-body">
               <div class="org-person">
                 <div class="op-dot" style="background:#7B2D8B;"></div>
                 <div class="op-info">
-                  <strong>Koordinator</strong>
-                  <span>Kepala Dinas Kependudukan dan Pencatatan Sipil Kab. Ogan Ilir</span>
-                </div>
-              </div>
-              <div
-                style="font-size:11px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:0.8px;padding:8px 0 4px;">
-                Anggota</div>
-              <div class="org-person">
-                <div class="op-dot"></div>
-                <div class="op-info">
-                  <strong>Sekretaris Dukcapil</strong>
+                  <strong>Kepala Dukcapil</strong>
+                  <span>Verifikasi NIK & Data KK</span>
                 </div>
               </div>
               <div class="org-person">
                 <div class="op-dot"></div>
                 <div class="op-info">
-                  <strong>Kabid Pengelolaan Informasi Administrasi Kependudukan</strong>
+                  <strong>Tim SIAK</strong>
+                  <span>Integrasi Data Kependudukan</span>
                 </div>
               </div>
               <div class="org-person">
                 <div class="op-dot"></div>
                 <div class="op-info">
-                  <strong>Kabid Pelayanan Pendaftaran Penduduk</strong>
-                </div>
-              </div>
-              <div class="org-person">
-                <div class="op-dot"></div>
-                <div class="op-info">
-                  <strong>Kabid Pelayanan Pencatatan Sipil</strong>
-                </div>
-              </div>
-              <div class="org-person">
-                <div class="op-dot"></div>
-                <div class="op-info">
-                  <strong>Kabid Pemanfaatan Data dan Inovasi Pelayanan</strong>
-                </div>
-              </div>
-              <div class="org-person">
-                <div class="op-dot"></div>
-                <div class="op-info">
-                  <strong>Analis Kebijakan Ahli Muda Dukcapil</strong>
-                </div>
-              </div>
-              <div class="org-person">
-                <div class="op-dot"></div>
-                <div class="op-info">
-                  <strong>Administrator Database Kependudukan Ahli Muda</strong>
-                </div>
-              </div>
-              <div class="org-person">
-                <div class="op-dot"></div>
-                <div class="op-info">
-                  <strong>Penata & Operator Layanan Operasional Dukcapil</strong>
-                </div>
-              </div>
-              <div class="org-person">
-                <div class="op-dot"></div>
-                <div class="op-info">
-                  <strong>Penata Layanan Operasional Dinas Sosial</strong>
+                  <strong>Petugas Registrasi</strong>
+                  <span>Pembuatan KTP/KK Penerima</span>
                 </div>
               </div>
             </div>
           </div>
 
-          <!-- TIM EVALUASI -->
           <div class="org-card fade-in fade-in-delay-3">
+            <div class="org-card-head oc-head-orange">
+              <div class="oca-icon"><i class="fa-solid fa-landmark"></i></div>
+              <div>
+                <h4>Bank Penyalur</h4>
+                <span>Mitra Penyaluran Non-Tunai</span>
+              </div>
+            </div>
+            <div class="org-card-body">
+              <div class="org-person">
+                <div class="op-dot" style="background:#D35400;"></div>
+                <div class="op-info">
+                  <strong>Bank BRI / BNI / Mandiri</strong>
+                  <span>Penyaluran KKS & Rekening</span>
+                </div>
+              </div>
+              <div class="org-person">
+                <div class="op-dot"></div>
+                <div class="op-info">
+                  <strong>Agen Laku Pandai</strong>
+                  <span>Pencairan di Desa Terpencil</span>
+                </div>
+              </div>
+              <div class="org-person">
+                <div class="op-dot"></div>
+                <div class="op-info">
+                  <strong>E-Warong Mitra BPNT</strong>
+                  <span>Transaksi Belanja Pangan</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="org-card fade-in fade-in-delay-4">
+            <div class="org-card-head oc-head-teal">
+              <div class="oca-icon"><i class="fa-solid fa-house-chimney-user"></i></div>
+              <div>
+                <h4>Pemerintah Desa / Kelurahan</h4>
+                <span>Ujung Tombak Pelaksana</span>
+              </div>
+            </div>
+            <div class="org-card-body">
+              <div class="org-person">
+                <div class="op-dot" style="background:#00838F;"></div>
+                <div class="op-info">
+                  <strong>Kepala Desa / Lurah</strong>
+                  <span>Musyawarah Desa & Rekomendasi</span>
+                </div>
+              </div>
+              <div class="org-person">
+                <div class="op-dot"></div>
+                <div class="op-info">
+                  <strong>Operator Desa</strong>
+                  <span>Input Data & Update DTKS</span>
+                </div>
+              </div>
+              <div class="org-person">
+                <div class="op-dot"></div>
+                <div class="op-info">
+                  <strong>BPD / LKD</strong>
+                  <span>Pengawasan & Pelaporan Lokal</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="org-card fade-in fade-in-delay-5">
             <div class="org-card-head oc-head-red">
               <div class="oca-icon"><i class="fa-solid fa-magnifying-glass-chart"></i></div>
               <div>
-                <h4>Tim Evaluasi</h4>
-                <span>Inspektorat & Pengawasan</span>
+                <h4>Tim Pengawas & Evaluasi</h4>
+                <span>Inspektorat & APIP</span>
               </div>
             </div>
             <div class="org-card-body">
               <div class="org-person">
                 <div class="op-dot" style="background:#C0392B;"></div>
                 <div class="op-info">
-                  <strong>Koordinator</strong>
-                  <span>Inspektur Daerah Kabupaten Ogan Ilir</span>
-                </div>
-              </div>
-              <div
-                style="font-size:11px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:0.8px;padding:8px 0 4px;">
-                Anggota</div>
-              <div class="org-person">
-                <div class="op-dot"></div>
-                <div class="op-info">
-                  <strong>Kepala Bappeda Kab. Ogan Ilir</strong>
+                  <strong>Inspektorat Daerah</strong>
+                  <span>Audit & Pemeriksaan Berkala</span>
                 </div>
               </div>
               <div class="org-person">
                 <div class="op-dot"></div>
                 <div class="op-info">
-                  <strong>Sekretaris Bappeda Kab. Ogan Ilir</strong>
+                  <strong>Tim Pengaduan Masyarakat</strong>
+                  <span>Penanganan Laporan & Sanggahan</span>
                 </div>
               </div>
               <div class="org-person">
                 <div class="op-dot"></div>
                 <div class="op-info">
-                  <strong>Inspektur Pembantu Wilayah I, II, III & IV Inspektorat</strong>
-                </div>
-              </div>
-              <div class="org-person">
-                <div class="op-dot"></div>
-                <div class="op-info">
-                  <strong>Fungsional Auditor/PPUPD Ahli Madya Inspektorat</strong>
-                </div>
-              </div>
-              <div class="org-person">
-                <div class="op-dot"></div>
-                <div class="op-info">
-                  <strong>Fungsional Auditor/PPUPD Ahli Muda Inspektorat</strong>
-                </div>
-              </div>
-              <div class="org-person">
-                <div class="op-dot"></div>
-                <div class="op-info">
-                  <strong>Fungsional Auditor/PPUPD Ahli Pertama Inspektorat</strong>
+                  <strong>BPKP / BPK (Eksternal)</strong>
+                  <span>Audit Keuangan Tahunan</span>
                 </div>
               </div>
             </div>
           </div>
-
-        </div><!-- end org-grid -->
-
-        <!-- CATATAN DASAR HUKUM -->
-        <div class="org-note fade-in">
-          <i class="fa-solid fa-circle-info"></i>
-          <p>Struktur organisasi ini ditetapkan berdasarkan <strong>Keputusan Bupati Ogan Ilir Nomor
-              /KEP/DISDUKCAPIL/2026</strong> tentang Tim Pelaksana Program Percontohan Digitalisasi Bantuan Sosial di
-            Kabupaten Ogan Ilir Tahun 2026, ditandatangani oleh <strong>Bupati Panca Wijaya Akbar</strong>. Tim
-            bertanggung jawab kepada Bupati melalui Sekretaris Daerah Kabupaten Ogan Ilir.</p>
         </div>
 
-      </div><!-- end org-wrapper -->
+        <div class="org-note fade-in">
+          <i class="fa-solid fa-circle-info"></i>
+          <p>Struktur penugasan ini ditetapkan berdasarkan <strong>Surat Keputusan Bupati Ogan Ilir</strong> tentang
+            Pembentukan Tim Koordinasi Digitalisasi Bantuan Sosial Kabupaten Ogan Ilir Tahun 2026. Setiap OPD memiliki
+            tugas dan kewenangan yang jelas dalam ekosistem digital bansos, dengan Diskominfo sebagai koordinator teknis
+            dan Dinas Sosial sebagai koordinator program.</p>
+        </div>
+      </div>
     </div>
   </section>
 
